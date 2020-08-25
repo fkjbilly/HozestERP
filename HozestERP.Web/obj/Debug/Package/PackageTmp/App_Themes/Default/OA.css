@@ -1,0 +1,490 @@
+﻿
+/*=======================================
+树页面的样式
+=========================================*/
+.MenuTop
+{
+	
+	background:#7D2C24;
+	}
+	.CurrentMenu
+	{
+		text-align:center;
+		background-image:url(Image/main_43.gif);
+		color:#FFFFFF;
+		font-size:12px;
+		font-weight:bold;
+		}
+ .SubMenu
+ {
+ 	cursor:pointer;
+	width: 100%; 
+	text-align:center;
+	background-image:url(Image/SubMenu.gif);
+	height:19px
+}
+.Split
+{
+	width: 20%;
+	background-image: url(Image/hiddenbtn_v.gif);
+	height:3px;
+	cursor:hand;
+}
+.SplitBg
+{
+	width: 40%;
+	background-image:url(Image/Split_bg.gif);
+	}
+		.TreeGrid
+	{border:0px;
+	}
+/*======================
+Default.aspx
+=======================*/
+.Split_V
+{
+	 background-color:#7d2c24;
+	 width:7px;
+}
+.Split_V_Bar
+{
+	height:48px;	
+	width:7px;
+}
+.Main_Top1
+{
+	background-image:url(Image/main_24.gif);
+	}
+	.Main_Top2
+{
+	background-image:url(Image/main_26.gif);
+	}
+		.Main_Top3
+{
+	background-image:url(Image/main_28.gif);
+	}
+			.Main_Top4
+{
+	background-image:url(Image/main_46.gif);
+	}
+			.Main_Top5
+{
+	background-image:url(Image/main_48.gif);
+	}
+.Main_Top6
+{
+	background-image:url(Image/main_50.gif);
+	}
+.Main_Right
+{
+	background-color:#7D2C24;
+	}
+
+/*====================
+CommonManager
+=====================*/
+.GridHeard
+{
+    background-image: url(Image/grid3-hrow.gif);
+    color: black;
+    position:relative ;
+    top: expression(this.offsetParent.scrollTop-1);
+    border-bottom-width:0px;
+
+}
+.GridHeardNoTop
+{
+    background-image: url(Image/grid3-hrow.gif);
+    color: black;
+    border-bottom-width:0px;
+
+}
+.GridOverHeard
+{
+    background-image:url(Image/grid3-hrow-over.gif);color: black;
+    position:relative ;
+   top: expression(this.offsetParent.scrollTop-1);
+   border-bottom-width:0px;
+
+}
+.GridTable
+{	
+	width:expression(document.documentElement.clientWidth -30);	
+	height:expression(document.documentElement.clientHeight-this.scrollTop -30);	
+	overflow:auto;
+}
+.GridOverHeardNoTop
+{
+    background-image:url(Image/grid3-hrow-over.gif);color: black;
+   border-bottom-width:0px;
+
+}
+.GridFoot
+{
+   height: 27px; 
+   background-image: url(Image/gridFoot.gif);
+   width:100%;
+   BORDER-RIGHT: #ababab 1px solid; BORDER-LEFT: #ababab 1px solid; WIDTH: 100%; BORDER-BOTTOM: #ababab 1px solid;
+
+}
+.GridBody
+{
+   BORDER-RIGHT: #ababab 1px solid; BORDER-LEFT: #ababab 1px solid;  BORDER-BOTTOM: #ababab 1px solid;
+
+}
+.fixCol
+{
+    position: relative; left: expression(this.offsetParent.scrollLeft);
+    
+}
+.TitleDir
+{
+	font-weight: bold;
+	color:#890906;
+	font-size:10pt;
+	font-family:微软雅黑;
+	}
+	
+.SearchSplit
+{
+	 height:1px;
+	 background-color:#dcdcdc;
+	}
+	
+.transbox 
+{    
+	filter:alpha(opacity=70);
+	-moz-opacity:0.7;
+	opacity: 0.7;
+}
+.divs
+{
+	overflow:auto; height:100%;
+}
+.WaitPanel
+{
+	width: 262px; height:167px;background-image: url(Image/Wait.jpg);
+}
+.CheckRow
+{
+	background-color:#FAE4E3;
+	text-align:left;
+	vertical-align:middle;
+	height:5px;
+	}
+.SelectRow
+{
+	background-color:#F6C4C3;
+	text-align:left;
+	vertical-align:middle;
+	height:5px;
+}
+/*=============================
+
+按钮样式
+
+=============================*/
+.button2left_out
+{
+	BORDER-TOP-WIDTH: 0px;
+    BORDER-LEFT-WIDTH: 0px;
+    BORDER-BOTTOM-WIDTH: 0px;
+    BORDER-RIGHT-WIDTH:0px;
+	background-image:url(Image/btn2left.gif);
+	color:White;
+	width: 42px;
+	height:21px;
+}
+.button2left_over
+{
+	BORDER-TOP-WIDTH: 0px;
+    BORDER-LEFT-WIDTH: 0px;
+    BORDER-BOTTOM-WIDTH: 0px;
+    BORDER-RIGHT-WIDTH:0px;
+	background-image:url(Image/btn2left_over.gif);
+	color:White;
+	width: 42px;
+	height:21px;
+	cursor:hand;
+}
+.button2right_out
+{
+	BORDER-TOP-WIDTH: 0px;
+    BORDER-LEFT-WIDTH: 0px;
+    BORDER-BOTTOM-WIDTH: 0px;
+    BORDER-RIGHT-WIDTH:0px;
+	background-image:url(Image/btn2right.gif);
+	color:White;
+	width: 24px;
+	height:21px;
+	cursor:hand;
+}
+
+.button2right_over
+{
+	BORDER-TOP-WIDTH: 0px;
+    BORDER-LEFT-WIDTH: 0px;
+    BORDER-BOTTOM-WIDTH: 0px;
+    BORDER-RIGHT-WIDTH:0px;
+	background-image:url(Image/btn2right_over.gif);
+	color:White;
+	width: 24px;
+	height:21px;
+	cursor:hand;
+}
+
+.button2right_down_out
+{
+	BORDER-TOP-WIDTH: 0px;
+    BORDER-LEFT-WIDTH: 0px;
+    BORDER-BOTTOM-WIDTH: 0px;
+    BORDER-RIGHT-WIDTH:0px;
+	background-image:url(Image/btn2rightdown.gif);
+	color:White;
+	width: 24px;
+	height:21px;
+	cursor:hand;
+}
+
+.button2right_down_over
+{
+	BORDER-TOP-WIDTH: 0px;
+    BORDER-LEFT-WIDTH: 0px;
+    BORDER-BOTTOM-WIDTH: 0px;
+    BORDER-RIGHT-WIDTH:0px;
+	background-image:url(Image/btn2rightdown_over.gif);
+	color:White;
+	width: 24px;
+	height:21px;
+	cursor:hand;
+}
+
+.button2_out
+{
+	BORDER-TOP-WIDTH: 0px;
+    BORDER-LEFT-WIDTH: 0px;
+    BORDER-BOTTOM-WIDTH: 0px;
+    BORDER-RIGHT-WIDTH:0px;
+	background-image:url(Image/btn2.gif);
+	color:White;
+	width: 55px;
+	height:21px;
+	cursor:hand;
+	margin-left: 5px;
+}
+.button2_over
+{
+	BORDER-TOP-WIDTH: 0px;
+    BORDER-LEFT-WIDTH: 0px;
+    BORDER-BOTTOM-WIDTH: 0px;
+    BORDER-RIGHT-WIDTH:0px;
+	background-image:url(Image/btn2_over.gif);
+	color:White;
+	width: 55px;
+	height:21px;
+	cursor:hand;
+	margin-left: 5px;
+}
+
+
+.button2_up
+{
+	BORDER-TOP-WIDTH: 0px;
+    BORDER-LEFT-WIDTH: 0px;
+    BORDER-BOTTOM-WIDTH: 0px;
+    BORDER-RIGHT-WIDTH:0px;
+	background-image:url(Image/btn2up);
+	color:White;
+	width: 24px;
+	height:21px;
+	cursor:hand;
+	margin-left: 5px;
+}
+
+.button2_down
+{
+	BORDER-TOP-WIDTH: 0px;
+    BORDER-LEFT-WIDTH: 0px;
+    BORDER-BOTTOM-WIDTH: 0px;
+    BORDER-RIGHT-WIDTH:0px;
+	background-image:url(Image/btn2down);
+	color:White;
+	width: 24px;
+	height:21px;
+	cursor:hand;
+	margin-left: 5px;
+}
+
+.button4_out
+{
+	BORDER-TOP-WIDTH: 0px;
+    BORDER-LEFT-WIDTH: 0px;
+    BORDER-BOTTOM-WIDTH: 0px;
+    BORDER-RIGHT-WIDTH:0px;
+	background-image:url(Image/btn4.gif);
+	color:White;
+	width: 79px;
+	height:21px;
+	cursor:hand;
+	margin-left: 5px;
+}
+.button4_over
+{
+	BORDER-TOP-WIDTH: 0px;
+    BORDER-LEFT-WIDTH: 0px;
+    BORDER-BOTTOM-WIDTH: 0px;
+    BORDER-RIGHT-WIDTH:0px;
+	background-image:url(Image/btn4_over.gif);
+	color:White;
+	width: 79px;
+	height:21px;
+	cursor:hand;
+	margin-left: 5px;
+}
+
+.button6_out
+{
+	BORDER-TOP-WIDTH: 0px;
+    BORDER-LEFT-WIDTH: 0px;
+    BORDER-BOTTOM-WIDTH: 0px;
+    BORDER-RIGHT-WIDTH:0px;
+	background-image:url(Image/btn6.gif);
+	color:White;
+	width: 105px;
+	height:21px;
+	cursor:hand;
+	margin-left: 5px;
+}
+
+.button6_over
+{
+	BORDER-TOP-WIDTH: 0px;
+    BORDER-LEFT-WIDTH: 0px;
+    BORDER-BOTTOM-WIDTH: 0px;
+    BORDER-RIGHT-WIDTH:0px;
+	background-image:url(Image/btn6_over.gif);
+	color:White;
+	width: 105px;
+	height:21px;
+	cursor:hand;
+	margin-left: 5px;
+}
+.EidtHead
+{
+    background-image: url(Image/grid3-hrow.gif);
+    color: black;
+    height:24px;
+    border-bottom-width:0px;
+
+}
+
+.tabBtn4_out
+{
+	BORDER-TOP-WIDTH: 0px;
+    BORDER-LEFT-WIDTH: 0px;
+    BORDER-BOTTOM-WIDTH: 0px;
+    BORDER-RIGHT-WIDTH:0px;
+	background-image:url(Image/tabBtn4.gif);
+	color:White;
+	width: 79px;
+	height:24px;
+	cursor:hand;
+	vertical-align:middle;
+}
+.tabBtn4_over
+{
+	BORDER-TOP-WIDTH: 0px;
+    BORDER-LEFT-WIDTH: 0px;
+    BORDER-BOTTOM-WIDTH: 0px;
+    BORDER-RIGHT-WIDTH:0px;
+	background-image:url(Image/tabBtn4_over.gif);
+	color:White;
+	width: 79px;
+	height:24px;
+	cursor:hand;
+	vertical-align:middle;
+}
+.PopDivTop
+{
+	height: 32px;
+	background-image: url(Image/Notice/NoticeTop.gif);
+	BORDER-BOTTOM: #ababab 1px solid;
+}
+
+.PopDivTitle
+{
+	CURSOR: move;
+	height: 20px;
+	background-color: #3e91d3;
+}
+
+.PopDivClose
+{
+	CURSOR: hand;
+	background-color: #3e91d3;
+}
+.PopDivFoot
+{
+	PADDING-RIGHT: 5px; 
+	PADDING-LEFT: 5px; 
+	PADDING-BOTTOM: 5px; 
+	PADDING-TOP: 5px; 
+	HEIGHT: 25px;
+	background-image: url(Image/Notice/NoticeFoot.gif);
+	border-top: #ababab 1px solid;
+}
+
+.button7_out
+{
+	BORDER-TOP-WIDTH: 0px;
+    BORDER-LEFT-WIDTH: 0px;
+    BORDER-BOTTOM-WIDTH: 0px;
+    BORDER-RIGHT-WIDTH:0px;
+	background-image:url(Image/btn6.gif);
+	color:White;
+	width: 105px;
+	height:21px;
+	cursor:hand;
+	margin-left: 5px;
+}
+
+.button7_over
+{
+	BORDER-TOP-WIDTH: 0px;
+    BORDER-LEFT-WIDTH: 0px;
+    BORDER-BOTTOM-WIDTH: 0px;
+    BORDER-RIGHT-WIDTH:0px;
+	background-image:url(Image/btn6_over.gif);
+	color:White;
+	width: 105px;
+	height:21px;
+	cursor:hand;
+	margin-left: 5px;
+}
+
+.fieldset
+{
+	padding-top: 10px;
+	padding-right: 30px;
+	padding-bottom: 10px;
+	padding-left: 16px;
+	border-top-color: #9d9d9d;
+	border-right-color: #9d9d9d;
+	border-bottom-color: #9d9d9d;
+	border-left-color: #9d9d9d;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: dashed;
+	border-right-style: dashed;
+	border-bottom-style: dashed;
+	border-left-style: dashed;
+}
+
+.fieldset legend
+{
+	padding-right: 16px;
+	padding-left: 16px;
+	background-color: #ffffff;
+}

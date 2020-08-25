@@ -1,0 +1,13 @@
+D:\gqn\Repair\trunk\CRM.Common\bin\CRM.Common.dll
+D:\gqn\Repair\trunk\CRM.Common\bin\CRM.Common.pdb
+D:\gqn\Repair\trunk\CRM.Common\obj\Debug\ResolveAssemblyReference.cache
+D:\gqn\Repair\trunk\CRM.Common\obj\Debug\CRM.Common.dll
+D:\gqn\Repair\trunk\CRM.Common\obj\Debug\CRM.Common.pdb
+E:\Repair\trunk\CRM.Common\bin\CRM.Common.dll
+E:\Repair\trunk\CRM.Common\bin\CRM.Common.pdb
+E:\Repair\trunk\CRM.Common\obj\Debug\CRM.Common.dll
+E:\Repair\trunk\CRM.Common\obj\Debug\CRM.Common.pdb
+G:\和众电商ERP-NEW\trunk\CRM.Common\bin\CRM.Common.dll
+G:\和众电商ERP-NEW\trunk\CRM.Common\bin\CRM.Common.pdb
+G:\和众电商ERP-NEW\trunk\CRM.Common\obj\Debug\CRM.Common.dll
+G:\和众电商ERP-NEW\trunk\CRM.Common\obj\Debug\CRM.Common.pdb

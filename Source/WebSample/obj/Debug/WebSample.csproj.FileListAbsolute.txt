@@ -1,0 +1,10 @@
+F:\TD\JdSdk-master\Source\WebSample\obj\Debug\ResolveAssemblyReference.cache
+F:\TD\JdSdk-master\Source\WebSample\bin\WebSample.dll
+F:\TD\JdSdk-master\Source\WebSample\bin\WebSample.pdb
+F:\TD\JdSdk-master\Source\WebSample\bin\JdSdk.dll
+F:\TD\JdSdk-master\Source\WebSample\bin\Newtonsoft.Json.dll
+F:\TD\JdSdk-master\Source\WebSample\bin\JdSdk.pdb
+F:\TD\JdSdk-master\Source\WebSample\bin\JdSdk.xml
+F:\TD\JdSdk-master\Source\WebSample\bin\Newtonsoft.Json.xml
+F:\TD\JdSdk-master\Source\WebSample\obj\Debug\WebSample.dll
+F:\TD\JdSdk-master\Source\WebSample\obj\Debug\WebSample.pdb

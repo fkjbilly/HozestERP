@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="WebGetJDOrderInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="orderId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AppKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AppSecret" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ServerUrl" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AccessToken" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WebGetJDOrderInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WebGetJDOrderInfoResult" type="tns:OrderInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="OrderInfo">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:JdObject">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="order_id" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="vender_id" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="pay_type" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="order_total_price" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="order_payment" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="order_seller_price" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="freight_price" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="seller_discount" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="order_state" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="order_state_remark" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="delivery_type" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="invoice_info" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="order_remark" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="order_start_time" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="order_end_time" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="consignee_info" type="tns:UserInfo" />
+              <s:element minOccurs="0" maxOccurs="unbounded" name="item_info_list" type="tns:ItemInfo" />
+              <s:element minOccurs="0" maxOccurs="unbounded" name="coupon_detail_list" type="tns:CouponDetail" />
+              <s:element minOccurs="0" maxOccurs="1" name="return_order" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="vender_remark" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="pin" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="balance_used" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="modified" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="payment_confirm_time" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="logistics_id" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="waybill" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="vat_invoice_info" type="tns:VatInvoiceInfo" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="JdObject" abstract="true" />
+      <s:complexType name="VatInvoiceInfo">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:JdObject">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="taxpayer_ident" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="registered_address" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="registered_phone" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="deposit_bank" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="bank_account" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="CouponDetail">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:JdObject">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="coupon_price" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="coupon_type" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="order_id" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="sku_id" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ItemInfo">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:JdObject">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="sku_id" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="outer_sku_id" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="sku_name" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="jd_price" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="gift_point" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ware_id" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="item_total" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="product_no" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="UserInfo">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:JdObject">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="fullname" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="full_address" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="telephone" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="mobile" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="province" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="city" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="county" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="WebGetJDOrderInfoAll">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="startDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="endDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="orderState" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="page" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pageSize" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="recursive" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="AppKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AppSecret" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ServerUrl" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AccessToken" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WebGetJDOrderInfoAllResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WebGetJDOrderInfoAllResult" type="tns:ArrayOfOrderInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfOrderInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="OrderInfo" nillable="true" type="tns:OrderInfo" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="WebGetJDOrderInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:WebGetJDOrderInfo" />
+  </wsdl:message>
+  <wsdl:message name="WebGetJDOrderInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:WebGetJDOrderInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="WebGetJDOrderInfoAllSoapIn">
+    <wsdl:part name="parameters" element="tns:WebGetJDOrderInfoAll" />
+  </wsdl:message>
+  <wsdl:message name="WebGetJDOrderInfoAllSoapOut">
+    <wsdl:part name="parameters" element="tns:WebGetJDOrderInfoAllResponse" />
+  </wsdl:message>
+  <wsdl:portType name="JDsingleOrderGetSoap">
+    <wsdl:operation name="WebGetJDOrderInfo">
+      <wsdl:input message="tns:WebGetJDOrderInfoSoapIn" />
+      <wsdl:output message="tns:WebGetJDOrderInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WebGetJDOrderInfoAll">
+      <wsdl:input message="tns:WebGetJDOrderInfoAllSoapIn" />
+      <wsdl:output message="tns:WebGetJDOrderInfoAllSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="JDsingleOrderGetSoap" type="tns:JDsingleOrderGetSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="WebGetJDOrderInfo">
+      <soap:operation soapAction="http://tempuri.org/WebGetJDOrderInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebGetJDOrderInfoAll">
+      <soap:operation soapAction="http://tempuri.org/WebGetJDOrderInfoAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="JDsingleOrderGetSoap12" type="tns:JDsingleOrderGetSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="WebGetJDOrderInfo">
+      <soap12:operation soapAction="http://tempuri.org/WebGetJDOrderInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebGetJDOrderInfoAll">
+      <soap12:operation soapAction="http://tempuri.org/WebGetJDOrderInfoAll" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="JDsingleOrderGet">
+    <wsdl:port name="JDsingleOrderGetSoap" binding="tns:JDsingleOrderGetSoap">
+      <soap:address location="http://153.36.228.222/JDsingleOrderGet.asmx" />
+    </wsdl:port>
+    <wsdl:port name="JDsingleOrderGetSoap12" binding="tns:JDsingleOrderGetSoap12">
+      <soap12:address location="http://153.36.228.222/JDsingleOrderGet.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

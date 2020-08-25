@@ -1,0 +1,973 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CRM.BusinessLogic.Data" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="CRMEntities" annotation:LazyLoadingEnabled="false">
+    <EntitySet Name="ACLs" EntityType="CRM.BusinessLogic.Data.ACL" />
+    <EntitySet Name="ACLModules" EntityType="CRM.BusinessLogic.Data.ACLModule" />
+    <EntitySet Name="ActivityLogs" EntityType="CRM.BusinessLogic.Data.ActivityLog" />
+    <EntitySet Name="ActivityLogTypes" EntityType="CRM.BusinessLogic.Data.ActivityLogType" />
+    <EntitySet Name="AreaCodes" EntityType="CRM.BusinessLogic.Data.AreaCode" />
+    <EntitySet Name="BannedIpAddresses" EntityType="CRM.BusinessLogic.Data.BannedIpAddress" />
+    <EntitySet Name="BannedIpNetworks" EntityType="CRM.BusinessLogic.Data.BannedIpNetwork" />
+    <EntitySet Name="CodeLists" EntityType="CRM.BusinessLogic.Data.CodeList" />
+    <EntitySet Name="CodeTypes" EntityType="CRM.BusinessLogic.Data.CodeType" />
+    <EntitySet Name="Customers" EntityType="CRM.BusinessLogic.Data.Customer" />
+    <EntitySet Name="CustomerActions" EntityType="CRM.BusinessLogic.Data.CustomerAction" />
+    <EntitySet Name="CustomerAttributes" EntityType="CRM.BusinessLogic.Data.CustomerAttribute" />
+    <EntitySet Name="CustomerRoles" EntityType="CRM.BusinessLogic.Data.CustomerRole" />
+    <EntitySet Name="CustomerSessions" EntityType="CRM.BusinessLogic.Data.CustomerSession" />
+    <EntitySet Name="Departments" EntityType="CRM.BusinessLogic.Data.Department" />
+    <EntitySet Name="Enterprises" EntityType="CRM.BusinessLogic.Data.Enterprise" />
+    <EntitySet Name="Logs" EntityType="CRM.BusinessLogic.Data.Log" />
+    <EntitySet Name="Modules" EntityType="CRM.BusinessLogic.Data.Module" />
+    <EntitySet Name="Notices" EntityType="CRM.BusinessLogic.Data.Notice" />
+    <EntitySet Name="Pictures" EntityType="CRM.BusinessLogic.Data.Picture" />
+    <EntitySet Name="Settings" EntityType="CRM.BusinessLogic.Data.Setting" />
+    <AssociationSet Name="FK_Nop_ACL_Nop_CustomerAction" Association="CRM.BusinessLogic.Data.FK_Nop_ACL_Nop_CustomerAction">
+      <End Role="Sys_CustomerAction" EntitySet="CustomerActions" />
+      <End Role="Sys_ACL" EntitySet="ACLs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Nop_ACL_Nop_CustomerRole" Association="CRM.BusinessLogic.Data.FK_Nop_ACL_Nop_CustomerRole">
+      <End Role="Sys_CustomerRole" EntitySet="CustomerRoles" />
+      <End Role="Sys_ACL" EntitySet="ACLs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Nop_ACLPerObject_Nop_CustomerRole" Association="CRM.BusinessLogic.Data.FK_Nop_ACLPerObject_Nop_CustomerRole">
+      <End Role="Sys_CustomerRole" EntitySet="CustomerRoles" />
+      <End Role="Sys_ACLModule" EntitySet="ACLModules" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Nop_ActivityLog_Nop_ActivityLogType" Association="CRM.BusinessLogic.Data.FK_Nop_ActivityLog_Nop_ActivityLogType">
+      <End Role="Sys_ActivityLogType" EntitySet="ActivityLogTypes" />
+      <End Role="Sys_ActivityLog" EntitySet="ActivityLogs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Nop_ActivityLog_Nop_Customer" Association="CRM.BusinessLogic.Data.FK_Nop_ActivityLog_Nop_Customer">
+      <End Role="Sys_Customer" EntitySet="Customers" />
+      <End Role="Sys_ActivityLog" EntitySet="ActivityLogs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Nop_CodeList_Nop_CodeType" Association="CRM.BusinessLogic.Data.FK_Nop_CodeList_Nop_CodeType">
+      <End Role="Sys_CodeType" EntitySet="CodeTypes" />
+      <End Role="Sys_CodeList" EntitySet="CodeLists" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Nop_CustomerAttribute_Nop_Customer" Association="CRM.BusinessLogic.Data.FK_Nop_CustomerAttribute_Nop_Customer">
+      <End Role="Sys_Customer" EntitySet="Customers" />
+      <End Role="Sys_CustomerAttribute" EntitySet="CustomerAttributes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sys_CustomerAction_Sys_Module" Association="CRM.BusinessLogic.Data.FK_Sys_CustomerAction_Sys_Module">
+      <End Role="Sys_Module" EntitySet="Modules" />
+      <End Role="Sys_CustomerAction" EntitySet="CustomerActions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Nop_Department_Nop_Department" Association="CRM.BusinessLogic.Data.FK_Nop_Department_Nop_Department">
+      <End Role="Sys_Enterprise" EntitySet="Enterprises" />
+      <End Role="Sys_Department" EntitySet="Departments" />
+    </AssociationSet>
+    <AssociationSet Name="Sys_Customer_CustomerRole_Mapping" Association="CRM.BusinessLogic.Data.Sys_Customer_CustomerRole_Mapping">
+      <End Role="Sys_Customer" EntitySet="Customers" />
+      <End Role="Sys_CustomerRole" EntitySet="CustomerRoles" />
+    </AssociationSet>
+    <EntitySet Name="Portals" EntityType="CRM.BusinessLogic.Data.Portal" />
+    <EntitySet Name="PortalColumns" EntityType="CRM.BusinessLogic.Data.PortalColumn" />
+    <EntitySet Name="PortalColumnNumbers" EntityType="CRM.BusinessLogic.Data.PortalColumnNumber" />
+    <AssociationSet Name="FK_Sys_PortalColumnNumber_Sys_Customer" Association="CRM.BusinessLogic.Data.FK_Sys_PortalColumnNumber_Sys_Customer">
+      <End Role="Customer" EntitySet="Customers" />
+      <End Role="Sys_PortalColumnNumber" EntitySet="PortalColumnNumbers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sys_PortalColumn_Sys_Portal" Association="CRM.BusinessLogic.Data.FK_Sys_PortalColumn_Sys_Portal">
+      <End Role="Sys_Portal" EntitySet="Portals" />
+      <End Role="Sys_PortalColumn" EntitySet="PortalColumns" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sys_PortalColumn_Sys_PortalColumnNumber" Association="CRM.BusinessLogic.Data.FK_Sys_PortalColumn_Sys_PortalColumnNumber">
+      <End Role="Sys_PortalColumnNumber" EntitySet="PortalColumnNumbers" />
+      <End Role="Sys_PortalColumn" EntitySet="PortalColumns" />
+    </AssociationSet>
+    <EntitySet Name="CustomerInfoes" EntityType="CRM.BusinessLogic.Data.CustomerInfo" />
+    <AssociationSet Name="FK_Sys_CustomerInfo_Sys_Customer" Association="CRM.BusinessLogic.Data.FK_Sys_CustomerInfo_Sys_Customer">
+      <End Role="Customer" EntitySet="Customers" />
+      <End Role="Sys_CustomerInfo" EntitySet="CustomerInfoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sys_CustomerInfo_Sys_Department" Association="CRM.BusinessLogic.Data.FK_Sys_CustomerInfo_Sys_Department">
+      <End Role="Department" EntitySet="Departments" />
+      <End Role="Sys_CustomerInfo" EntitySet="CustomerInfoes" />
+    </AssociationSet>
+    <EntitySet Name="UploadFiles" EntityType="CRM.BusinessLogic.Data.UploadFile" />
+    <FunctionImport Name="GetUploadFileList" EntitySet="UploadFiles" ReturnType="Collection(CRM.BusinessLogic.Data.UploadFile)">
+      <Parameter Name="ObjectID" Mode="In" Type="Int32" />
+      <Parameter Name="TaggantID" Mode="In" Type="Guid" />
+      <Parameter Name="TableName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UploadFileList">
+      <Parameter Name="ObjectID" Mode="In" Type="Int32" />
+      <Parameter Name="TaggantID" Mode="In" Type="Guid" />
+      <Parameter Name="TableName" Mode="In" Type="String" />
+    </FunctionImport>
+    <AssociationSet Name="Sys_CustomerRole_StaffPrivileges_Mapping" Association="CRM.BusinessLogic.Data.Sys_CustomerRole_StaffPrivileges_Mapping">
+      <End Role="Customer" EntitySet="Customers" />
+      <End Role="CustomerRole" EntitySet="CustomerRoles" />
+    </AssociationSet>
+    <FunctionImport Name="SaveAgentAccount">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="agentAccountName" Mode="In" Type="String" />
+      <Parameter Name="password" Mode="In" Type="String" />
+      <Parameter Name="enabled" Mode="In" Type="Int32" />
+      <Parameter Name="createStaff" Mode="In" Type="Int32" />
+      <Parameter Name="createDate" Mode="In" Type="DateTime" />
+      <Parameter Name="modifyStaff" Mode="In" Type="Int32" />
+      <Parameter Name="modifyDate" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="InsertAgentAccountUser">
+      <Parameter Name="agentAccountID" Mode="In" Type="Int32" />
+      <Parameter Name="customerID" Mode="In" Type="Int32" />
+      <Parameter Name="enabled" Mode="In" Type="Int32" />
+      <Parameter Name="createStaff" Mode="In" Type="Int32" />
+      <Parameter Name="createDate" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="ContractRenewal">
+      <Parameter Name="oldContractID" Mode="In" Type="Int32" />
+      <Parameter Name="NewContractID" Mode="In" Type="Int32" />
+      <Parameter Name="CreatorID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <AssociationSet Name="Sys_Department_CustomerRole_Mapping" Association="CRM.BusinessLogic.Data.Sys_Department_CustomerRole_Mapping">
+      <End Role="CustomerRole" EntitySet="CustomerRoles" />
+      <End Role="Department" EntitySet="Departments" />
+    </AssociationSet>
+    <EntitySet Name="Sys_AlertSettings" EntityType="CRM.BusinessLogic.Data.Sys_AlertSettings" />
+    <EntitySet Name="Sys_AlertTimeSet" EntityType="CRM.BusinessLogic.Data.Sys_AlertTimeSet" />
+    <EntitySet Name="Sys_StarSet" EntityType="CRM.BusinessLogic.Data.Sys_StarSet" />
+    <EntitySet Name="Sys_CustomerStar" EntityType="CRM.BusinessLogic.Data.Sys_CustomerStar" />
+    <FunctionImport Name="SaveAgentAccountTP">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="agentAccountName" Mode="In" Type="String" />
+      <Parameter Name="password" Mode="In" Type="String" />
+      <Parameter Name="enabled" Mode="In" Type="Int32" />
+      <Parameter Name="createStaff" Mode="In" Type="Int32" />
+      <Parameter Name="createDate" Mode="In" Type="DateTime" />
+      <Parameter Name="modifyStaff" Mode="In" Type="Int32" />
+      <Parameter Name="modifyDate" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <EntitySet Name="TableUpdateLogs" EntityType="CRM.BusinessLogic.Data.TableUpdateLog" />
+    <EntitySet Name="Bulletins" EntityType="CRM.BusinessLogic.Data.Bulletin" />
+    <AssociationSet Name="Sys_Bulletin_CusotmerMapping" Association="CRM.BusinessLogic.Data.Sys_Bulletin_CusotmerMapping">
+      <End Role="Sys_Bulletin" EntitySet="Bulletins" />
+      <End Role="CustomerInfo" EntitySet="CustomerInfoes" />
+    </AssociationSet>
+    <EntitySet Name="BXRepairInformations" EntityType="CRM.BusinessLogic.Data.BXRepairInformation" />
+  </EntityContainer>
+  <EntityType Name="ACL">
+    <Key>
+      <PropertyRef Name="ACLID" />
+    </Key>
+    <Property Type="Int32" Name="ACLID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="CustomerActionID" Nullable="false" />
+    <Property Type="Int32" Name="CustomerRoleID" Nullable="false" />
+    <Property Type="Boolean" Name="Allow" Nullable="false" />
+    <NavigationProperty Name="SCustomerAction" Relationship="CRM.BusinessLogic.Data.FK_Nop_ACL_Nop_CustomerAction" FromRole="Sys_ACL" ToRole="Sys_CustomerAction" />
+    <NavigationProperty Name="SCustomerRole" Relationship="CRM.BusinessLogic.Data.FK_Nop_ACL_Nop_CustomerRole" FromRole="Sys_ACL" ToRole="Sys_CustomerRole" />
+  </EntityType>
+  <EntityType Name="ACLModule">
+    <Key>
+      <PropertyRef Name="ACLModuleId" />
+    </Key>
+    <Property Type="Int32" Name="ACLModuleId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="ModuleID" Nullable="false" />
+    <Property Type="Int32" Name="CustomerRoleId" Nullable="false" />
+    <Property Type="Boolean" Name="Allow" Nullable="false" />
+    <NavigationProperty Name="SCustomerRole" Relationship="CRM.BusinessLogic.Data.FK_Nop_ACLPerObject_Nop_CustomerRole" FromRole="Sys_ACLModule" ToRole="Sys_CustomerRole" />
+  </EntityType>
+  <EntityType Name="ActivityLog">
+    <Key>
+      <PropertyRef Name="ActivityLogID" />
+    </Key>
+    <Property Type="Int32" Name="ActivityLogID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="ActivityLogTypeID" Nullable="false" />
+    <Property Type="Int32" Name="CustomerID" Nullable="false" />
+    <Property Type="String" Name="Comment" Nullable="false" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="CreatedOn" Nullable="false" />
+    <Property Type="Int32" Name="MerchantID" />
+    <NavigationProperty Name="SActivityLogType" Relationship="CRM.BusinessLogic.Data.FK_Nop_ActivityLog_Nop_ActivityLogType" FromRole="Sys_ActivityLog" ToRole="Sys_ActivityLogType" />
+    <NavigationProperty Name="SCustomer" Relationship="CRM.BusinessLogic.Data.FK_Nop_ActivityLog_Nop_Customer" FromRole="Sys_ActivityLog" ToRole="Sys_Customer" />
+  </EntityType>
+  <EntityType Name="ActivityLogType">
+    <Key>
+      <PropertyRef Name="ActivityLogTypeID" />
+    </Key>
+    <Property Type="Int32" Name="ActivityLogTypeID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="SystemKeyword" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="Enabled" Nullable="false" />
+    <NavigationProperty Name="SActivityLogs" Relationship="CRM.BusinessLogic.Data.FK_Nop_ActivityLog_Nop_ActivityLogType" FromRole="Sys_ActivityLogType" ToRole="Sys_ActivityLog" />
+  </EntityType>
+  <EntityType Name="AreaCode">
+    <Key>
+      <PropertyRef Name="xmlid" />
+    </Key>
+    <Property Type="Int32" Name="xmlid" Nullable="false" />
+    <Property Type="String" Name="NumberID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Root" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Preceding" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PrePath" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Rank" />
+    <Property Type="String" Name="City" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CityType" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Govt" />
+    <Property Type="String" Name="Post" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="AreaID" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="shortening" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Spell" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="KeyWord" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="OrderStr" />
+    <Property Type="Decimal" Name="Acreage" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="Population" Precision="19" Scale="4" />
+    <Property Type="Boolean" Name="Enabled" />
+  </EntityType>
+  <EntityType Name="BannedIpAddress">
+    <Key>
+      <PropertyRef Name="BannedIpAddressID" />
+    </Key>
+    <Property Type="Int32" Name="BannedIpAddressID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Address" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Comment" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="CreatedOn" Nullable="false" />
+    <Property Type="DateTime" Name="UpdatedOn" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BannedIpNetwork">
+    <Key>
+      <PropertyRef Name="BannedIpNetworkID" />
+    </Key>
+    <Property Type="Int32" Name="BannedIpNetworkID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="StartAddress" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EndAddress" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Comment" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="IpException" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="CreatedOn" Nullable="false" />
+    <Property Type="DateTime" Name="UpdatedOn" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CodeList">
+    <Key>
+      <PropertyRef Name="CodeID" />
+    </Key>
+    <Property Type="Int32" Name="CodeID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="CodeTypeID" Nullable="false" />
+    <Property Type="String" Name="CodeNO" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CodeName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="Deleted" Nullable="false" />
+    <Property Type="Int32" Name="DisplayOrder" Nullable="false" />
+    <NavigationProperty Name="SCodeType" Relationship="CRM.BusinessLogic.Data.FK_Nop_CodeList_Nop_CodeType" FromRole="Sys_CodeList" ToRole="Sys_CodeType" />
+  </EntityType>
+  <EntityType Name="CodeType">
+    <Key>
+      <PropertyRef Name="CodeTypeID" />
+    </Key>
+    <Property Type="Int32" Name="CodeTypeID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="ModuleID" Nullable="false" />
+    <Property Type="String" Name="CodeTypeCode" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CodeTypeName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="Deleted" Nullable="false" />
+    <Property Type="Int32" Name="DisplayOrder" Nullable="false" />
+    <NavigationProperty Name="SCodeLists" Relationship="CRM.BusinessLogic.Data.FK_Nop_CodeList_Nop_CodeType" FromRole="Sys_CodeType" ToRole="Sys_CodeList" />
+  </EntityType>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="CustomerID" />
+    </Key>
+    <Property Type="Int32" Name="CustomerID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Email" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Username" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PasswordHash" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SaltKey" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="IsAdmin" Nullable="false" />
+    <Property Type="Boolean" Name="IsGuest" Nullable="false" />
+    <Property Type="String" Name="Signature" Nullable="false" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="AdminComment" Nullable="false" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="Active" Nullable="false" />
+    <Property Type="Boolean" Name="Deleted" Nullable="false" />
+    <Property Type="DateTime" Name="RegistrationDate" Nullable="false" />
+    <Property Type="String" Name="TimeZoneID" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="AvatarID" Nullable="false" />
+    <Property Type="DateTime" Name="DateOfBirth" />
+    <NavigationProperty Name="SActivityLogs" Relationship="CRM.BusinessLogic.Data.FK_Nop_ActivityLog_Nop_Customer" FromRole="Sys_Customer" ToRole="Sys_ActivityLog" />
+    <NavigationProperty Name="SCustomerAttributes" Relationship="CRM.BusinessLogic.Data.FK_Nop_CustomerAttribute_Nop_Customer" FromRole="Sys_Customer" ToRole="Sys_CustomerAttribute" />
+    <NavigationProperty Name="SCustomerRoles" Relationship="CRM.BusinessLogic.Data.Sys_Customer_CustomerRole_Mapping" FromRole="Sys_Customer" ToRole="Sys_CustomerRole" />
+    <NavigationProperty Name="SPortalColumnNumbers" Relationship="CRM.BusinessLogic.Data.FK_Sys_PortalColumnNumber_Sys_Customer" FromRole="Customer" ToRole="Sys_PortalColumnNumber" />
+    <NavigationProperty Name="SCustomerInfo" Relationship="CRM.BusinessLogic.Data.FK_Sys_CustomerInfo_Sys_Customer" FromRole="Customer" ToRole="Sys_CustomerInfo" />
+    <NavigationProperty Name="SStaffPrivilegesCustomerRole" Relationship="CRM.BusinessLogic.Data.Sys_CustomerRole_StaffPrivileges_Mapping" FromRole="Customer" ToRole="CustomerRole" />
+  </EntityType>
+  <EntityType Name="CustomerAction">
+    <Key>
+      <PropertyRef Name="CustomerActionID" />
+    </Key>
+    <Property Type="Int32" Name="CustomerActionID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="ModuleID" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SystemKeyword" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Comment" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="DisplayOrder" Nullable="false" />
+    <NavigationProperty Name="SACLs" Relationship="CRM.BusinessLogic.Data.FK_Nop_ACL_Nop_CustomerAction" FromRole="Sys_CustomerAction" ToRole="Sys_ACL" />
+    <NavigationProperty Name="SModule" Relationship="CRM.BusinessLogic.Data.FK_Sys_CustomerAction_Sys_Module" FromRole="Sys_CustomerAction" ToRole="Sys_Module" />
+  </EntityType>
+  <EntityType Name="CustomerAttribute">
+    <Key>
+      <PropertyRef Name="CustomerAttributeId" />
+    </Key>
+    <Property Type="Int32" Name="CustomerAttributeId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="CustomerId" Nullable="false" />
+    <Property Type="String" Name="Key" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Value" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="SCustomer" Relationship="CRM.BusinessLogic.Data.FK_Nop_CustomerAttribute_Nop_Customer" FromRole="Sys_CustomerAttribute" ToRole="Sys_Customer" />
+  </EntityType>
+  <EntityType Name="CustomerRole">
+    <Key>
+      <PropertyRef Name="CustomerRoleID" />
+    </Key>
+    <Property Type="Int32" Name="CustomerRoleID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Code" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="ParentCustomerRoleID" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="Active" Nullable="false" />
+    <Property Type="Boolean" Name="Deleted" Nullable="false" />
+    <Property Type="String" Name="Description" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="CreateStaff" Nullable="false" />
+    <Property Type="DateTime" Name="CreateDate" Nullable="false" />
+    <NavigationProperty Name="SACLs" Relationship="CRM.BusinessLogic.Data.FK_Nop_ACL_Nop_CustomerRole" FromRole="Sys_CustomerRole" ToRole="Sys_ACL" />
+    <NavigationProperty Name="SACLModules" Relationship="CRM.BusinessLogic.Data.FK_Nop_ACLPerObject_Nop_CustomerRole" FromRole="Sys_CustomerRole" ToRole="Sys_ACLModule" />
+    <NavigationProperty Name="SCustomers" Relationship="CRM.BusinessLogic.Data.Sys_Customer_CustomerRole_Mapping" FromRole="Sys_CustomerRole" ToRole="Sys_Customer" />
+    <NavigationProperty Name="SCustomerRoleStaffPrivileges" Relationship="CRM.BusinessLogic.Data.Sys_CustomerRole_StaffPrivileges_Mapping" FromRole="CustomerRole" ToRole="Customer" />
+    <NavigationProperty Name="SDepartments" Relationship="CRM.BusinessLogic.Data.Sys_Department_CustomerRole_Mapping" FromRole="CustomerRole" ToRole="Department" />
+  </EntityType>
+  <EntityType Name="CustomerSession">
+    <Key>
+      <PropertyRef Name="CustomerSessionGUID" />
+    </Key>
+    <Property Type="Guid" Name="CustomerSessionGUID" Nullable="false" />
+    <Property Type="Int32" Name="CustomerID" Nullable="false" />
+    <Property Type="DateTime" Name="LogTime" Nullable="false" />
+    <Property Type="DateTime" Name="LastAccessed" Nullable="false" />
+    <Property Type="Boolean" Name="IsExpired" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Department">
+    <Key>
+      <PropertyRef Name="DepartmentID" />
+    </Key>
+    <Property Type="Int32" Name="DepartmentID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="ParentID" />
+    <Property Type="Int32" Name="EnterpriseID" Nullable="false" />
+    <Property Type="String" Name="DepCode" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DepName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="DepType" />
+    <Property Type="String" Name="Label" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="DepManagerID" Nullable="false" />
+    <Property Type="String" Name="Address" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tel" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="Published" Nullable="false" />
+    <Property Type="Boolean" Name="Deleted" Nullable="false" />
+    <Property Type="Int32" Name="DisplayOrder" Nullable="false" />
+    <Property Type="String" Name="Remark" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="AddUserId" />
+    <Property Type="String" Name="AddTime" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="EditUserId" />
+    <Property Type="String" Name="EditTime" MaxLength="20" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="SEnterprise" Relationship="CRM.BusinessLogic.Data.FK_Nop_Department_Nop_Department" FromRole="Sys_Department" ToRole="Sys_Enterprise" />
+    <NavigationProperty Name="SCustomerInfos" Relationship="CRM.BusinessLogic.Data.FK_Sys_CustomerInfo_Sys_Department" FromRole="Department" ToRole="Sys_CustomerInfo" />
+    <NavigationProperty Name="SCustomerRoles" Relationship="CRM.BusinessLogic.Data.Sys_Department_CustomerRole_Mapping" FromRole="Department" ToRole="CustomerRole" />
+  </EntityType>
+  <EntityType Name="Enterprise">
+    <Key>
+      <PropertyRef Name="EntId" />
+    </Key>
+    <Property Type="Int32" Name="EntId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="EntName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EntTel" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EntFax" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EntAddress" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EntZip" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EntWebSite" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EntEmail" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EntBank" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EntBankAccount" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="AddUserId" Nullable="false" />
+    <Property Type="String" Name="AddTime" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="Published" Nullable="false" />
+    <Property Type="Boolean" Name="Deleted" Nullable="false" />
+    <Property Type="Int32" Name="DisplayOrder" Nullable="false" />
+    <NavigationProperty Name="SDepartments" Relationship="CRM.BusinessLogic.Data.FK_Nop_Department_Nop_Department" FromRole="Sys_Enterprise" ToRole="Sys_Department" />
+  </EntityType>
+  <EntityType Name="Log">
+    <Key>
+      <PropertyRef Name="LogID" />
+    </Key>
+    <Property Type="Int32" Name="LogID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="LogTypeID" Nullable="false" />
+    <Property Type="Int32" Name="Severity" Nullable="false" />
+    <Property Type="String" Name="Message" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Exception" Nullable="false" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="IPAddress" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="CustomerID" Nullable="false" />
+    <Property Type="String" Name="PageURL" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ReferrerURL" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="CreatedOn" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Module">
+    <Key>
+      <PropertyRef Name="ModuleID" />
+    </Key>
+    <Property Type="Int32" Name="ModuleID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="ParentID" />
+    <Property Type="String" Name="ModuleName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ModuleCode" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="isTarget" Nullable="false" />
+    <Property Type="String" Name="href" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="Expand" Nullable="false" />
+    <Property Type="Boolean" Name="Published" Nullable="false" />
+    <Property Type="Boolean" Name="Deleted" Nullable="false" />
+    <Property Type="Int32" Name="DisplayOrder" Nullable="false" />
+    <Property Type="String" Name="iconCls" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="AppIconCls" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="SCustomerActions" Relationship="CRM.BusinessLogic.Data.FK_Sys_CustomerAction_Sys_Module" FromRole="Sys_Module" ToRole="Sys_CustomerAction" />
+  </EntityType>
+  <EntityType Name="Notice">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Title" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="DateTime" Nullable="false" />
+    <Property Type="String" Name="Promulgator" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="StartTime" Nullable="false" />
+    <Property Type="Boolean" Name="Published" Nullable="false" />
+    <Property Type="String" Name="Description" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Picture">
+    <Key>
+      <PropertyRef Name="PictureID" />
+    </Key>
+    <Property Type="Int32" Name="PictureID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Binary" Name="PictureBinary" Nullable="false" MaxLength="Max" FixedLength="false" />
+    <Property Type="Boolean" Name="IsNew" Nullable="false" />
+    <Property Type="String" Name="MimeType" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Setting">
+    <Key>
+      <PropertyRef Name="SettingID" />
+    </Key>
+    <Property Type="Int32" Name="SettingID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Value" Nullable="false" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Description" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK_Nop_ACL_Nop_CustomerAction">
+    <End Type="CRM.BusinessLogic.Data.CustomerAction" Role="Sys_CustomerAction" Multiplicity="1" />
+    <End Type="CRM.BusinessLogic.Data.ACL" Role="Sys_ACL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sys_CustomerAction">
+        <PropertyRef Name="CustomerActionID" />
+      </Principal>
+      <Dependent Role="Sys_ACL">
+        <PropertyRef Name="CustomerActionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Nop_ACL_Nop_CustomerRole">
+    <End Type="CRM.BusinessLogic.Data.CustomerRole" Role="Sys_CustomerRole" Multiplicity="1" />
+    <End Type="CRM.BusinessLogic.Data.ACL" Role="Sys_ACL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sys_CustomerRole">
+        <PropertyRef Name="CustomerRoleID" />
+      </Principal>
+      <Dependent Role="Sys_ACL">
+        <PropertyRef Name="CustomerRoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Nop_ACLPerObject_Nop_CustomerRole">
+    <End Type="CRM.BusinessLogic.Data.CustomerRole" Role="Sys_CustomerRole" Multiplicity="1" />
+    <End Type="CRM.BusinessLogic.Data.ACLModule" Role="Sys_ACLModule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sys_CustomerRole">
+        <PropertyRef Name="CustomerRoleID" />
+      </Principal>
+      <Dependent Role="Sys_ACLModule">
+        <PropertyRef Name="CustomerRoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Nop_ActivityLog_Nop_ActivityLogType">
+    <End Type="CRM.BusinessLogic.Data.ActivityLogType" Role="Sys_ActivityLogType" Multiplicity="1" />
+    <End Type="CRM.BusinessLogic.Data.ActivityLog" Role="Sys_ActivityLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sys_ActivityLogType">
+        <PropertyRef Name="ActivityLogTypeID" />
+      </Principal>
+      <Dependent Role="Sys_ActivityLog">
+        <PropertyRef Name="ActivityLogTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Nop_ActivityLog_Nop_Customer">
+    <End Type="CRM.BusinessLogic.Data.Customer" Role="Sys_Customer" Multiplicity="1" />
+    <End Type="CRM.BusinessLogic.Data.ActivityLog" Role="Sys_ActivityLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sys_Customer">
+        <PropertyRef Name="CustomerID" />
+      </Principal>
+      <Dependent Role="Sys_ActivityLog">
+        <PropertyRef Name="CustomerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Nop_CodeList_Nop_CodeType">
+    <End Type="CRM.BusinessLogic.Data.CodeType" Role="Sys_CodeType" Multiplicity="1" />
+    <End Type="CRM.BusinessLogic.Data.CodeList" Role="Sys_CodeList" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sys_CodeType">
+        <PropertyRef Name="CodeTypeID" />
+      </Principal>
+      <Dependent Role="Sys_CodeList">
+        <PropertyRef Name="CodeTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Nop_CustomerAttribute_Nop_Customer">
+    <End Type="CRM.BusinessLogic.Data.Customer" Role="Sys_Customer" Multiplicity="1" />
+    <End Type="CRM.BusinessLogic.Data.CustomerAttribute" Role="Sys_CustomerAttribute" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sys_Customer">
+        <PropertyRef Name="CustomerID" />
+      </Principal>
+      <Dependent Role="Sys_CustomerAttribute">
+        <PropertyRef Name="CustomerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sys_CustomerAction_Sys_Module">
+    <End Type="CRM.BusinessLogic.Data.Module" Role="Sys_Module" Multiplicity="1" />
+    <End Type="CRM.BusinessLogic.Data.CustomerAction" Role="Sys_CustomerAction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sys_Module">
+        <PropertyRef Name="ModuleID" />
+      </Principal>
+      <Dependent Role="Sys_CustomerAction">
+        <PropertyRef Name="ModuleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Nop_Department_Nop_Department">
+    <End Type="CRM.BusinessLogic.Data.Enterprise" Role="Sys_Enterprise" Multiplicity="1" />
+    <End Type="CRM.BusinessLogic.Data.Department" Role="Sys_Department" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sys_Enterprise">
+        <PropertyRef Name="EntId" />
+      </Principal>
+      <Dependent Role="Sys_Department">
+        <PropertyRef Name="EnterpriseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Sys_Customer_CustomerRole_Mapping">
+    <End Type="CRM.BusinessLogic.Data.Customer" Role="Sys_Customer" Multiplicity="*" />
+    <End Type="CRM.BusinessLogic.Data.CustomerRole" Role="Sys_CustomerRole" Multiplicity="*" />
+  </Association>
+  <EntityType Name="Portal">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Url" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="iconCls" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="Created" Nullable="false" />
+    <Property Type="Int32" Name="CreatorID" Nullable="false" />
+    <NavigationProperty Name="SPortalColumns" Relationship="CRM.BusinessLogic.Data.FK_Sys_PortalColumn_Sys_Portal" FromRole="Sys_Portal" ToRole="Sys_PortalColumn" />
+  </EntityType>
+  <EntityType Name="PortalColumn">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="ColumnNumberID" Nullable="false" />
+    <Property Type="Int32" Name="PortalID" Nullable="false" />
+    <Property Type="Int32" Name="IsExpand" Nullable="false" />
+    <Property Type="Int32" Name="SortIndex" Nullable="false" />
+    <NavigationProperty Name="SPortal" Relationship="CRM.BusinessLogic.Data.FK_Sys_PortalColumn_Sys_Portal" FromRole="Sys_PortalColumn" ToRole="Sys_Portal" />
+    <NavigationProperty Name="SPortalColumnNumber" Relationship="CRM.BusinessLogic.Data.FK_Sys_PortalColumn_Sys_PortalColumnNumber" FromRole="Sys_PortalColumn" ToRole="Sys_PortalColumnNumber" />
+  </EntityType>
+  <EntityType Name="PortalColumnNumber">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="CustomerID" Nullable="false" />
+    <Property Type="Decimal" Name="Width" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="Int32" Name="Display" Nullable="false" />
+    <NavigationProperty Name="SCustomer" Relationship="CRM.BusinessLogic.Data.FK_Sys_PortalColumnNumber_Sys_Customer" FromRole="Sys_PortalColumnNumber" ToRole="Customer" />
+    <NavigationProperty Name="SPortalColumns" Relationship="CRM.BusinessLogic.Data.FK_Sys_PortalColumn_Sys_PortalColumnNumber" FromRole="Sys_PortalColumnNumber" ToRole="Sys_PortalColumn" />
+  </EntityType>
+  <Association Name="FK_Sys_PortalColumnNumber_Sys_Customer">
+    <End Type="CRM.BusinessLogic.Data.Customer" Role="Customer" Multiplicity="1" />
+    <End Type="CRM.BusinessLogic.Data.PortalColumnNumber" Role="Sys_PortalColumnNumber" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="CustomerID" />
+      </Principal>
+      <Dependent Role="Sys_PortalColumnNumber">
+        <PropertyRef Name="CustomerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sys_PortalColumn_Sys_Portal">
+    <End Type="CRM.BusinessLogic.Data.Portal" Role="Sys_Portal" Multiplicity="1" />
+    <End Type="CRM.BusinessLogic.Data.PortalColumn" Role="Sys_PortalColumn" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sys_Portal">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Sys_PortalColumn">
+        <PropertyRef Name="PortalID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sys_PortalColumn_Sys_PortalColumnNumber">
+    <End Type="CRM.BusinessLogic.Data.PortalColumnNumber" Role="Sys_PortalColumnNumber" Multiplicity="1" />
+    <End Type="CRM.BusinessLogic.Data.PortalColumn" Role="Sys_PortalColumn" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sys_PortalColumnNumber">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Sys_PortalColumn">
+        <PropertyRef Name="ColumnNumberID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="CustomerInfo">
+    <Key>
+      <PropertyRef Name="CustomerID" />
+    </Key>
+    <Property Type="Int32" Name="CustomerID" Nullable="false" />
+    <Property Type="Int32" Name="DepartmentID" Nullable="false" />
+    <Property Type="String" Name="JobNumber" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FullName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="GenderID" Nullable="false" />
+    <Property Type="Int32" Name="NationalityID" Nullable="false" />
+    <Property Type="Int32" Name="AnimalID" Nullable="false" />
+    <Property Type="String" Name="RegisteredResidence" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="Birthday" />
+    <Property Type="Int32" Name="MarriageID" />
+    <Property Type="Int32" Name="BloodTypeID" Nullable="false" />
+    <Property Type="Int32" Name="PoliticalStatusID" />
+    <Property Type="Int32" Name="Stature" Nullable="false" />
+    <Property Type="Boolean" Name="Childbearing" Nullable="false" />
+    <Property Type="Int32" Name="CustomerStatusID" Nullable="false" />
+    <Property Type="Boolean" Name="Deleted" Nullable="false" />
+    <Property Type="Boolean" Name="Published" Nullable="false" />
+    <Property Type="Int32" Name="DisplayOrder" Nullable="false" />
+    <Property Type="DateTime" Name="Created" />
+    <Property Type="Int32" Name="CreatorID" />
+    <NavigationProperty Name="SCustomer" Relationship="CRM.BusinessLogic.Data.FK_Sys_CustomerInfo_Sys_Customer" FromRole="Sys_CustomerInfo" ToRole="Customer" />
+    <NavigationProperty Name="SDepartment" Relationship="CRM.BusinessLogic.Data.FK_Sys_CustomerInfo_Sys_Department" FromRole="Sys_CustomerInfo" ToRole="Department" />
+    <NavigationProperty Name="SBulletins" Relationship="CRM.BusinessLogic.Data.Sys_Bulletin_CusotmerMapping" FromRole="CustomerInfo" ToRole="Sys_Bulletin" />
+  </EntityType>
+  <Association Name="FK_Sys_CustomerInfo_Sys_Customer">
+    <End Type="CRM.BusinessLogic.Data.Customer" Role="Customer" Multiplicity="1" />
+    <End Type="CRM.BusinessLogic.Data.CustomerInfo" Role="Sys_CustomerInfo" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="CustomerID" />
+      </Principal>
+      <Dependent Role="Sys_CustomerInfo">
+        <PropertyRef Name="CustomerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sys_CustomerInfo_Sys_Department">
+    <End Type="CRM.BusinessLogic.Data.Department" Role="Department" Multiplicity="1" />
+    <End Type="CRM.BusinessLogic.Data.CustomerInfo" Role="Sys_CustomerInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="DepartmentID" />
+      </Principal>
+      <Dependent Role="Sys_CustomerInfo">
+        <PropertyRef Name="DepartmentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="UploadFile">
+    <Key>
+      <PropertyRef Name="UploadFileID" />
+    </Key>
+    <Property Type="Int32" Name="UploadFileID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Guid" Name="TaggantID" Nullable="false" />
+    <Property Type="Int32" Name="ObjectID" Nullable="false" />
+    <Property Type="String" Name="TableName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FullName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Url" Nullable="false" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="Created" Nullable="false" />
+    <Property Type="Int32" Name="CreatorID" Nullable="false" />
+  </EntityType>
+  <Association Name="Sys_CustomerRole_StaffPrivileges_Mapping">
+    <End Type="CRM.BusinessLogic.Data.Customer" Role="Customer" Multiplicity="*" />
+    <End Type="CRM.BusinessLogic.Data.CustomerRole" Role="CustomerRole" Multiplicity="*" />
+  </Association>
+  <ComplexType Name="GetBUMyContract_Result">
+    <Property Type="String" Name="Url" Nullable="false" MaxLength="256" />
+    <Property Type="Int32" Name="ClientID" Nullable="false" />
+    <Property Type="Int32" Name="ContractID" Nullable="false" />
+    <Property Type="String" Name="MasterWangNo" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="StoreName" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="SectorID" Nullable="false" />
+    <Property Type="Int32" Name="CreditRatingID" Nullable="false" />
+    <Property Type="Int32" Name="CusSourceID" Nullable="false" />
+    <Property Type="String" Name="ContractCode" Nullable="false" MaxLength="50" />
+    <Property Type="Decimal" Name="Amount" Nullable="false" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="HavePayAmount" Nullable="false" Precision="18" Scale="4" />
+    <Property Type="Int32" Name="ContractStatusID" Nullable="false" />
+    <Property Type="Boolean" Name="Published" Nullable="true" />
+    <Property Type="DateTime" Name="ContractDate" Nullable="false" Precision="16" />
+    <Property Type="DateTime" Name="ServiceStartTime" Nullable="false" Precision="16" />
+    <Property Type="DateTime" Name="ServiceEndTime" Nullable="false" Precision="16" />
+    <Property Type="Int32" Name="CustomerID" Nullable="false" />
+    <Property Type="Int32" Name="AMCustomerID" Nullable="true" />
+    <Property Type="Int32" Name="AECustomerID" Nullable="true" />
+    <Property Type="String" Name="AMCustomerName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="AECustomerName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="SectorName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CreditRatingName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CusSourceName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CustomerName" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="GetBUContractList_Result">
+    <Property Type="String" Name="Url" Nullable="false" MaxLength="256" />
+    <Property Type="Int32" Name="ClientID" Nullable="false" />
+    <Property Type="Int32" Name="ContractID" Nullable="false" />
+    <Property Type="String" Name="MasterWangNo" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="StoreName" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="SectorID" Nullable="false" />
+    <Property Type="Int32" Name="CreditRatingID" Nullable="false" />
+    <Property Type="Int32" Name="CusSourceID" Nullable="false" />
+    <Property Type="String" Name="ContractCode" Nullable="false" MaxLength="50" />
+    <Property Type="Decimal" Name="Amount" Nullable="false" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="HavePayAmount" Nullable="false" Precision="18" Scale="4" />
+    <Property Type="Int32" Name="ContractStatusID" Nullable="false" />
+    <Property Type="Boolean" Name="Published" Nullable="true" />
+    <Property Type="DateTime" Name="ContractDate" Nullable="false" Precision="16" />
+    <Property Type="DateTime" Name="ServiceStartTime" Nullable="false" Precision="16" />
+    <Property Type="DateTime" Name="ServiceEndTime" Nullable="false" Precision="16" />
+    <Property Type="Int32" Name="CustomerID" Nullable="false" />
+    <Property Type="Int32" Name="AMCustomerID" Nullable="true" />
+    <Property Type="Int32" Name="AECustomerID" Nullable="true" />
+    <Property Type="String" Name="AMCustomerName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="AECustomerName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="SectorName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CreditRatingName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CusSourceName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CustomerName" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="SearchMonBusAnalysisReport_Result">
+    <Property Type="String" Name="Date" Nullable="true" MaxLength="7" />
+    <Property Type="Int32" Name="ConNUm" Nullable="true" />
+    <Property Type="Decimal" Name="Amount" Nullable="false" Precision="38" Scale="4" />
+  </ComplexType>
+  <ComplexType Name="GetAgencyAccountAllot_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="Int32" Name="AgentAccountID" Nullable="true" />
+    <Property Type="Int32" Name="ClientID" Nullable="true" />
+    <Property Type="String" Name="AgentAccountName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="MasterWangNo" Nullable="true" MaxLength="200" />
+    <Property Type="Int32" Name="Enabled" Nullable="true" />
+    <Property Type="Int32" Name="CreateStaff" Nullable="true" />
+    <Property Type="DateTime" Name="CreateDate" Nullable="true" Precision="16" />
+    <Property Type="String" Name="AEManager" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <Association Name="Sys_Department_CustomerRole_Mapping">
+    <End Type="CRM.BusinessLogic.Data.CustomerRole" Role="CustomerRole" Multiplicity="*" />
+    <End Type="CRM.BusinessLogic.Data.Department" Role="Department" Multiplicity="*" />
+  </Association>
+  <ComplexType Name="CRMBUTarget1_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Date" Nullable="true" MaxLength="7" />
+    <Property Type="Int32" Name="EYear" Nullable="true" />
+    <Property Type="Int32" Name="Emonth" Nullable="true" />
+    <Property Type="Decimal" Name="HaveAmount" Nullable="false" Precision="38" Scale="4" />
+    <Property Type="String" Name="CompletionRate" Nullable="true" MaxLength="31" />
+    <Property Type="Int32" Name="ConNUm" Nullable="false" />
+    <Property Type="String" Name="CusCompletionRate" Nullable="true" MaxLength="31" />
+    <Property Type="Decimal" Name="AVCuPrice" Nullable="true" Precision="38" Scale="6" />
+    <Property Type="Int32" Name="LinkCusNum" Nullable="true" />
+    <Property Type="Int32" Name="IntentionCusNum" Nullable="true" />
+    <Property Type="Int32" Name="NewCusNum" Nullable="true" />
+    <Property Type="Decimal" Name="TargetSales" Nullable="true" Precision="19" />
+    <Property Type="Int64" Name="ROWNUM" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="SearchSalesmanAnalysisReport_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="Int32" Name="CustomerID" Nullable="false" />
+    <Property Type="String" Name="SalesmanName" Nullable="false" MaxLength="50" />
+    <Property Type="Decimal" Name="Amount" Nullable="false" Precision="19" />
+    <Property Type="Int32" Name="SalesmanId" Nullable="false" />
+    <Property Type="Decimal" Name="HaveAmount" Nullable="false" Precision="38" Scale="4" />
+    <Property Type="Int32" Name="ContractNum" Nullable="false" />
+    <Property Type="Decimal" Name="ContractAmount" Nullable="false" Precision="38" Scale="4" />
+    <Property Type="String" Name="CompletionRate" Nullable="false" MaxLength="31" />
+    <Property Type="String" Name="lblDate" Nullable="true" MaxLength="7" />
+    <Property Type="DateTime" Name="Date" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="SearchDisMoSaReReport_Result">
+    <Property Type="String" Name="SalesmanName" Nullable="false" MaxLength="50" />
+    <Property Type="Decimal" Name="Amount" Nullable="false" Precision="19" />
+    <Property Type="Decimal" Name="HaveAmount" Nullable="false" Precision="38" Scale="4" />
+    <Property Type="Int32" Name="ContractNum" Nullable="false" />
+    <Property Type="Decimal" Name="ContractAmount" Nullable="false" Precision="38" Scale="4" />
+    <Property Type="String" Name="CompletionRate" Nullable="false" MaxLength="31" />
+  </ComplexType>
+  <ComplexType Name="SearchTargetDetails_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="SalesmanName" Nullable="false" MaxLength="50" />
+    <Property Type="Decimal" Name="Amount" Nullable="false" Precision="19" />
+    <Property Type="Int32" Name="SalesmanId" Nullable="false" />
+    <Property Type="Decimal" Name="HaveAmount" Nullable="false" Precision="38" Scale="4" />
+    <Property Type="Int32" Name="ContractNum" Nullable="false" />
+    <Property Type="Decimal" Name="ContractAmount" Nullable="false" Precision="38" Scale="4" />
+    <Property Type="Decimal" Name="ClientUnit" Nullable="true" Precision="38" Scale="6" />
+    <Property Type="String" Name="CompletionRate" Nullable="false" MaxLength="31" />
+    <Property Type="Int64" Name="ROWNUM" Nullable="true" />
+  </ComplexType>
+  <EntityType Name="Sys_AlertSettings">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Rmdname" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Remarks" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Spare1" />
+    <Property Type="String" Name="Spare2" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Sys_AlertTimeSet">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="CustomerID" />
+    <Property Type="Int32" Name="AlertID" />
+    <Property Type="Int32" Name="Cycletime" />
+    <Property Type="String" Name="Spare1" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Spare2" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Sys_StarSet">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="StarName" />
+      <PropertyRef Name="StarSrc" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="StarName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="StarSrc" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Remarks" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Sys_CustomerStar">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="CustomerID" Nullable="false" />
+    <Property Type="Decimal" Name="StarLv" Nullable="false" Precision="18" Scale="1" />
+    <Property Type="Int32" Name="ServerCount" />
+    <Property Type="Boolean" Name="IsNew" />
+    <Property Type="Int32" Name="SetID" Nullable="false" />
+    <Property Type="DateTime" Name="SetDate" Nullable="false" />
+    <Property Type="String" Name="Spare1" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Spare2" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <ComplexType Name="GetIntegrationMyContract_Result">
+    <Property Type="String" Name="Url" Nullable="false" />
+    <Property Type="Int32" Name="ClientID" Nullable="false" />
+    <Property Type="Int32" Name="ContractID" Nullable="false" />
+    <Property Type="String" Name="MasterWangNo" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="StoreName" Nullable="false" MaxLength="200" />
+    <Property Type="Int32" Name="SectorID" Nullable="false" />
+    <Property Type="Int32" Name="CreditRatingID" Nullable="false" />
+    <Property Type="Int32" Name="CusSourceID" Nullable="false" />
+    <Property Type="String" Name="ContractCode" Nullable="false" MaxLength="50" />
+    <Property Type="Decimal" Name="Amount" Nullable="false" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="HavePayAmount" Nullable="false" Precision="18" Scale="4" />
+    <Property Type="Int32" Name="ContractStatusID" Nullable="false" />
+    <Property Type="Boolean" Name="Published" Nullable="true" />
+    <Property Type="DateTime" Name="ContractDate" Nullable="false" Precision="16" />
+    <Property Type="DateTime" Name="ServiceStartTime" Nullable="false" Precision="16" />
+    <Property Type="DateTime" Name="ServiceEndTime" Nullable="false" Precision="16" />
+    <Property Type="Int32" Name="CustomerID" Nullable="false" />
+    <Property Type="Int32" Name="OperationCommissionerID" Nullable="true" />
+    <Property Type="Int32" Name="CustomerManagerID" Nullable="true" />
+    <Property Type="Int32" Name="CopywriterCommissionerID" Nullable="true" />
+    <Property Type="String" Name="OperationCommissioner" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CustomerManager" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CopywriterCommissioner" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="SectorName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CreditRatingName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CustomerName" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <EntityType Name="TableUpdateLog">
+    <Key>
+      <PropertyRef Name="LogID" />
+    </Key>
+    <Property Type="Int32" Name="LogID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="RequestID" Nullable="false" />
+    <Property Type="String" Name="FieldName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="OrginValue" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NewValue" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="OperatorID" Nullable="false" />
+    <Property Type="DateTime" Name="UpdateTime" Nullable="false" />
+    <Property Type="String" Name="TableName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Bulletin">
+    <Key>
+      <PropertyRef Name="BulletinID" />
+    </Key>
+    <Property Type="Int32" Name="BulletinID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="AnnouncementTypeId" />
+    <Property Type="String" Name="BulletinCode" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="BulletinTitle" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="BulletinTypeID" />
+    <Property Type="Int32" Name="PriorTypeID" />
+    <Property Type="Int32" Name="UnitNameId" />
+    <Property Type="DateTime" Name="EffectiveDate" />
+    <Property Type="DateTime" Name="InvalidDate" />
+    <Property Type="DateTime" Name="ReleasedDate" />
+    <Property Type="Int32" Name="BulletinStatus" />
+    <Property Type="String" Name="Approval" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Remark" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="Deleted" />
+    <Property Type="Boolean" Name="Published" />
+    <Property Type="Int32" Name="DisplayOrder" />
+    <Property Type="DateTime" Name="Created" Nullable="false" />
+    <Property Type="Int32" Name="CreatorID" Nullable="false" />
+    <Property Type="Int32" Name="UpdatorID" Nullable="false" />
+    <Property Type="DateTime" Name="UpdateTime" />
+    <NavigationProperty Name="SCustomerInfo" Relationship="CRM.BusinessLogic.Data.Sys_Bulletin_CusotmerMapping" FromRole="Sys_Bulletin" ToRole="CustomerInfo" />
+  </EntityType>
+  <Association Name="Sys_Bulletin_CusotmerMapping">
+    <End Type="CRM.BusinessLogic.Data.Bulletin" Role="Sys_Bulletin" Multiplicity="*" />
+    <End Type="CRM.BusinessLogic.Data.CustomerInfo" Role="CustomerInfo" Multiplicity="*" />
+  </Association>
+  <EntityType Name="BXRepairInformation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="RepairType" />
+    <Property Type="Int32" Name="UnitNameId" />
+    <Property Type="String" Name="RepairProject" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Quantity" />
+    <Property Type="Int32" Name="DegreeId" />
+    <Property Type="String" Name="RepairMan" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Location" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Contact" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="WarrantyWayId" />
+    <Property Type="Int32" Name="StatusId" />
+    <Property Type="DateTime" Name="NoAcceptanceTime" />
+    <Property Type="String" Name="MaintenanceMan" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="AcceptanceTime" />
+    <Property Type="Int32" Name="NoMaintenanceReasonsId" />
+    <Property Type="DateTime" Name="NoRepairsTime" />
+    <Property Type="DateTime" Name="RepairTime" />
+    <Property Type="Boolean" Name="IsAudit" />
+    <Property Type="Boolean" Name="IsDelete" />
+    <Property Type="Int32" Name="CreatorID" />
+    <Property Type="DateTime" Name="CreateTime" />
+    <Property Type="Int32" Name="UpdatorID" />
+    <Property Type="DateTime" Name="UpdateTime" />
+  </EntityType>
+</Schema>

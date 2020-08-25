@@ -1,0 +1,485 @@
+﻿body, html
+{
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    font-family: 微软雅黑 Verdana Arial;
+    text-align: left;
+}
+.ajax__tab_tab
+{
+    font-size: 14px;
+    font-family: 微软雅黑 Verdana Arial;
+}
+img
+{
+    border: 0;
+}
+ul, li, div
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+table, tr, td
+{
+    border-collapse: collapse;
+}
+.detailTable td,.detailTable th,.detailTable caption
+{
+    padding:2px 4px;
+}
+a
+{
+    color: #000000;
+    text-decoration: none;
+}
+a:hover
+{
+    color: #cc0000;
+    text-decoration: none;
+}
+.clear
+{
+    clear: both;
+}
+/*蓝色*/
+.bluebox
+{
+    margin: 0 auto;
+    width: 100%;
+}
+.size
+{
+    float: left;
+    width: 100%;
+}
+.tdleft
+{
+    float: left;
+    width: 70%;
+}
+.bluebox .tople
+{
+    float: left;
+    width: 99%;
+    border: 1px solid #bbd8ed;
+    margin-bottom: 5px;
+    display: inline;
+}
+.bluebox .lefttit
+{
+    float: left;
+    width: 100%;
+    background: url(../../images/bline.gif) repeat-x left top;
+    height: 20px;
+    line-height: 20px;
+}
+.lefttit span
+{
+    float: left;
+    width: 96%;
+    text-indent: 10px;
+    font-weight: bolder;
+}
+.bluebox .lefttit a
+{
+    float: left;
+    width: 2%;
+    background: url(../../images/xiab.gif) no-repeat left center;
+}
+.bluebox .lefttit a:hover
+{
+    float: left;
+    width: 2%;
+    background: url(../../images/shangb.gif) no-repeat left center;
+}
+.lefcont
+{
+    float: left;
+    width: 100%;
+    padding-bottom: 5px;
+}
+.lefcont ul
+{
+    float: left;
+    width: 95%;
+    background: url(../../images/iconhei.gif) no-repeat 5px center;
+    margin: 7px 0;
+    margin-left: 5px;
+    display: inline;
+}
+.bluebox .lefcont ul span
+{
+    float: left;
+    width: 40%;
+    color: #1e50a2;
+    text-indent: 15px;
+    font-size: 12px;
+    font-family: 微软雅黑;
+}
+.bluebox .lefcont ul span a
+{
+    width: 100%;
+    float: left;
+    color: #1e50a2;
+}
+
+.bluebox .lefcont ul a:hover
+{
+    float: left;
+    color: #cc0000;
+}
+
+.lefcont ul a
+{
+    float: left;
+    width: 57%;
+}
+.font1
+{
+    color: #1e50a2;
+}
+.font2
+{
+    color: #8f9093;
+}
+.font3
+{
+    color: #fe4801;
+}
+.bluebox .font4
+{
+    color: #0c67ff;
+}
+.tople table
+{
+    float: right;
+    width: 99%;
+}
+.tople table td
+{
+    line-height: 2.5em;
+}
+.tople table select
+{
+    width: 110px;
+    height: 22px;
+}
+#Select3
+{
+    width: 350px;
+}
+.tople table input
+{
+    width: 115px;
+    height: 16px;
+}
+.tdright
+{
+    float: left;
+    width: 29%;
+}
+.tople1
+{
+    float: left;
+    width: 99%;
+}
+.bluebox .topri1
+{
+    float: left;
+    width: 49%;
+    border: 1px solid #bbd8ed;
+    margin-bottom: 5px;
+    display: inline;
+}
+.bluebox .topri
+{
+    float: left;
+    width: 99%;
+    border: 1px solid #bbd8ed;
+    margin-bottom: 5px;
+    display: inline;
+}
+.bluebox .righttit
+{
+    float: left;
+    width: 100%;
+    background: url(../../images/bline.gif) repeat-x left top;
+    height: 20px;
+    line-height: 20px;
+}
+.righttit span
+{
+    float: left;
+    width: 81%;
+    text-indent: 11px;
+    font-weight: bolder;
+}
+.bluebox .righttit font
+{
+    float: left;
+    width: 12%;
+    color: #0c67ff;
+    font-size: 12px;
+    font-family: 微软雅黑;
+    text-align: center;
+}
+.bluebox .righttit a
+{
+    float: left;
+    width: 3%;
+    background: url(../../images/xiab.gif) no-repeat left center;
+}
+.bluebox .righttit a:hover
+{
+    float: left;
+    width: 3%;
+    background: url(../../images/shangb.gif) no-repeat left center;
+}
+
+.bluebox .righttit1
+{
+    float: left;
+    width: 100%;
+    background: url(../../images/bline.gif) repeat-x left top;
+    height: 20px;
+    line-height: 20px;
+}
+.righttit1 span
+{
+    float: left;
+    font-weight: bolder;
+    width: 40%;
+    text-indent: 15px;
+}
+.bluebox .righttit1 a
+{
+    float: right;
+    color: #0c67ff;
+    width: 13%;
+}
+.bluebox .righttit1 a:hover
+{
+    float: right;
+    color: #cc0000;
+}
+
+.rightcont
+{
+    float: left;
+    width: 100%;
+    padding-bottom: 3px;
+    display: inline;
+}
+.rightcont ul
+{
+    float: left;
+    width: 99%;
+    background: url(../../images/iconhei.gif) no-repeat 10px center;
+    line-height: 2.2em;
+}
+.rightcont ul a
+{
+    float: left;
+    width: 80%;
+    text-indent: 20px;
+}
+.rightcont2
+{
+    float: left;
+    width: 100%;
+    padding-bottom: 1px;
+    display: inline;
+    padding-top: 2px;
+}
+.rightcont2 ul
+{
+    float: left;
+    width: 95%;
+    background: url(../../images/iconhei.gif) no-repeat 10px center;
+    line-height: 2.2em;
+}
+.rightcont2 ul a
+{
+    float: left;
+    width: 100%;
+    text-indent: 20px;
+}
+.width
+{
+    float: left;
+    width: 100%;
+    padding-top: 2px;
+}
+.bluebox .navgation
+{
+    float: left;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #4e91ff;
+    height: 21px;
+}
+.navgation a
+{
+    float: left;
+    width: 82px;
+    height: 22px;
+    text-align: center;
+    text-decoration: none;
+    line-height: 22px;
+    margin-left: 3px;
+    display: inline;
+}
+.navgation a.ph_t2
+{
+    background: url(../../images/change2.gif) no-repeat;
+    border-bottom: none;
+    font-size: 12px;
+}
+.bluebox .navgation a.ph_t1
+{
+    background: url(../../images/change1.gif) no-repeat;
+    border-bottom: none;
+    font-size: 12px;
+    font-weight: bolder;
+}
+.subnav
+{
+    float: left;
+    width: 98%;
+    line-height: 1.8em;
+}
+#phtab31, #phtab32, #phtab33
+{
+    float: left;
+    width: 100%;
+    display: none;
+    z-index: 1;
+}
+.change
+{
+    float: left;
+    width: 100%;
+}
+.chale
+{
+    float: left;
+    width: 37%;
+    text-align: center;
+}
+.bluebox .chaxia
+{
+    float: left;
+    width: 98%;
+    border-top: 1px solid #4e91ff;
+    text-align: center;
+    margin-left: 10px;
+    line-height: 2.2em;
+    margin-top: 7px;
+    display: inline;
+}
+.pagess
+{
+    float: left;
+    width: 82%;
+    line-height: 1.5em;
+    padding: 5px 30px 10px 25px;
+}
+.notice
+{
+    text-indent: 15px;
+    border-bottom: dashed 1px #4e91ff;
+    color: #0090e0;
+    margin-left: 10px;
+    line-height: 20px;
+    padding-top: 10px;
+}
+
+
+.detailTable
+{
+	border-top-color: #C0C0C0;
+	border-left-color: #C0C0C0;
+	border-top-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-left-style: solid;
+}
+.detailTable tbody tr TD
+{
+	border-left-color: #C0C0C0;
+	border-right-color: #C0C0C0;
+	border-bottom-color: #C0C0C0;
+	border-left-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	word-break:break-all;
+}
+.detailTable tbody tr Th
+{
+	border-color: #C0C0C0;
+	border-width: 1px;
+	border-style: solid;
+	background-image: none;
+	background-attachment: scroll;
+	background-repeat: repeat;
+	background-position-x: 0%;
+	background-position-y: 0%;
+	background-color: rgb(238, 238, 238);
+}
+.detailTitle
+{
+	font-family: 仿宋;
+	font-size: 13pt;
+	font-style: italic;
+	font-weight: bold;
+}
+
+
+/*订单表详情*/
+.detailTableo
+{
+	border-top-color: #fff;
+	border-left-color: #fff;
+	border-top-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-left-style: solid;
+}
+.detailTableo tbody tr TD
+{
+	border-left-color: #fff;
+	border-right-color: #fff;
+	border-bottom-color: #fff;
+	border-left-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	word-break:break-all;
+}
+.detailTableo tbody tr Th
+{
+	border-color: #fff;
+	border-width: 1px;
+	border-style: solid;
+	background-image: none;
+	background-attachment: scroll;
+	background-repeat: repeat;
+	background-position-x: 0%;
+	background-position-y: 0%;
+	background-color: rgb(238, 238, 238);
+}
+
+.detailTable1
+{
+	border-color: #C0C0C0;
+	border-width: 1px;
+	border-style: solid;
+}
+
+
+

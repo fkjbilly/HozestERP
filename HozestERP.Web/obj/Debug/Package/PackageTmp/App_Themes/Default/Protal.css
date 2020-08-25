@@ -1,0 +1,157 @@
+﻿.foottable
+{
+	background-image: url(Image/foot_bg.gif);
+}
+.ProtalTitle
+{
+	font-weight: bold;
+	font-size: 18pt;
+	color: white;
+	text-align: right;
+}
+.Protalbg
+{
+	background-image: url(Image/protal_bg.gif);
+	background-color: White;
+	height: 49px;
+}
+
+.ProtalLogo
+{
+	width: 84px;
+	background-color: white;
+	background-image: url(Image/tb.gif);
+}
+.ProtalBar
+{
+	background-image: url(Image/protalbar.gif);
+	height: 29px;
+}
+
+.ProtalBarActive
+{
+	background-image: url(Image/ProtalBarActive.gif);
+	height: 29px;
+	width: 110px;
+}
+.LoginLeft
+{
+	width: 16px;
+	background-image: url(Image/index_1.gif);
+}
+
+.LoginTop
+{
+	width: 605;
+	height: 20px;
+	background-image: url(Image/index_2.gif);
+}
+.LoginRight
+{
+	width: 15px;
+	background-image: url(Image/index_3.gif);
+}
+.LoginBottom
+{
+	height: 13px;
+	background-image: url(Image/index_6.gif);
+}
+.LoginMiddle
+{
+	width: 605px;
+	height: 203px;
+	background-image: url(Image/index_4.gif);
+}
+.LoginBar
+{
+	height: 37px;
+	background-image: url(Image/LoginBar.gif);
+	text-align: center;
+	vertical-align: middle;
+}
+.Loginlbl
+{
+	color: #400201;
+	font-weight: bold;
+	width: 50px;
+}
+.LoginTable
+{
+	width: 636px;
+	margin: 0px auto;
+}
+.Loginbody
+{
+	margin-top: 0px;
+	margin-left: 0px;
+	overflow: hidden;
+	background-color: #eda7a7;
+}
+.LoginPwd
+{
+	color: #810805;
+	font-weight: bold;
+}
+/*门户顶*/
+.Top_down
+{
+	 text-align:center;
+	  vertical-align:top;
+	    height:57px;
+	   background-image: url(Image/Top_down.gif);
+	}
+.Top_d
+{ width:90%;
+  height:57px;
+   border:0px;
+    background-image: url(Image/Top_d.gif);
+	}
+.Top_left
+{
+	width:29px;
+	height:57px;
+	 background-image: url(Image/Top_left.gif);
+	}
+.Top_lie
+{
+	width:2px;
+	height:30px;
+	background-image: url(Image/Top_lie.gif);
+	}
+.Top_Login
+{
+	width:441px;
+	 height:57px;
+	 background-image: url(Image/Login.gif);
+	}
+	.Top_right
+	{
+		width:27px;
+		height:57px;
+		background-image: url(Image/Top_right.gif);
+		}
+.Top_down1
+{
+	height:26px;
+	vertical-align:bottom;
+	 background-image: url(Image/Top_down1.gif);
+	}
+	
+.Menu
+{
+	width:125px;
+	height:19px;
+	background-image: url(Image/Menu.gif);
+	}
+.Login_logo
+{
+	 width:210px;
+	 height:51px;
+	 background-image: url(Image/logo.gif);
+	}
+.Login_left
+{
+	height:164px;
+	width:207px;
+	background-image: url(Image/left_img.gif);
+	}

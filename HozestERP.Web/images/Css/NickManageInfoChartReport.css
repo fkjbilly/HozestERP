@@ -1,0 +1,9 @@
+ul,li{ margin:0px; padding:0px;}
+ul{ width:100%; height:100%;}
+li{ width:145px; float:left; border-left:1px solid #cfe4cf; border-bottom:1px solid #cfe4cf; height:30px; line-height:30px;}
+.titBar{background:url(../ManageProject/spr-2.gif) repeat-x 0 -75px;width:100%;height:31px;
+        border-top:1px #cfe4cf solid;border-bottom:1px #cfe4cf isold; margin-top:10px;}
+.condition{width:100%; margin-top:10px;clear:both;border:1px #e8e8e8 solid; height:30px; line-height:30px;}
+.config-option-table-btn{text-align:center; margin-top:10px;border:1px #e8e8e8 solid;}
+.dateInfo{ border-left:1px solid #cfe4cf; border-bottom:1px solid #cfe4cf; text-align:center;}
+

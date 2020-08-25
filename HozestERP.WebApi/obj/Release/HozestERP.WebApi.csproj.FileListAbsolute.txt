@@ -1,0 +1,2 @@
+F:\项目\和众电商ERP\trunk\HozestERP.WebApi\obj\Release\HozestERP.WebApi.csproj.App.config
+F:\项目\和众电商ERP\trunk\HozestERP.WebApi\obj\Release\HozestERP.WebApi.csprojResolveAssemblyReference.cache

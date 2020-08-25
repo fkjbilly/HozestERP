@@ -1,0 +1,994 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CRM.BusinessLogic.Data.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="CRMBusinessLogicDataStoreContainer">
+    <EntitySet Name="BX_RepairInformation" EntityType="CRM.BusinessLogic.Data.Store.BX_RepairInformation" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Sys_ACL" EntityType="CRM.BusinessLogic.Data.Store.Sys_ACL" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Sys_ACLModule" EntityType="CRM.BusinessLogic.Data.Store.Sys_ACLModule" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Sys_ActivityLog" EntityType="CRM.BusinessLogic.Data.Store.Sys_ActivityLog" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Sys_ActivityLogType" EntityType="CRM.BusinessLogic.Data.Store.Sys_ActivityLogType" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Sys_AlertSettings" EntityType="CRM.BusinessLogic.Data.Store.Sys_AlertSettings" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Sys_AlertTimeSet" EntityType="CRM.BusinessLogic.Data.Store.Sys_AlertTimeSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Sys_AreaCode" EntityType="CRM.BusinessLogic.Data.Store.Sys_AreaCode" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Sys_BannedIpAddress" EntityType="CRM.BusinessLogic.Data.Store.Sys_BannedIpAddress" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Sys_BannedIpNetwork" EntityType="CRM.BusinessLogic.Data.Store.Sys_BannedIpNetwork" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Sys_Bulletin" EntityType="CRM.BusinessLogic.Data.Store.Sys_Bulletin" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Sys_Bulletin_CusotmerMapping" EntityType="CRM.BusinessLogic.Data.Store.Sys_Bulletin_CusotmerMapping" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Sys_CodeList" EntityType="CRM.BusinessLogic.Data.Store.Sys_CodeList" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Sys_CodeType" EntityType="CRM.BusinessLogic.Data.Store.Sys_CodeType" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Sys_Customer" EntityType="CRM.BusinessLogic.Data.Store.Sys_Customer" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Sys_Customer_CustomerRole_Mapping" EntityType="CRM.BusinessLogic.Data.Store.Sys_Customer_CustomerRole_Mapping" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Sys_CustomerAction" EntityType="CRM.BusinessLogic.Data.Store.Sys_CustomerAction" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Sys_CustomerAttribute" EntityType="CRM.BusinessLogic.Data.Store.Sys_CustomerAttribute" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Sys_CustomerInfo" EntityType="CRM.BusinessLogic.Data.Store.Sys_CustomerInfo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Sys_CustomerRole" EntityType="CRM.BusinessLogic.Data.Store.Sys_CustomerRole" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Sys_CustomerRole_StaffPrivileges_Mapping" EntityType="CRM.BusinessLogic.Data.Store.Sys_CustomerRole_StaffPrivileges_Mapping" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Sys_CustomerSession" EntityType="CRM.BusinessLogic.Data.Store.Sys_CustomerSession" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Sys_CustomerStar" EntityType="CRM.BusinessLogic.Data.Store.Sys_CustomerStar" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Sys_Department" EntityType="CRM.BusinessLogic.Data.Store.Sys_Department" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Sys_Department_CustomerRole_Mapping" EntityType="CRM.BusinessLogic.Data.Store.Sys_Department_CustomerRole_Mapping" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Sys_Enterprise" EntityType="CRM.BusinessLogic.Data.Store.Sys_Enterprise" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Sys_Log" EntityType="CRM.BusinessLogic.Data.Store.Sys_Log" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Sys_Module" EntityType="CRM.BusinessLogic.Data.Store.Sys_Module" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Sys_Notice" EntityType="CRM.BusinessLogic.Data.Store.Sys_Notice" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Sys_Picture" EntityType="CRM.BusinessLogic.Data.Store.Sys_Picture" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Sys_Portal" EntityType="CRM.BusinessLogic.Data.Store.Sys_Portal" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Sys_PortalColumn" EntityType="CRM.BusinessLogic.Data.Store.Sys_PortalColumn" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Sys_PortalColumnNumber" EntityType="CRM.BusinessLogic.Data.Store.Sys_PortalColumnNumber" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Sys_Setting" EntityType="CRM.BusinessLogic.Data.Store.Sys_Setting" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Sys_StarSet" EntityType="CRM.BusinessLogic.Data.Store.Sys_StarSet" store:Type="Tables" store:Schema="dbo" store:Name="Sys_StarSet">
+      <DefiningQuery>SELECT 
+      [Sys_StarSet].[ID] AS [ID], 
+      [Sys_StarSet].[StarName] AS [StarName], 
+      [Sys_StarSet].[StarSrc] AS [StarSrc], 
+      [Sys_StarSet].[Remarks] AS [Remarks]
+      FROM [dbo].[Sys_StarSet] AS [Sys_StarSet]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Sys_UploadFile" EntityType="CRM.BusinessLogic.Data.Store.Sys_UploadFile" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Table_Update_Log" EntityType="CRM.BusinessLogic.Data.Store.Table_Update_Log" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_Nop_ACL_Nop_CustomerAction" Association="CRM.BusinessLogic.Data.Store.FK_Nop_ACL_Nop_CustomerAction">
+      <End Role="Sys_CustomerAction" EntitySet="Sys_CustomerAction" />
+      <End Role="Sys_ACL" EntitySet="Sys_ACL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Nop_ACL_Nop_CustomerRole" Association="CRM.BusinessLogic.Data.Store.FK_Nop_ACL_Nop_CustomerRole">
+      <End Role="Sys_CustomerRole" EntitySet="Sys_CustomerRole" />
+      <End Role="Sys_ACL" EntitySet="Sys_ACL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Nop_ACLPerObject_Nop_CustomerRole" Association="CRM.BusinessLogic.Data.Store.FK_Nop_ACLPerObject_Nop_CustomerRole">
+      <End Role="Sys_CustomerRole" EntitySet="Sys_CustomerRole" />
+      <End Role="Sys_ACLModule" EntitySet="Sys_ACLModule" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Nop_ActivityLog_Nop_ActivityLogType" Association="CRM.BusinessLogic.Data.Store.FK_Nop_ActivityLog_Nop_ActivityLogType">
+      <End Role="Sys_ActivityLogType" EntitySet="Sys_ActivityLogType" />
+      <End Role="Sys_ActivityLog" EntitySet="Sys_ActivityLog" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Nop_ActivityLog_Nop_Customer" Association="CRM.BusinessLogic.Data.Store.FK_Nop_ActivityLog_Nop_Customer">
+      <End Role="Sys_Customer" EntitySet="Sys_Customer" />
+      <End Role="Sys_ActivityLog" EntitySet="Sys_ActivityLog" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Nop_CodeList_Nop_CodeType" Association="CRM.BusinessLogic.Data.Store.FK_Nop_CodeList_Nop_CodeType">
+      <End Role="Sys_CodeType" EntitySet="Sys_CodeType" />
+      <End Role="Sys_CodeList" EntitySet="Sys_CodeList" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Nop_Customer_CustomerRole_Mapping_Nop_Customer" Association="CRM.BusinessLogic.Data.Store.FK_Nop_Customer_CustomerRole_Mapping_Nop_Customer">
+      <End Role="Sys_Customer" EntitySet="Sys_Customer" />
+      <End Role="Sys_Customer_CustomerRole_Mapping" EntitySet="Sys_Customer_CustomerRole_Mapping" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Nop_Customer_CustomerRole_Mapping_Nop_CustomerRole" Association="CRM.BusinessLogic.Data.Store.FK_Nop_Customer_CustomerRole_Mapping_Nop_CustomerRole">
+      <End Role="Sys_CustomerRole" EntitySet="Sys_CustomerRole" />
+      <End Role="Sys_Customer_CustomerRole_Mapping" EntitySet="Sys_Customer_CustomerRole_Mapping" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Nop_CustomerAttribute_Nop_Customer" Association="CRM.BusinessLogic.Data.Store.FK_Nop_CustomerAttribute_Nop_Customer">
+      <End Role="Sys_Customer" EntitySet="Sys_Customer" />
+      <End Role="Sys_CustomerAttribute" EntitySet="Sys_CustomerAttribute" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Nop_Department_CustomerRole_Mapping_Nop_CustomerRole" Association="CRM.BusinessLogic.Data.Store.FK_Nop_Department_CustomerRole_Mapping_Nop_CustomerRole">
+      <End Role="Sys_CustomerRole" EntitySet="Sys_CustomerRole" />
+      <End Role="Sys_Department_CustomerRole_Mapping" EntitySet="Sys_Department_CustomerRole_Mapping" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Nop_Department_CustomerRole_Mapping_Nop_Department" Association="CRM.BusinessLogic.Data.Store.FK_Nop_Department_CustomerRole_Mapping_Nop_Department">
+      <End Role="Sys_Department" EntitySet="Sys_Department" />
+      <End Role="Sys_Department_CustomerRole_Mapping" EntitySet="Sys_Department_CustomerRole_Mapping" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Nop_Department_Nop_Department" Association="CRM.BusinessLogic.Data.Store.FK_Nop_Department_Nop_Department">
+      <End Role="Sys_Enterprise" EntitySet="Sys_Enterprise" />
+      <End Role="Sys_Department" EntitySet="Sys_Department" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sys_Bulletin_CusotmerMapping_Sys_Bulletin" Association="CRM.BusinessLogic.Data.Store.FK_Sys_Bulletin_CusotmerMapping_Sys_Bulletin">
+      <End Role="Sys_Bulletin" EntitySet="Sys_Bulletin" />
+      <End Role="Sys_Bulletin_CusotmerMapping" EntitySet="Sys_Bulletin_CusotmerMapping" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sys_Bulletin_CusotmerMapping_Sys_CustomerInfo" Association="CRM.BusinessLogic.Data.Store.FK_Sys_Bulletin_CusotmerMapping_Sys_CustomerInfo">
+      <End Role="Sys_CustomerInfo" EntitySet="Sys_CustomerInfo" />
+      <End Role="Sys_Bulletin_CusotmerMapping" EntitySet="Sys_Bulletin_CusotmerMapping" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sys_CustomerAction_Sys_Module" Association="CRM.BusinessLogic.Data.Store.FK_Sys_CustomerAction_Sys_Module">
+      <End Role="Sys_Module" EntitySet="Sys_Module" />
+      <End Role="Sys_CustomerAction" EntitySet="Sys_CustomerAction" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sys_CustomerInfo_Sys_Customer" Association="CRM.BusinessLogic.Data.Store.FK_Sys_CustomerInfo_Sys_Customer">
+      <End Role="Sys_Customer" EntitySet="Sys_Customer" />
+      <End Role="Sys_CustomerInfo" EntitySet="Sys_CustomerInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sys_CustomerInfo_Sys_Department" Association="CRM.BusinessLogic.Data.Store.FK_Sys_CustomerInfo_Sys_Department">
+      <End Role="Sys_Department" EntitySet="Sys_Department" />
+      <End Role="Sys_CustomerInfo" EntitySet="Sys_CustomerInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sys_CustomerRole_StaffPrivileges_Mapping_Sys_Customer" Association="CRM.BusinessLogic.Data.Store.FK_Sys_CustomerRole_StaffPrivileges_Mapping_Sys_Customer">
+      <End Role="Sys_Customer" EntitySet="Sys_Customer" />
+      <End Role="Sys_CustomerRole_StaffPrivileges_Mapping" EntitySet="Sys_CustomerRole_StaffPrivileges_Mapping" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sys_CustomerRole_StaffPrivileges_Mapping_Sys_CustomerRole" Association="CRM.BusinessLogic.Data.Store.FK_Sys_CustomerRole_StaffPrivileges_Mapping_Sys_CustomerRole">
+      <End Role="Sys_CustomerRole" EntitySet="Sys_CustomerRole" />
+      <End Role="Sys_CustomerRole_StaffPrivileges_Mapping" EntitySet="Sys_CustomerRole_StaffPrivileges_Mapping" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sys_PortalColumn_Sys_Portal" Association="CRM.BusinessLogic.Data.Store.FK_Sys_PortalColumn_Sys_Portal">
+      <End Role="Sys_Portal" EntitySet="Sys_Portal" />
+      <End Role="Sys_PortalColumn" EntitySet="Sys_PortalColumn" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sys_PortalColumn_Sys_PortalColumnNumber" Association="CRM.BusinessLogic.Data.Store.FK_Sys_PortalColumn_Sys_PortalColumnNumber">
+      <End Role="Sys_PortalColumnNumber" EntitySet="Sys_PortalColumnNumber" />
+      <End Role="Sys_PortalColumn" EntitySet="Sys_PortalColumn" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sys_PortalColumnNumber_Sys_Customer" Association="CRM.BusinessLogic.Data.Store.FK_Sys_PortalColumnNumber_Sys_Customer">
+      <End Role="Sys_Customer" EntitySet="Sys_Customer" />
+      <End Role="Sys_PortalColumnNumber" EntitySet="Sys_PortalColumnNumber" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="BX_RepairInformation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RepairType" Type="int" />
+    <Property Name="UnitNameId" Type="int" />
+    <Property Name="RepairProject" Type="nvarchar" MaxLength="50" />
+    <Property Name="Quantity" Type="int" />
+    <Property Name="DegreeId" Type="int" />
+    <Property Name="RepairMan" Type="nvarchar" MaxLength="50" />
+    <Property Name="Location" Type="nvarchar" MaxLength="50" />
+    <Property Name="Contact" Type="nvarchar" MaxLength="50" />
+    <Property Name="WarrantyWayId" Type="int" />
+    <Property Name="StatusId" Type="int" />
+    <Property Name="NoAcceptanceTime" Type="datetime" />
+    <Property Name="MaintenanceMan" Type="nvarchar" MaxLength="50" />
+    <Property Name="AcceptanceTime" Type="datetime" />
+    <Property Name="NoMaintenanceReasonsId" Type="int" />
+    <Property Name="NoRepairsTime" Type="datetime" />
+    <Property Name="RepairTime" Type="datetime" />
+    <Property Name="IsAudit" Type="bit" />
+    <Property Name="IsDelete" Type="bit" />
+    <Property Name="CreatorID" Type="int" />
+    <Property Name="CreateTime" Type="datetime" />
+    <Property Name="UpdatorID" Type="int" />
+    <Property Name="UpdateTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Sys_ACL">
+    <Key>
+      <PropertyRef Name="ACLID" />
+    </Key>
+    <Property Name="ACLID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CustomerActionID" Type="int" Nullable="false" />
+    <Property Name="CustomerRoleID" Type="int" Nullable="false" />
+    <Property Name="Allow" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sys_ACLModule">
+    <Key>
+      <PropertyRef Name="ACLModuleId" />
+    </Key>
+    <Property Name="ACLModuleId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ModuleID" Type="int" Nullable="false" />
+    <Property Name="CustomerRoleId" Type="int" Nullable="false" />
+    <Property Name="Allow" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sys_ActivityLog">
+    <Key>
+      <PropertyRef Name="ActivityLogID" />
+    </Key>
+    <Property Name="ActivityLogID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ActivityLogTypeID" Type="int" Nullable="false" />
+    <Property Name="CustomerID" Type="int" Nullable="false" />
+    <Property Name="Comment" Type="nvarchar" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="MerchantID" Type="int" />
+  </EntityType>
+  <EntityType Name="Sys_ActivityLogType">
+    <Key>
+      <PropertyRef Name="ActivityLogTypeID" />
+    </Key>
+    <Property Name="ActivityLogTypeID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SystemKeyword" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="Enabled" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sys_AlertSettings">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Rmdname" Type="nvarchar" MaxLength="50" />
+    <Property Name="Remarks" Type="nvarchar" MaxLength="100" />
+    <Property Name="Spare1" Type="int" />
+    <Property Name="Spare2" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Sys_AlertTimeSet">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CustomerID" Type="int" />
+    <Property Name="AlertID" Type="int" />
+    <Property Name="Cycletime" Type="int" />
+    <Property Name="Spare1" Type="nvarchar" MaxLength="50" />
+    <Property Name="Spare2" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Sys_AreaCode">
+    <Key>
+      <PropertyRef Name="xmlid" />
+    </Key>
+    <Property Name="xmlid" Type="int" Nullable="false" />
+    <Property Name="NumberID" Type="nvarchar" MaxLength="50" />
+    <Property Name="Root" Type="nvarchar" MaxLength="10" />
+    <Property Name="Preceding" Type="nvarchar" MaxLength="50" />
+    <Property Name="PrePath" Type="nvarchar" MaxLength="100" />
+    <Property Name="Rank" Type="int" />
+    <Property Name="City" Type="nvarchar" MaxLength="100" />
+    <Property Name="CityType" Type="nvarchar" MaxLength="50" />
+    <Property Name="Govt" Type="int" />
+    <Property Name="Post" Type="nvarchar" MaxLength="10" />
+    <Property Name="AreaID" Type="nvarchar" MaxLength="10" />
+    <Property Name="shortening" Type="nvarchar" MaxLength="50" />
+    <Property Name="Spell" Type="nvarchar" MaxLength="100" />
+    <Property Name="KeyWord" Type="nvarchar" MaxLength="100" />
+    <Property Name="OrderStr" Type="int" />
+    <Property Name="Acreage" Type="money" />
+    <Property Name="Population" Type="money" />
+    <Property Name="Enabled" Type="bit" />
+  </EntityType>
+  <EntityType Name="Sys_BannedIpAddress">
+    <Key>
+      <PropertyRef Name="BannedIpAddressID" />
+    </Key>
+    <Property Name="BannedIpAddressID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Address" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Comment" Type="nvarchar" MaxLength="500" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedOn" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sys_BannedIpNetwork">
+    <Key>
+      <PropertyRef Name="BannedIpNetworkID" />
+    </Key>
+    <Property Name="BannedIpNetworkID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="StartAddress" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="EndAddress" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Comment" Type="nvarchar" MaxLength="500" />
+    <Property Name="IpException" Type="nvarchar(max)" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedOn" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sys_Bulletin">
+    <Key>
+      <PropertyRef Name="BulletinID" />
+    </Key>
+    <Property Name="BulletinID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="AnnouncementTypeId" Type="int" />
+    <Property Name="BulletinCode" Type="nvarchar" MaxLength="40" />
+    <Property Name="BulletinTitle" Type="nvarchar" MaxLength="50" />
+    <Property Name="BulletinTypeID" Type="int" />
+    <Property Name="PriorTypeID" Type="int" />
+    <Property Name="UnitNameId" Type="int" />
+    <Property Name="EffectiveDate" Type="smalldatetime" />
+    <Property Name="InvalidDate" Type="smalldatetime" />
+    <Property Name="ReleasedDate" Type="smalldatetime" />
+    <Property Name="BulletinStatus" Type="int" />
+    <Property Name="Approval" Type="nvarchar(max)" />
+    <Property Name="Remark" Type="nvarchar(max)" />
+    <Property Name="Deleted" Type="bit" />
+    <Property Name="Published" Type="bit" />
+    <Property Name="DisplayOrder" Type="int" />
+    <Property Name="Created" Type="smalldatetime" Nullable="false" />
+    <Property Name="CreatorID" Type="int" Nullable="false" />
+    <Property Name="UpdatorID" Type="int" Nullable="false" />
+    <Property Name="UpdateTime" Type="smalldatetime" />
+  </EntityType>
+  <EntityType Name="Sys_Bulletin_CusotmerMapping">
+    <Key>
+      <PropertyRef Name="BulletinID" />
+      <PropertyRef Name="CustomerID" />
+    </Key>
+    <Property Name="BulletinID" Type="int" Nullable="false" />
+    <Property Name="CustomerID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sys_CodeList">
+    <Key>
+      <PropertyRef Name="CodeID" />
+    </Key>
+    <Property Name="CodeID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CodeTypeID" Type="int" Nullable="false" />
+    <Property Name="CodeNO" Type="nvarchar" MaxLength="40" />
+    <Property Name="CodeName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Deleted" Type="bit" Nullable="false" />
+    <Property Name="DisplayOrder" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sys_CodeType">
+    <Key>
+      <PropertyRef Name="CodeTypeID" />
+    </Key>
+    <Property Name="CodeTypeID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ModuleID" Type="int" Nullable="false" />
+    <Property Name="CodeTypeCode" Type="nvarchar" Nullable="false" MaxLength="40" />
+    <Property Name="CodeTypeName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Deleted" Type="bit" Nullable="false" />
+    <Property Name="DisplayOrder" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sys_Customer">
+    <Key>
+      <PropertyRef Name="CustomerID" />
+    </Key>
+    <Property Name="CustomerID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Email" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="Username" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="PasswordHash" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="SaltKey" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="IsAdmin" Type="bit" Nullable="false" />
+    <Property Name="IsGuest" Type="bit" Nullable="false" />
+    <Property Name="Signature" Type="nvarchar" Nullable="false" MaxLength="300" />
+    <Property Name="AdminComment" Type="nvarchar" Nullable="false" />
+    <Property Name="Active" Type="bit" Nullable="false" />
+    <Property Name="Deleted" Type="bit" Nullable="false" />
+    <Property Name="RegistrationDate" Type="datetime" Nullable="false" />
+    <Property Name="TimeZoneID" Type="nvarchar" Nullable="false" MaxLength="200" />
+    <Property Name="AvatarID" Type="int" Nullable="false" />
+    <Property Name="DateOfBirth" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Sys_Customer_CustomerRole_Mapping">
+    <Key>
+      <PropertyRef Name="CustomerID" />
+      <PropertyRef Name="CustomerRoleID" />
+    </Key>
+    <Property Name="CustomerID" Type="int" Nullable="false" />
+    <Property Name="CustomerRoleID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sys_CustomerAction">
+    <Key>
+      <PropertyRef Name="CustomerActionID" />
+    </Key>
+    <Property Name="CustomerActionID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ModuleID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="SystemKeyword" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="Comment" Type="nvarchar" Nullable="false" MaxLength="1000" />
+    <Property Name="DisplayOrder" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sys_CustomerAttribute">
+    <Key>
+      <PropertyRef Name="CustomerAttributeId" />
+    </Key>
+    <Property Name="CustomerAttributeId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CustomerId" Type="int" Nullable="false" />
+    <Property Name="Key" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="Value" Type="nvarchar" Nullable="false" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="Sys_CustomerInfo">
+    <Key>
+      <PropertyRef Name="CustomerID" />
+    </Key>
+    <Property Name="CustomerID" Type="int" Nullable="false" />
+    <Property Name="DepartmentID" Type="int" Nullable="false" />
+    <Property Name="JobNumber" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="FullName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="GenderID" Type="int" Nullable="false" />
+    <Property Name="NationalityID" Type="int" Nullable="false" />
+    <Property Name="AnimalID" Type="int" Nullable="false" />
+    <Property Name="RegisteredResidence" Type="nvarchar" MaxLength="100" />
+    <Property Name="Birthday" Type="smalldatetime" />
+    <Property Name="MarriageID" Type="int" />
+    <Property Name="BloodTypeID" Type="int" Nullable="false" />
+    <Property Name="PoliticalStatusID" Type="int" />
+    <Property Name="Stature" Type="int" Nullable="false" />
+    <Property Name="Childbearing" Type="bit" Nullable="false" />
+    <Property Name="CustomerStatusID" Type="int" Nullable="false" />
+    <Property Name="Deleted" Type="bit" Nullable="false" />
+    <Property Name="Published" Type="bit" Nullable="false" />
+    <Property Name="DisplayOrder" Type="int" Nullable="false" />
+    <Property Name="Created" Type="smalldatetime" />
+    <Property Name="CreatorID" Type="int" />
+  </EntityType>
+  <EntityType Name="Sys_CustomerRole">
+    <Key>
+      <PropertyRef Name="CustomerRoleID" />
+    </Key>
+    <Property Name="CustomerRoleID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Code" Type="nvarchar" MaxLength="50" />
+    <Property Name="ParentCustomerRoleID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="Active" Type="bit" Nullable="false" />
+    <Property Name="Deleted" Type="bit" Nullable="false" />
+    <Property Name="Description" Type="ntext" Nullable="false" />
+    <Property Name="CreateStaff" Type="int" Nullable="false" />
+    <Property Name="CreateDate" Type="smalldatetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sys_CustomerRole_StaffPrivileges_Mapping">
+    <Key>
+      <PropertyRef Name="CustomerRoleID" />
+      <PropertyRef Name="CustomerID" />
+    </Key>
+    <Property Name="CustomerRoleID" Type="int" Nullable="false" />
+    <Property Name="CustomerID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sys_CustomerSession">
+    <Key>
+      <PropertyRef Name="CustomerSessionGUID" />
+    </Key>
+    <Property Name="CustomerSessionGUID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CustomerID" Type="int" Nullable="false" />
+    <Property Name="LogTime" Type="datetime" Nullable="false" />
+    <Property Name="LastAccessed" Type="datetime" Nullable="false" />
+    <Property Name="IsExpired" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sys_CustomerStar">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CustomerID" Type="int" Nullable="false" />
+    <Property Name="StarLv" Type="numeric" Nullable="false" Scale="1" />
+    <Property Name="ServerCount" Type="int" />
+    <Property Name="IsNew" Type="bit" />
+    <Property Name="SetID" Type="int" Nullable="false" />
+    <Property Name="SetDate" Type="datetime" Nullable="false" />
+    <Property Name="Spare1" Type="nvarchar" MaxLength="50" />
+    <Property Name="Spare2" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Sys_Department">
+    <Key>
+      <PropertyRef Name="DepartmentID" />
+    </Key>
+    <Property Name="DepartmentID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ParentID" Type="int" />
+    <Property Name="EnterpriseID" Type="int" Nullable="false" />
+    <Property Name="DepCode" Type="nvarchar" Nullable="false" MaxLength="40" />
+    <Property Name="DepName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="DepType" Type="int" />
+    <Property Name="Label" Type="nvarchar" MaxLength="50" />
+    <Property Name="DepManagerID" Type="int" Nullable="false" />
+    <Property Name="Address" Type="nvarchar" MaxLength="200" />
+    <Property Name="Tel" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Published" Type="bit" Nullable="false" />
+    <Property Name="Deleted" Type="bit" Nullable="false" />
+    <Property Name="DisplayOrder" Type="int" Nullable="false" />
+    <Property Name="Remark" Type="ntext" />
+    <Property Name="AddUserId" Type="int" />
+    <Property Name="AddTime" Type="nvarchar" MaxLength="20" />
+    <Property Name="EditUserId" Type="int" />
+    <Property Name="EditTime" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Sys_Department_CustomerRole_Mapping">
+    <Key>
+      <PropertyRef Name="DepartmentID" />
+      <PropertyRef Name="CustomerRoleID" />
+    </Key>
+    <Property Name="DepartmentID" Type="int" Nullable="false" />
+    <Property Name="CustomerRoleID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sys_Enterprise">
+    <Key>
+      <PropertyRef Name="EntId" />
+    </Key>
+    <Property Name="EntId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="EntName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="EntTel" Type="nvarchar" Nullable="false" MaxLength="40" />
+    <Property Name="EntFax" Type="nvarchar" Nullable="false" MaxLength="40" />
+    <Property Name="EntAddress" Type="nvarchar" Nullable="false" MaxLength="200" />
+    <Property Name="EntZip" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="EntWebSite" Type="nvarchar" MaxLength="50" />
+    <Property Name="EntEmail" Type="nvarchar" MaxLength="50" />
+    <Property Name="EntBank" Type="nvarchar" MaxLength="50" />
+    <Property Name="EntBankAccount" Type="nvarchar" MaxLength="50" />
+    <Property Name="AddUserId" Type="int" Nullable="false" />
+    <Property Name="AddTime" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="Published" Type="bit" Nullable="false" />
+    <Property Name="Deleted" Type="bit" Nullable="false" />
+    <Property Name="DisplayOrder" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sys_Log">
+    <Key>
+      <PropertyRef Name="LogID" />
+    </Key>
+    <Property Name="LogID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="LogTypeID" Type="int" Nullable="false" />
+    <Property Name="Severity" Type="int" Nullable="false" />
+    <Property Name="Message" Type="nvarchar" Nullable="false" MaxLength="1000" />
+    <Property Name="Exception" Type="nvarchar" Nullable="false" />
+    <Property Name="IPAddress" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="CustomerID" Type="int" Nullable="false" />
+    <Property Name="PageURL" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="ReferrerURL" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sys_Module">
+    <Key>
+      <PropertyRef Name="ModuleID" />
+    </Key>
+    <Property Name="ModuleID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ParentID" Type="int" />
+    <Property Name="ModuleName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="ModuleCode" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="isTarget" Type="bit" Nullable="false" />
+    <Property Name="href" Type="nvarchar" MaxLength="200" />
+    <Property Name="Expand" Type="bit" Nullable="false" />
+    <Property Name="Published" Type="bit" Nullable="false" />
+    <Property Name="Deleted" Type="bit" Nullable="false" />
+    <Property Name="DisplayOrder" Type="int" Nullable="false" />
+    <Property Name="iconCls" Type="nvarchar" MaxLength="50" />
+    <Property Name="AppIconCls" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Sys_Notice">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="DateTime" Type="smalldatetime" Nullable="false" />
+    <Property Name="Promulgator" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="StartTime" Type="smalldatetime" Nullable="false" />
+    <Property Name="Published" Type="bit" Nullable="false" />
+    <Property Name="Description" Type="ntext" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sys_Picture">
+    <Key>
+      <PropertyRef Name="PictureID" />
+    </Key>
+    <Property Name="PictureID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PictureBinary" Type="varbinary(max)" Nullable="false" />
+    <Property Name="IsNew" Type="bit" Nullable="false" />
+    <Property Name="MimeType" Type="nvarchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Sys_Portal">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Url" Type="nvarchar" Nullable="false" MaxLength="200" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="iconCls" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Created" Type="smalldatetime" Nullable="false" />
+    <Property Name="CreatorID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sys_PortalColumn">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ColumnNumberID" Type="int" Nullable="false" />
+    <Property Name="PortalID" Type="int" Nullable="false" />
+    <Property Name="IsExpand" Type="int" Nullable="false" />
+    <Property Name="SortIndex" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sys_PortalColumnNumber">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CustomerID" Type="int" Nullable="false" />
+    <Property Name="Width" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="Display" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sys_Setting">
+    <Key>
+      <PropertyRef Name="SettingID" />
+    </Key>
+    <Property Name="SettingID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="200" />
+    <Property Name="Value" Type="nvarchar" Nullable="false" MaxLength="2000" />
+    <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'Repair.dbo.Sys_StarSet' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="Sys_StarSet">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="StarName" />
+      <PropertyRef Name="StarSrc" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="StarName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="StarSrc" Type="nvarchar" Nullable="false" MaxLength="150" />
+    <Property Name="Remarks" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Sys_UploadFile">
+    <Key>
+      <PropertyRef Name="UploadFileID" />
+    </Key>
+    <Property Name="UploadFileID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TaggantID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ObjectID" Type="int" Nullable="false" />
+    <Property Name="TableName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="FullName" Type="nvarchar" Nullable="false" MaxLength="300" />
+    <Property Name="Url" Type="nvarchar" Nullable="false" MaxLength="300" />
+    <Property Name="Created" Type="smalldatetime" Nullable="false" />
+    <Property Name="CreatorID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Table_Update_Log">
+    <Key>
+      <PropertyRef Name="LogID" />
+    </Key>
+    <Property Name="LogID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RequestID" Type="int" Nullable="false" />
+    <Property Name="FieldName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="OrginValue" Type="text" Nullable="false" />
+    <Property Name="NewValue" Type="text" Nullable="false" />
+    <Property Name="OperatorID" Type="int" Nullable="false" />
+    <Property Name="UpdateTime" Type="datetime" Nullable="false" />
+    <Property Name="TableName" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_Nop_ACL_Nop_CustomerAction">
+    <End Role="Sys_CustomerAction" Type="CRM.BusinessLogic.Data.Store.Sys_CustomerAction" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Sys_ACL" Type="CRM.BusinessLogic.Data.Store.Sys_ACL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sys_CustomerAction">
+        <PropertyRef Name="CustomerActionID" />
+      </Principal>
+      <Dependent Role="Sys_ACL">
+        <PropertyRef Name="CustomerActionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Nop_ACL_Nop_CustomerRole">
+    <End Role="Sys_CustomerRole" Type="CRM.BusinessLogic.Data.Store.Sys_CustomerRole" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Sys_ACL" Type="CRM.BusinessLogic.Data.Store.Sys_ACL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sys_CustomerRole">
+        <PropertyRef Name="CustomerRoleID" />
+      </Principal>
+      <Dependent Role="Sys_ACL">
+        <PropertyRef Name="CustomerRoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Nop_ACLPerObject_Nop_CustomerRole">
+    <End Role="Sys_CustomerRole" Type="CRM.BusinessLogic.Data.Store.Sys_CustomerRole" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Sys_ACLModule" Type="CRM.BusinessLogic.Data.Store.Sys_ACLModule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sys_CustomerRole">
+        <PropertyRef Name="CustomerRoleID" />
+      </Principal>
+      <Dependent Role="Sys_ACLModule">
+        <PropertyRef Name="CustomerRoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Nop_ActivityLog_Nop_ActivityLogType">
+    <End Role="Sys_ActivityLogType" Type="CRM.BusinessLogic.Data.Store.Sys_ActivityLogType" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Sys_ActivityLog" Type="CRM.BusinessLogic.Data.Store.Sys_ActivityLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sys_ActivityLogType">
+        <PropertyRef Name="ActivityLogTypeID" />
+      </Principal>
+      <Dependent Role="Sys_ActivityLog">
+        <PropertyRef Name="ActivityLogTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Nop_ActivityLog_Nop_Customer">
+    <End Role="Sys_Customer" Type="CRM.BusinessLogic.Data.Store.Sys_Customer" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Sys_ActivityLog" Type="CRM.BusinessLogic.Data.Store.Sys_ActivityLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sys_Customer">
+        <PropertyRef Name="CustomerID" />
+      </Principal>
+      <Dependent Role="Sys_ActivityLog">
+        <PropertyRef Name="CustomerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Nop_CodeList_Nop_CodeType">
+    <End Role="Sys_CodeType" Type="CRM.BusinessLogic.Data.Store.Sys_CodeType" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Sys_CodeList" Type="CRM.BusinessLogic.Data.Store.Sys_CodeList" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sys_CodeType">
+        <PropertyRef Name="CodeTypeID" />
+      </Principal>
+      <Dependent Role="Sys_CodeList">
+        <PropertyRef Name="CodeTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Nop_Customer_CustomerRole_Mapping_Nop_Customer">
+    <End Role="Sys_Customer" Type="CRM.BusinessLogic.Data.Store.Sys_Customer" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Sys_Customer_CustomerRole_Mapping" Type="CRM.BusinessLogic.Data.Store.Sys_Customer_CustomerRole_Mapping" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sys_Customer">
+        <PropertyRef Name="CustomerID" />
+      </Principal>
+      <Dependent Role="Sys_Customer_CustomerRole_Mapping">
+        <PropertyRef Name="CustomerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Nop_Customer_CustomerRole_Mapping_Nop_CustomerRole">
+    <End Role="Sys_CustomerRole" Type="CRM.BusinessLogic.Data.Store.Sys_CustomerRole" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Sys_Customer_CustomerRole_Mapping" Type="CRM.BusinessLogic.Data.Store.Sys_Customer_CustomerRole_Mapping" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sys_CustomerRole">
+        <PropertyRef Name="CustomerRoleID" />
+      </Principal>
+      <Dependent Role="Sys_Customer_CustomerRole_Mapping">
+        <PropertyRef Name="CustomerRoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Nop_CustomerAttribute_Nop_Customer">
+    <End Role="Sys_Customer" Type="CRM.BusinessLogic.Data.Store.Sys_Customer" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Sys_CustomerAttribute" Type="CRM.BusinessLogic.Data.Store.Sys_CustomerAttribute" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sys_Customer">
+        <PropertyRef Name="CustomerID" />
+      </Principal>
+      <Dependent Role="Sys_CustomerAttribute">
+        <PropertyRef Name="CustomerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Nop_Department_CustomerRole_Mapping_Nop_CustomerRole">
+    <End Role="Sys_CustomerRole" Type="CRM.BusinessLogic.Data.Store.Sys_CustomerRole" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Sys_Department_CustomerRole_Mapping" Type="CRM.BusinessLogic.Data.Store.Sys_Department_CustomerRole_Mapping" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sys_CustomerRole">
+        <PropertyRef Name="CustomerRoleID" />
+      </Principal>
+      <Dependent Role="Sys_Department_CustomerRole_Mapping">
+        <PropertyRef Name="CustomerRoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Nop_Department_CustomerRole_Mapping_Nop_Department">
+    <End Role="Sys_Department" Type="CRM.BusinessLogic.Data.Store.Sys_Department" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Sys_Department_CustomerRole_Mapping" Type="CRM.BusinessLogic.Data.Store.Sys_Department_CustomerRole_Mapping" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sys_Department">
+        <PropertyRef Name="DepartmentID" />
+      </Principal>
+      <Dependent Role="Sys_Department_CustomerRole_Mapping">
+        <PropertyRef Name="DepartmentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Nop_Department_Nop_Department">
+    <End Role="Sys_Enterprise" Type="CRM.BusinessLogic.Data.Store.Sys_Enterprise" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Sys_Department" Type="CRM.BusinessLogic.Data.Store.Sys_Department" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sys_Enterprise">
+        <PropertyRef Name="EntId" />
+      </Principal>
+      <Dependent Role="Sys_Department">
+        <PropertyRef Name="EnterpriseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sys_Bulletin_CusotmerMapping_Sys_Bulletin">
+    <End Role="Sys_Bulletin" Type="CRM.BusinessLogic.Data.Store.Sys_Bulletin" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Sys_Bulletin_CusotmerMapping" Type="CRM.BusinessLogic.Data.Store.Sys_Bulletin_CusotmerMapping" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sys_Bulletin">
+        <PropertyRef Name="BulletinID" />
+      </Principal>
+      <Dependent Role="Sys_Bulletin_CusotmerMapping">
+        <PropertyRef Name="BulletinID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sys_Bulletin_CusotmerMapping_Sys_CustomerInfo">
+    <End Role="Sys_CustomerInfo" Type="CRM.BusinessLogic.Data.Store.Sys_CustomerInfo" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Sys_Bulletin_CusotmerMapping" Type="CRM.BusinessLogic.Data.Store.Sys_Bulletin_CusotmerMapping" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sys_CustomerInfo">
+        <PropertyRef Name="CustomerID" />
+      </Principal>
+      <Dependent Role="Sys_Bulletin_CusotmerMapping">
+        <PropertyRef Name="CustomerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sys_CustomerAction_Sys_Module">
+    <End Role="Sys_Module" Type="CRM.BusinessLogic.Data.Store.Sys_Module" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Sys_CustomerAction" Type="CRM.BusinessLogic.Data.Store.Sys_CustomerAction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sys_Module">
+        <PropertyRef Name="ModuleID" />
+      </Principal>
+      <Dependent Role="Sys_CustomerAction">
+        <PropertyRef Name="ModuleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sys_CustomerInfo_Sys_Customer">
+    <End Role="Sys_Customer" Type="CRM.BusinessLogic.Data.Store.Sys_Customer" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Sys_CustomerInfo" Type="CRM.BusinessLogic.Data.Store.Sys_CustomerInfo" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Sys_Customer">
+        <PropertyRef Name="CustomerID" />
+      </Principal>
+      <Dependent Role="Sys_CustomerInfo">
+        <PropertyRef Name="CustomerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sys_CustomerInfo_Sys_Department">
+    <End Role="Sys_Department" Type="CRM.BusinessLogic.Data.Store.Sys_Department" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Sys_CustomerInfo" Type="CRM.BusinessLogic.Data.Store.Sys_CustomerInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sys_Department">
+        <PropertyRef Name="DepartmentID" />
+      </Principal>
+      <Dependent Role="Sys_CustomerInfo">
+        <PropertyRef Name="DepartmentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sys_CustomerRole_StaffPrivileges_Mapping_Sys_Customer">
+    <End Role="Sys_Customer" Type="CRM.BusinessLogic.Data.Store.Sys_Customer" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Sys_CustomerRole_StaffPrivileges_Mapping" Type="CRM.BusinessLogic.Data.Store.Sys_CustomerRole_StaffPrivileges_Mapping" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sys_Customer">
+        <PropertyRef Name="CustomerID" />
+      </Principal>
+      <Dependent Role="Sys_CustomerRole_StaffPrivileges_Mapping">
+        <PropertyRef Name="CustomerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sys_CustomerRole_StaffPrivileges_Mapping_Sys_CustomerRole">
+    <End Role="Sys_CustomerRole" Type="CRM.BusinessLogic.Data.Store.Sys_CustomerRole" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Sys_CustomerRole_StaffPrivileges_Mapping" Type="CRM.BusinessLogic.Data.Store.Sys_CustomerRole_StaffPrivileges_Mapping" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sys_CustomerRole">
+        <PropertyRef Name="CustomerRoleID" />
+      </Principal>
+      <Dependent Role="Sys_CustomerRole_StaffPrivileges_Mapping">
+        <PropertyRef Name="CustomerRoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sys_PortalColumn_Sys_Portal">
+    <End Role="Sys_Portal" Type="CRM.BusinessLogic.Data.Store.Sys_Portal" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Sys_PortalColumn" Type="CRM.BusinessLogic.Data.Store.Sys_PortalColumn" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sys_Portal">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Sys_PortalColumn">
+        <PropertyRef Name="PortalID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sys_PortalColumn_Sys_PortalColumnNumber">
+    <End Role="Sys_PortalColumnNumber" Type="CRM.BusinessLogic.Data.Store.Sys_PortalColumnNumber" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Sys_PortalColumn" Type="CRM.BusinessLogic.Data.Store.Sys_PortalColumn" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sys_PortalColumnNumber">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Sys_PortalColumn">
+        <PropertyRef Name="ColumnNumberID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sys_PortalColumnNumber_Sys_Customer">
+    <End Role="Sys_Customer" Type="CRM.BusinessLogic.Data.Store.Sys_Customer" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Sys_PortalColumnNumber" Type="CRM.BusinessLogic.Data.Store.Sys_PortalColumnNumber" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sys_Customer">
+        <PropertyRef Name="CustomerID" />
+      </Principal>
+      <Dependent Role="Sys_PortalColumnNumber">
+        <PropertyRef Name="CustomerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="ContractRenewal" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="oldContractID" Type="int" Mode="In" />
+    <Parameter Name="NewContractID" Type="int" Mode="In" />
+    <Parameter Name="CreatorID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="CRM_GetUploadFileList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ObjectID" Type="int" Mode="In" />
+    <Parameter Name="TaggantID" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="TableName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="CRM_UploadFileList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ObjectID" Type="int" Mode="In" />
+    <Parameter Name="TaggantID" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="TableName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="CRMBUTarget" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="paramYear" Type="varchar" Mode="In" />
+    <Parameter Name="paramMonth" Type="varchar" Mode="In" />
+    <Parameter Name="sortExpression" Type="nvarchar" Mode="In" />
+    <Parameter Name="sortDirection" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="EditDC_AgentAccountTP" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="agentAccountName" Type="nvarchar" Mode="In" />
+    <Parameter Name="password" Type="nvarchar" Mode="In" />
+    <Parameter Name="enabled" Type="int" Mode="In" />
+    <Parameter Name="createStaff" Type="int" Mode="In" />
+    <Parameter Name="createDate" Type="smalldatetime" Mode="In" />
+    <Parameter Name="modifyStaff" Type="int" Mode="In" />
+    <Parameter Name="modifyDate" Type="smalldatetime" Mode="In" />
+  </Function>
+  <Function Name="InsertAgentAccountUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="agentAccountID" Type="int" Mode="In" />
+    <Parameter Name="customerID" Type="int" Mode="In" />
+    <Parameter Name="enabled" Type="int" Mode="In" />
+    <Parameter Name="createStaff" Type="int" Mode="In" />
+    <Parameter Name="createDate" Type="smalldatetime" Mode="In" />
+  </Function>
+  <Function Name="KeyWordAddStratrgy" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="peak" Type="decimal" Mode="In" />
+    <Parameter Name="Margin" Type="decimal" Mode="In" />
+    <Parameter Name="PageNumber" Type="int" Mode="In" />
+    <Parameter Name="StartLocation" Type="int" Mode="In" />
+    <Parameter Name="EndLocation" Type="int" Mode="In" />
+    <Parameter Name="IsEnabled" Type="int" Mode="In" />
+    <Parameter Name="KeyWordIDS" Type="nvarchar" Mode="In" />
+    <Parameter Name="EmpID" Type="int" Mode="In" />
+    <Parameter Name="StratrgyEnabled" Type="int" Mode="In" />
+    <Parameter Name="AgroupID" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="TOPDB_EditTop_AgentAccount" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="agentAccountName" Type="nvarchar" Mode="In" />
+    <Parameter Name="password" Type="nvarchar" Mode="In" />
+    <Parameter Name="enabled" Type="int" Mode="In" />
+    <Parameter Name="createStaff" Type="int" Mode="In" />
+    <Parameter Name="createDate" Type="smalldatetime" Mode="In" />
+    <Parameter Name="modifyStaff" Type="int" Mode="In" />
+    <Parameter Name="modifyDate" Type="smalldatetime" Mode="In" />
+  </Function>
+</Schema>

@@ -1,0 +1,105 @@
+﻿
+<%--
+
+门户样式
+
+--%>
+
+<asp:LinkButton runat="server" Font-Size="12px" ForeColor="#4C5259"  SkinId="Protalbar"/>
+
+<asp:HyperLink runat="server" Font-Size="12px" ForeColor="white"  SkinId="ProtalLink"/>
+
+<asp:Image style="cursor:hand" runat="server" ImageUrl="Image/CompanySiteBarhide.gif" SkinId="CompanySiteBarhide"/>
+
+<asp:CheckBox runat="server"  ForeColor="red" SkinId="LoginChk" />
+<%--
+
+OA样式
+
+--%>
+<asp:Image runat="server" ImageUrl="Image/loading.gif" SkinId="Loading" />
+
+<asp:ImageButton runat="server" ImageUrl="Image/update.gif"  SkinId="btnDetail" />
+
+<asp:ImageButton runat="server" ImageUrl="Image/print.gif"  SkinId="btnPrint" />
+
+<asp:ImageButton runat="server" ImageUrl="Image/add.gif"  SkinId="btnDetailAdd" />
+<asp:ImageButton  runat="server" ImageUrl="Image/icon_select.gif" style="cursor:hand" SkinId="ImgSelect" />
+
+<asp:ImageButton  runat="server" ImageUrl="Image/Cancel.gif" style="cursor:hand" SkinId="ImagCancel" />
+
+<asp:Button runat="server" onmouseover="this.className='tabBtn4_over'" onmouseout="this.className='tabBtn4_out'" CssClass="tabBtn4_out" SkinId="tabBtn4" />
+
+<asp:Button runat="server"  CssClass="tabBtn4_out" SkinId="ActiveTabBtn4" />
+
+<asp:Image runat="server" ImageUrl="Image/btn2down.gif" SkinId="btn2down" />
+
+<asp:Image runat="server" ImageUrl="Image/btn2up.gif" SkinId="btn2up" />
+
+<asp:Image runat="server" ImageUrl="Image/Notice/NoticeClose.gif" SkinId="NoticeClose" />
+
+<asp:Image runat="server" ImageUrl="Image/Remind.gif" SkinId="Remind" />
+
+<asp:textbox CssClass="TextBox" runat="server"   />
+
+<asp:textbox CssClass="LineText" runat="server" SkinId="LineText"   />
+
+<asp:textbox CssClass="Login" runat="server" SkinId="Login"   />
+
+<asp:DropDownList CssClass="DropDownList"   runat="server"  />
+
+
+
+<%--
+Default 样式
+--%>
+<asp:Image runat="server" ImageUrl="Image/hiddenbtn.gif" style="cursor:pointer" SkinId="SplitBar" height="100%" width="7px" />
+
+<asp:Button runat="server" onmouseover="this.className='button2left_over'" onmouseout="this.className='button2left_out'" CssClass="button2left_out" SkinId="btn2SplitLeft" />
+
+<asp:Button runat="server" onmouseover="this.className='button2right_over'" onmouseout="this.className='button2right_out'" CssClass="button2right_out" SkinId="btn2SplitRight" />
+
+<asp:Button runat="server" onmouseover="this.className='button2right_down_over'" onmouseout="this.className='button2right_down_out'" CssClass="button2right_down_out" SkinId="btn2SplitRightdown" />
+
+<asp:Button runat="server" onmouseover="this.className='button2_over'" onmouseout="this.className='button2_out'" CssClass="button2_out" SkinId="button2" />
+
+<asp:Button runat="server" onmouseover="this.className='button2_over'" onmouseout="this.className='button2_out'" CssClass="button2_out"  />
+
+<asp:Button runat="server" onmouseover="this.className='button4_over'" onmouseout="this.className='button4_out'" CssClass="button4_out" SkinId="button4" />
+
+<asp:Button runat="server" onmouseover="this.className='button6_over'" onmouseout="this.className='button6_out'" CssClass="button6_out" SkinId="button6" />
+<asp:Button runat="server" onmouseover="this.className='button7_over'" onmouseout="this.className='button7_out'" CssClass="button7_out" SkinId="button7" />
+
+
+<asp:ImageButton runat="server" ImageUrl="Image/icon_page_front.gif" SkinId="Nevigatorfront" />
+
+<asp:ImageButton runat="server" ImageUrl="Image/icon_page_end.gif"  SkinId="NevigatorEnd" />
+
+<asp:ImageButton runat="server" ImageUrl="Image/icon_page_next.gif"  SkinId="NevigatorNext" />
+
+<asp:ImageButton runat="server" ImageUrl="Image/icon_page_First.gif"  SkinId="NevigatorFirst" />
+
+<asp:ImageButton runat="server" ImageUrl="Image/icon_page_go.gif"  SkinId="NevigatorGo" />
+
+<%--
+
+DownLoad页面
+
+--%>
+<asp:Image runat="server" ImageUrl="Image/download16.gif" SkinId="FileDownload" />
+
+
+<asp:TreeView runat="server" ExpandDepth="1" SkinId="DocumentTree" Width="100%" >
+
+    <SelectedNodeStyle BackColor="white" BorderStyle="Solid" BorderWidth="1px" Font-Underline="False"  Font-Bold="True"  />
+
+    <RootNodeStyle Font-Bold="True" />
+
+    <NodeStyle  ForeColor="Black" HorizontalPadding="5px" 
+                                                    NodeSpacing="1px" VerticalPadding="2px" />
+
+    <HoverNodeStyle BackColor="#CCCCCC" BorderColor="#888888" BorderStyle="Solid" Font-Underline="True" />
+
+</asp:TreeView>
+
+

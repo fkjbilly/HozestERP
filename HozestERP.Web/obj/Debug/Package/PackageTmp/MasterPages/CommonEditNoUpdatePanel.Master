@@ -1,0 +1,115 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="CommonEditNoUpdatePanel.Master.cs"
+    Inherits="HozestERP.Web.MasterPages.CommonEditNoUpdatePanel" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <base target="_self" />
+    <meta http-equiv="expires" content="0" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="bodyDiv">
+        <ajaxToolkit:ToolkitScriptManager ID="ScriptManager1" EnableScriptGlobalization="true" runat="server">
+        </ajaxToolkit:ToolkitScriptManager>
+        <table border="0" cellpadding="0" cellspacing="0" style="width: 100%;">
+            <tr>
+                <td style="width: 8px; height: 8px">
+                </td>
+                <td>
+                </td>
+                <td style="width: 8px">
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 4px;">
+                    &nbsp;
+                </td>
+                <td style="vertical-align: top">
+                    <table runat="server" id="tablework" border="0" style="width: 100%; background-color: White"
+                        cellspacing="0" cellpadding="0" class="Borderline">
+                        <tr>
+                            <td colspan="1" style="width: 8px; height: 4px">
+                            </td>
+                            <td colspan="6" style="height: 4px">
+                            </td>
+                            <td colspan="1" style="height: 4px">
+                            </td>
+                        </tr>
+                        <tr id="trEditHead" class="EidtHead" runat="server">
+                            <td colspan="1" id="TD1">
+                            </td>
+                            <td colspan="6">
+                                <table border="0" cellpadding="0" cellspacing="0" style="width: 100%">
+                                    <tr>
+                                        <td style="vertical-align: middle">
+                                            <asp:Label ID="lblTitle" runat="server" Font-Bold="True" Text="基本信息"></asp:Label>
+                                        </td>
+                                        <td style="text-align: right">
+                                            <asp:Image ID="imgExpand" runat="server" SkinID="btn2up" />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td colspan="1">
+                            </td>
+                        </tr>
+                        <tr id="tdContentPlaceHolder01" runat="server">
+                            <td colspan="1">
+                            </td>
+                            <td colspan="6" style="height: 4px">
+                            </td>
+                            <td colspan="1">
+                            </td>
+                        </tr>
+                        <tr id="tdContentPlaceHolder1" runat="server">
+                            <td colspan="1">
+                            </td>
+                            <td colspan="6">
+                                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                </asp:ContentPlaceHolder>
+                            </td>
+                            <td colspan="1">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="height: 4px">
+                            </td>
+                            <td style="height: 4px;" colspan="6" rowspan="1">
+                            </td>
+                            <td style="width: 4px">
+                            </td>
+                        </tr>
+                    </table>
+                    <table border="0" cellpadding="0" cellspacing="0" style="width: 100%">
+                        <tr>
+                            <td align="right" style="height: 4px" id="TD2">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left" id="tdContent2" runat="server">
+                                <asp:ContentPlaceHolder ID="Contentplaceholder2" runat="server">
+                                </asp:ContentPlaceHolder>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td style="height: 8px">
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>

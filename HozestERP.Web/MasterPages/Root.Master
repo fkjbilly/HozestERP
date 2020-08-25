@@ -1,0 +1,169 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Root.master.cs" Inherits="HozestERP.Web.MasterPages.Root" %>
+
+<%@ Register Src="~/Modules/GridNevigator.ascx" TagName="GridNevigator" TagPrefix="HozestERP" %>
+<%@ Register Src="~/Modules/UpdaeProcess.ascx" TagName="UpdateProcess" TagPrefix="HozestERP" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <base target="_self" />
+    <meta http-equiv="expires" content="0" />
+    <style type="text/css">
+        .divs
+        {
+            height: 100%;
+            width: 100%;
+            overflow: auto;
+            position: relative;
+        }
+    </style>
+    <script src="../Script/jquery1.9.1/jquery-1.9.1.js" type="text/javascript"></script>
+    <script src="../Script/layer/2.4/layer.js" type="text/javascript"></script>
+    <script src="../Script/layer/layerWindows.js" type="text/javascript"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <table border="0" cellpadding="0" cellspacing="0" style="width: 100%; height: 100%">
+            <tr>
+                <td style="width: 8px; height: 4px">
+                </td>
+                <td style="width: 8px; height: 4px">
+                </td>
+                <td>
+                    <ajaxToolkit:ToolkitScriptManager   ID="ScriptManager1" EnableScriptGlobalization="true" runat="server" OnAsyncPostBackError="ScriptManager1_AsyncPostBackError">
+                    </ajaxToolkit:ToolkitScriptManager >
+                </td>
+                <td style="width: 8px; height: 4px">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td style="vertical-align: top">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder4" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+                <td style="vertical-align: top">
+                    <table runat="server" id="tablework" border="0" cellpadding="0" cellspacing="0" style="width: 100%;">
+                        <tr runat="server" id="trTitle">
+                            <td style="height: 4px; vertical-align: middle;">
+                                <asp:Label ID="lblTitle" runat="server" Text="查询" CssClass="TitleDir"></asp:Label>
+                            </td>
+                        </tr>
+                        <tr runat="server" id="trTitle1">
+                            <td style="height: 4px;">
+                            </td>
+                        </tr>
+                        <tr runat="server" id="trTitle2">
+                            <td style="height: 12px;">
+                                <table id="SearchTab" runat="server" border="0" cellpadding="0" cellspacing="0" style="background-color: White;
+                                    border-right: #ababab 1px solid; border-top: #ababab 1px solid; border-left: #ababab 1px solid;
+                                    width: 100%; border-bottom: #ababab 1px solid;">
+                                    <tr style="height: 4px">
+                                        <td style="width: 4px">
+                                        </td>
+                                        <td style="vertical-align: top;">
+                                        </td>
+                                        <td style="width: 4px">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 4px">
+                                        </td>
+                                        <td style="vertical-align: top;">
+                                            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                            </asp:ContentPlaceHolder>
+                                        </td>
+                                        <td style="width: 4px">
+                                        </td>
+                                    </tr>
+                                    <tr style="height: 4px">
+                                        <td style="width: 4px">
+                                        </td>
+                                        <td style="vertical-align: top;">
+                                        </td>
+                                        <td style="width: 4px">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr runat="server" id="trTitle3">
+                            <td style="height: 8px">
+                            </td>
+                        </tr>
+                        <tr runat="server" id="tdGrid">
+                            <td style="width: 100%">
+                                <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                                    <ContentTemplate>
+                                       <table runat="server" id="GridTable" style="display: none; width: 100%;  vertical-align: top;"
+                                                border="0" cellpadding="0" cellspacing="0">
+                                                <tr>
+                                                    <td id="tdtdGrid" runat="server" style="width: 100%; vertical-align: top;">
+                                                        <div runat="server" id="DivGrid" class="divs">
+                                                            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                                                            </asp:ContentPlaceHolder>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td runat="server" id="GridFoot" style="width: 100%;">
+                                                        <table class="GridFoot">
+                                                            <tr>
+                                                                <td>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="">
+                                                        <HozestERP:GridNevigator ID="GridNevigator1" runat="server" />
+                                                        <asp:HiddenField ID="hidGridViewSortField" runat="server" />
+                                                        <asp:Button ID="btnGridViewSort" runat="server" style="display:none;" 
+                                                            onclick="btnGridViewSort_Click" />
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                    </ContentTemplate>
+                                </asp:UpdatePanel>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="height: 4px">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="vertical-align: top;" id="tdContent2" runat="server">
+                                <asp:ContentPlaceHolder ID="Contentplaceholder3" runat="server">
+                                </asp:ContentPlaceHolder>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 8px; height: 8px">
+                </td>
+                <td style="width: 8px; height: 8px">
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <asp:UpdateProgress ID="UpdateProgress1" runat="server">
+        <ProgressTemplate>
+            <HozestERP:UpdateProcess ID="UpdateProcess1" runat="server" />
+        </ProgressTemplate>
+    </asp:UpdateProgress>
+    </form>
+</body>
+</html>

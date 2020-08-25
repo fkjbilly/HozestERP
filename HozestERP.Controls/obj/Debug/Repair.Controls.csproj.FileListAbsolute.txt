@@ -1,0 +1,17 @@
+D:\gqn\Repair\trunk\CRM.Controls\bin\Debug\CRM.Controls.dll
+D:\gqn\Repair\trunk\CRM.Controls\bin\Debug\CRM.Controls.pdb
+D:\gqn\Repair\trunk\CRM.Controls\bin\Debug\Lindonsoft.QRIIIS.Controls.dll
+D:\gqn\Repair\trunk\CRM.Controls\obj\Debug\ResolveAssemblyReference.cache
+D:\gqn\Repair\trunk\CRM.Controls\obj\Debug\CRM.Controls.dll
+D:\gqn\Repair\trunk\CRM.Controls\obj\Debug\CRM.Controls.pdb
+E:\Repair\trunk\CRM.Controls\bin\Debug\CRM.Controls.dll
+E:\Repair\trunk\CRM.Controls\bin\Debug\CRM.Controls.pdb
+E:\Repair\trunk\CRM.Controls\bin\Debug\Lindonsoft.QRIIIS.Controls.dll
+E:\Repair\trunk\CRM.Controls\obj\Debug\Repair.Controls.csprojResolveAssemblyReference.cache
+E:\Repair\trunk\CRM.Controls\obj\Debug\CRM.Controls.dll
+E:\Repair\trunk\CRM.Controls\obj\Debug\CRM.Controls.pdb
+G:\和众电商ERP-NEW\trunk\CRM.Controls\bin\Debug\CRM.Controls.dll
+G:\和众电商ERP-NEW\trunk\CRM.Controls\bin\Debug\CRM.Controls.pdb
+G:\和众电商ERP-NEW\trunk\CRM.Controls\bin\Debug\Lindonsoft.QRIIIS.Controls.dll
+G:\和众电商ERP-NEW\trunk\CRM.Controls\obj\Debug\CRM.Controls.dll
+G:\和众电商ERP-NEW\trunk\CRM.Controls\obj\Debug\CRM.Controls.pdb

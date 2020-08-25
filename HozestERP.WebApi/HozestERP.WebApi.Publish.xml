@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="F:\项目\软件发布\HozestERP-API" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="配置文件1" publishMethod="FileSystem" replaceMatchingFiles="True" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="bin/System.Web.Http.dll" publishTime="12/24/2018 14:00:46" />
+    <file relUrl="bin/HozestERP.Common.pdb" publishTime="04/09/2019 10:28:03" />
+    <file relUrl="Global.asax" publishTime="06/03/2019 09:53:23" />
+    <file relUrl="bin/Microsoft.Threading.Tasks.dll" publishTime="12/24/2018 21:29:37" />
+    <file relUrl="bin/HozestERP.Common.dll" publishTime="04/09/2019 10:28:04" />
+    <file relUrl="bin/System.Net.Http.WebRequest.xml" publishTime="12/25/2018 13:33:03" />
+    <file relUrl="bin/System.Web.Http.WebHost.xml" publishTime="12/24/2018 14:00:46" />
+    <file relUrl="bin/System.Net.Http.Extensions.xml" publishTime="12/25/2018 13:33:03" />
+    <file relUrl="bin/System.Net.Http.dll" publishTime="12/25/2018 13:33:03" />
+    <file relUrl="bin/System.Net.Http.Formatting.dll" publishTime="12/25/2018 13:33:08" />
+    <file relUrl="bin/System.Net.Http.Primitives.dll" publishTime="12/25/2018 13:33:03" />
+    <file relUrl="bin/Newtonsoft.Json.xml" publishTime="12/24/2018 14:00:46" />
+    <file relUrl="bin/System.IO.xml" publishTime="12/25/2018 13:33:03" />
+    <file relUrl="bin/Microsoft.Threading.Tasks.Extensions.Desktop.xml" publishTime="12/24/2018 21:29:37" />
+    <file relUrl="packages.config" publishTime="06/03/2019 09:53:22" />
+    <file relUrl="bin/System.Web.Http.xml" publishTime="12/24/2018 14:00:46" />
+    <file relUrl="bin/System.Runtime.dll" publishTime="12/25/2018 13:33:03" />
+    <file relUrl="bin/System.Net.Http.Primitives.xml" publishTime="12/25/2018 13:33:03" />
+    <file relUrl="bin/Microsoft.Threading.Tasks.Extensions.xml" publishTime="12/24/2018 21:29:37" />
+    <file relUrl="bin/Newtonsoft.Json.dll" publishTime="12/24/2018 14:00:46" />
+    <file relUrl="bin/Microsoft.Threading.Tasks.Extensions.dll" publishTime="12/24/2018 21:29:37" />
+    <file relUrl="bin/System.IO.dll" publishTime="12/25/2018 13:33:03" />
+    <file relUrl="bin/System.Net.Http.WebRequest.dll" publishTime="12/25/2018 13:33:03" />
+    <file relUrl="bin/Microsoft.Threading.Tasks.Extensions.Desktop.dll" publishTime="12/24/2018 21:29:37" />
+    <file relUrl="bin/System.Threading.Tasks.dll" publishTime="12/25/2018 13:33:03" />
+    <file relUrl="bin/System.Runtime.xml" publishTime="12/25/2018 13:33:03" />
+    <file relUrl="bin/System.Web.Http.WebHost.dll" publishTime="12/24/2018 14:00:46" />
+    <file relUrl="bin/System.Net.Http.xml" publishTime="12/25/2018 13:33:03" />
+    <file relUrl="bin/Microsoft.Web.Infrastructure.dll" publishTime="12/24/2018 14:00:46" />
+    <file relUrl="Web.config" publishTime="06/03/2019 10:50:32" />
+    <file relUrl="bin/System.Net.Http.Extensions.dll" publishTime="12/25/2018 13:33:03" />
+    <file relUrl="bin/HozestERP.WebApi.pdb" publishTime="06/05/2019 15:38:26" />
+    <file relUrl="bin/System.Net.Http.Formatting.xml" publishTime="12/25/2018 13:33:08" />
+    <file relUrl="bin/System.Threading.Tasks.xml" publishTime="12/25/2018 13:33:03" />
+    <file relUrl="bin/Microsoft.Threading.Tasks.xml" publishTime="12/24/2018 21:29:37" />
+    <file relUrl="bin/HozestERP.WebApi.dll" publishTime="06/05/2019 15:38:26" />
+  </publishProfile>
+</publishData>

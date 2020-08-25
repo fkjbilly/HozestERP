@@ -1,0 +1,27 @@
+﻿.BarBg
+{
+	background-image: url(Image/CompanySiteBar.gif); 
+	height: 26px
+}
+
+.BigTable
+{
+	width: 96%;
+	}
+.LeftTable
+{
+	width: 30%; vertical-align:top
+}
+
+.Content
+{
+	background-color: #efebe8; height:130px;
+}
+.CenterTable
+{
+	width: 45%; vertical-align:top;
+}
+.RightTable
+{
+	width: 25%; vertical-align:top
+	}

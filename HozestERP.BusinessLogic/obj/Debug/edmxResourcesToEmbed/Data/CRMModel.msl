@@ -1,0 +1,528 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CRMBusinessLogicDataStoreContainer" CdmEntityContainer="CRMEntities">
+    <EntitySetMapping Name="ACLs">
+      <EntityTypeMapping TypeName="CRM.BusinessLogic.Data.ACL">
+        <MappingFragment StoreEntitySet="Sys_ACL">
+          <ScalarProperty Name="Allow" ColumnName="Allow" />
+          <ScalarProperty Name="CustomerRoleID" ColumnName="CustomerRoleID" />
+          <ScalarProperty Name="CustomerActionID" ColumnName="CustomerActionID" />
+          <ScalarProperty Name="ACLID" ColumnName="ACLID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ACLModules">
+      <EntityTypeMapping TypeName="CRM.BusinessLogic.Data.ACLModule">
+        <MappingFragment StoreEntitySet="Sys_ACLModule">
+          <ScalarProperty Name="Allow" ColumnName="Allow" />
+          <ScalarProperty Name="CustomerRoleId" ColumnName="CustomerRoleId" />
+          <ScalarProperty Name="ModuleID" ColumnName="ModuleID" />
+          <ScalarProperty Name="ACLModuleId" ColumnName="ACLModuleId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ActivityLogs">
+      <EntityTypeMapping TypeName="CRM.BusinessLogic.Data.ActivityLog">
+        <MappingFragment StoreEntitySet="Sys_ActivityLog">
+          <ScalarProperty Name="MerchantID" ColumnName="MerchantID" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="ActivityLogTypeID" ColumnName="ActivityLogTypeID" />
+          <ScalarProperty Name="ActivityLogID" ColumnName="ActivityLogID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ActivityLogTypes">
+      <EntityTypeMapping TypeName="CRM.BusinessLogic.Data.ActivityLogType">
+        <MappingFragment StoreEntitySet="Sys_ActivityLogType">
+          <ScalarProperty Name="Enabled" ColumnName="Enabled" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="SystemKeyword" ColumnName="SystemKeyword" />
+          <ScalarProperty Name="ActivityLogTypeID" ColumnName="ActivityLogTypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AreaCodes">
+      <EntityTypeMapping TypeName="CRM.BusinessLogic.Data.AreaCode">
+        <MappingFragment StoreEntitySet="Sys_AreaCode">
+          <ScalarProperty Name="Enabled" ColumnName="Enabled" />
+          <ScalarProperty Name="Population" ColumnName="Population" />
+          <ScalarProperty Name="Acreage" ColumnName="Acreage" />
+          <ScalarProperty Name="OrderStr" ColumnName="OrderStr" />
+          <ScalarProperty Name="KeyWord" ColumnName="KeyWord" />
+          <ScalarProperty Name="Spell" ColumnName="Spell" />
+          <ScalarProperty Name="shortening" ColumnName="shortening" />
+          <ScalarProperty Name="AreaID" ColumnName="AreaID" />
+          <ScalarProperty Name="Post" ColumnName="Post" />
+          <ScalarProperty Name="Govt" ColumnName="Govt" />
+          <ScalarProperty Name="CityType" ColumnName="CityType" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Rank" ColumnName="Rank" />
+          <ScalarProperty Name="PrePath" ColumnName="PrePath" />
+          <ScalarProperty Name="Preceding" ColumnName="Preceding" />
+          <ScalarProperty Name="Root" ColumnName="Root" />
+          <ScalarProperty Name="NumberID" ColumnName="NumberID" />
+          <ScalarProperty Name="xmlid" ColumnName="xmlid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BannedIpAddresses">
+      <EntityTypeMapping TypeName="CRM.BusinessLogic.Data.BannedIpAddress">
+        <MappingFragment StoreEntitySet="Sys_BannedIpAddress">
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="BannedIpAddressID" ColumnName="BannedIpAddressID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BannedIpNetworks">
+      <EntityTypeMapping TypeName="CRM.BusinessLogic.Data.BannedIpNetwork">
+        <MappingFragment StoreEntitySet="Sys_BannedIpNetwork">
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="IpException" ColumnName="IpException" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="EndAddress" ColumnName="EndAddress" />
+          <ScalarProperty Name="StartAddress" ColumnName="StartAddress" />
+          <ScalarProperty Name="BannedIpNetworkID" ColumnName="BannedIpNetworkID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CodeLists">
+      <EntityTypeMapping TypeName="CRM.BusinessLogic.Data.CodeList">
+        <MappingFragment StoreEntitySet="Sys_CodeList">
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="CodeName" ColumnName="CodeName" />
+          <ScalarProperty Name="CodeNO" ColumnName="CodeNO" />
+          <ScalarProperty Name="CodeTypeID" ColumnName="CodeTypeID" />
+          <ScalarProperty Name="CodeID" ColumnName="CodeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CodeTypes">
+      <EntityTypeMapping TypeName="CRM.BusinessLogic.Data.CodeType">
+        <MappingFragment StoreEntitySet="Sys_CodeType">
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="CodeTypeName" ColumnName="CodeTypeName" />
+          <ScalarProperty Name="CodeTypeCode" ColumnName="CodeTypeCode" />
+          <ScalarProperty Name="ModuleID" ColumnName="ModuleID" />
+          <ScalarProperty Name="CodeTypeID" ColumnName="CodeTypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="CRM.BusinessLogic.Data.Customer">
+        <MappingFragment StoreEntitySet="Sys_Customer">
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="AvatarID" ColumnName="AvatarID" />
+          <ScalarProperty Name="TimeZoneID" ColumnName="TimeZoneID" />
+          <ScalarProperty Name="RegistrationDate" ColumnName="RegistrationDate" />
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="AdminComment" ColumnName="AdminComment" />
+          <ScalarProperty Name="Signature" ColumnName="Signature" />
+          <ScalarProperty Name="IsGuest" ColumnName="IsGuest" />
+          <ScalarProperty Name="IsAdmin" ColumnName="IsAdmin" />
+          <ScalarProperty Name="SaltKey" ColumnName="SaltKey" />
+          <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CustomerActions">
+      <EntityTypeMapping TypeName="CRM.BusinessLogic.Data.CustomerAction">
+        <MappingFragment StoreEntitySet="Sys_CustomerAction">
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="SystemKeyword" ColumnName="SystemKeyword" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ModuleID" ColumnName="ModuleID" />
+          <ScalarProperty Name="CustomerActionID" ColumnName="CustomerActionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CustomerAttributes">
+      <EntityTypeMapping TypeName="CRM.BusinessLogic.Data.CustomerAttribute">
+        <MappingFragment StoreEntitySet="Sys_CustomerAttribute">
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="Key" ColumnName="Key" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="CustomerAttributeId" ColumnName="CustomerAttributeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CustomerRoles">
+      <EntityTypeMapping TypeName="CRM.BusinessLogic.Data.CustomerRole">
+        <MappingFragment StoreEntitySet="Sys_CustomerRole">
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateStaff" ColumnName="CreateStaff" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ParentCustomerRoleID" ColumnName="ParentCustomerRoleID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="CustomerRoleID" ColumnName="CustomerRoleID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CustomerSessions">
+      <EntityTypeMapping TypeName="CRM.BusinessLogic.Data.CustomerSession">
+        <MappingFragment StoreEntitySet="Sys_CustomerSession">
+          <ScalarProperty Name="IsExpired" ColumnName="IsExpired" />
+          <ScalarProperty Name="LastAccessed" ColumnName="LastAccessed" />
+          <ScalarProperty Name="LogTime" ColumnName="LogTime" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="CustomerSessionGUID" ColumnName="CustomerSessionGUID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Departments">
+      <EntityTypeMapping TypeName="CRM.BusinessLogic.Data.Department">
+        <MappingFragment StoreEntitySet="Sys_Department">
+          <ScalarProperty Name="EditTime" ColumnName="EditTime" />
+          <ScalarProperty Name="EditUserId" ColumnName="EditUserId" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="AddUserId" ColumnName="AddUserId" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="Published" ColumnName="Published" />
+          <ScalarProperty Name="Tel" ColumnName="Tel" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="DepManagerID" ColumnName="DepManagerID" />
+          <ScalarProperty Name="Label" ColumnName="Label" />
+          <ScalarProperty Name="DepType" ColumnName="DepType" />
+          <ScalarProperty Name="DepName" ColumnName="DepName" />
+          <ScalarProperty Name="DepCode" ColumnName="DepCode" />
+          <ScalarProperty Name="EnterpriseID" ColumnName="EnterpriseID" />
+          <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+          <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Enterprises">
+      <EntityTypeMapping TypeName="CRM.BusinessLogic.Data.Enterprise">
+        <MappingFragment StoreEntitySet="Sys_Enterprise">
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="Published" ColumnName="Published" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="AddUserId" ColumnName="AddUserId" />
+          <ScalarProperty Name="EntBankAccount" ColumnName="EntBankAccount" />
+          <ScalarProperty Name="EntBank" ColumnName="EntBank" />
+          <ScalarProperty Name="EntEmail" ColumnName="EntEmail" />
+          <ScalarProperty Name="EntWebSite" ColumnName="EntWebSite" />
+          <ScalarProperty Name="EntZip" ColumnName="EntZip" />
+          <ScalarProperty Name="EntAddress" ColumnName="EntAddress" />
+          <ScalarProperty Name="EntFax" ColumnName="EntFax" />
+          <ScalarProperty Name="EntTel" ColumnName="EntTel" />
+          <ScalarProperty Name="EntName" ColumnName="EntName" />
+          <ScalarProperty Name="EntId" ColumnName="EntId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Logs">
+      <EntityTypeMapping TypeName="CRM.BusinessLogic.Data.Log">
+        <MappingFragment StoreEntitySet="Sys_Log">
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="ReferrerURL" ColumnName="ReferrerURL" />
+          <ScalarProperty Name="PageURL" ColumnName="PageURL" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+          <ScalarProperty Name="Exception" ColumnName="Exception" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="Severity" ColumnName="Severity" />
+          <ScalarProperty Name="LogTypeID" ColumnName="LogTypeID" />
+          <ScalarProperty Name="LogID" ColumnName="LogID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Modules">
+      <EntityTypeMapping TypeName="CRM.BusinessLogic.Data.Module">
+        <MappingFragment StoreEntitySet="Sys_Module">
+          <ScalarProperty Name="AppIconCls" ColumnName="AppIconCls" />
+          <ScalarProperty Name="iconCls" ColumnName="iconCls" />
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="Published" ColumnName="Published" />
+          <ScalarProperty Name="Expand" ColumnName="Expand" />
+          <ScalarProperty Name="href" ColumnName="href" />
+          <ScalarProperty Name="isTarget" ColumnName="isTarget" />
+          <ScalarProperty Name="ModuleCode" ColumnName="ModuleCode" />
+          <ScalarProperty Name="ModuleName" ColumnName="ModuleName" />
+          <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+          <ScalarProperty Name="ModuleID" ColumnName="ModuleID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Notices">
+      <EntityTypeMapping TypeName="CRM.BusinessLogic.Data.Notice">
+        <MappingFragment StoreEntitySet="Sys_Notice">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Published" ColumnName="Published" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="Promulgator" ColumnName="Promulgator" />
+          <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pictures">
+      <EntityTypeMapping TypeName="CRM.BusinessLogic.Data.Picture">
+        <MappingFragment StoreEntitySet="Sys_Picture">
+          <ScalarProperty Name="MimeType" ColumnName="MimeType" />
+          <ScalarProperty Name="IsNew" ColumnName="IsNew" />
+          <ScalarProperty Name="PictureBinary" ColumnName="PictureBinary" />
+          <ScalarProperty Name="PictureID" ColumnName="PictureID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Settings">
+      <EntityTypeMapping TypeName="CRM.BusinessLogic.Data.Setting">
+        <MappingFragment StoreEntitySet="Sys_Setting">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="SettingID" ColumnName="SettingID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="Sys_Customer_CustomerRole_Mapping" TypeName="CRM.BusinessLogic.Data.Sys_Customer_CustomerRole_Mapping" StoreEntitySet="Sys_Customer_CustomerRole_Mapping">
+      <EndProperty Name="Sys_CustomerRole">
+        <ScalarProperty Name="CustomerRoleID" ColumnName="CustomerRoleID" />
+      </EndProperty>
+      <EndProperty Name="Sys_Customer">
+        <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <EntitySetMapping Name="Portals">
+      <EntityTypeMapping TypeName="CRM.BusinessLogic.Data.Portal">
+        <MappingFragment StoreEntitySet="Sys_Portal">
+          <ScalarProperty Name="CreatorID" ColumnName="CreatorID" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="iconCls" ColumnName="iconCls" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PortalColumns">
+      <EntityTypeMapping TypeName="CRM.BusinessLogic.Data.PortalColumn">
+        <MappingFragment StoreEntitySet="Sys_PortalColumn">
+          <ScalarProperty Name="SortIndex" ColumnName="SortIndex" />
+          <ScalarProperty Name="IsExpand" ColumnName="IsExpand" />
+          <ScalarProperty Name="PortalID" ColumnName="PortalID" />
+          <ScalarProperty Name="ColumnNumberID" ColumnName="ColumnNumberID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PortalColumnNumbers">
+      <EntityTypeMapping TypeName="CRM.BusinessLogic.Data.PortalColumnNumber">
+        <MappingFragment StoreEntitySet="Sys_PortalColumnNumber">
+          <ScalarProperty Name="Display" ColumnName="Display" />
+          <ScalarProperty Name="Width" ColumnName="Width" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CustomerInfoes">
+      <EntityTypeMapping TypeName="CRM.BusinessLogic.Data.CustomerInfo">
+        <MappingFragment StoreEntitySet="Sys_CustomerInfo">
+          <ScalarProperty Name="CreatorID" ColumnName="CreatorID" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+          <ScalarProperty Name="Published" ColumnName="Published" />
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="CustomerStatusID" ColumnName="CustomerStatusID" />
+          <ScalarProperty Name="Childbearing" ColumnName="Childbearing" />
+          <ScalarProperty Name="Stature" ColumnName="Stature" />
+          <ScalarProperty Name="PoliticalStatusID" ColumnName="PoliticalStatusID" />
+          <ScalarProperty Name="BloodTypeID" ColumnName="BloodTypeID" />
+          <ScalarProperty Name="MarriageID" ColumnName="MarriageID" />
+          <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+          <ScalarProperty Name="RegisteredResidence" ColumnName="RegisteredResidence" />
+          <ScalarProperty Name="AnimalID" ColumnName="AnimalID" />
+          <ScalarProperty Name="NationalityID" ColumnName="NationalityID" />
+          <ScalarProperty Name="GenderID" ColumnName="GenderID" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="JobNumber" ColumnName="JobNumber" />
+          <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UploadFiles">
+      <EntityTypeMapping TypeName="CRM.BusinessLogic.Data.UploadFile">
+        <MappingFragment StoreEntitySet="Sys_UploadFile">
+          <ScalarProperty Name="CreatorID" ColumnName="CreatorID" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="TableName" ColumnName="TableName" />
+          <ScalarProperty Name="ObjectID" ColumnName="ObjectID" />
+          <ScalarProperty Name="TaggantID" ColumnName="TaggantID" />
+          <ScalarProperty Name="UploadFileID" ColumnName="UploadFileID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="GetUploadFileList" FunctionName="CRM.BusinessLogic.Data.Store.CRM_GetUploadFileList" />
+    <FunctionImportMapping FunctionImportName="UploadFileList" FunctionName="CRM.BusinessLogic.Data.Store.CRM_UploadFileList" />
+    <AssociationSetMapping Name="Sys_CustomerRole_StaffPrivileges_Mapping" TypeName="CRM.BusinessLogic.Data.Sys_CustomerRole_StaffPrivileges_Mapping" StoreEntitySet="Sys_CustomerRole_StaffPrivileges_Mapping">
+      <EndProperty Name="CustomerRole">
+        <ScalarProperty Name="CustomerRoleID" ColumnName="CustomerRoleID" />
+      </EndProperty>
+      <EndProperty Name="Customer">
+        <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <FunctionImportMapping FunctionImportName="SaveAgentAccount" FunctionName="CRM.BusinessLogic.Data.Store.TOPDB_EditTop_AgentAccount" />
+    <FunctionImportMapping FunctionImportName="InsertAgentAccountUser" FunctionName="CRM.BusinessLogic.Data.Store.InsertAgentAccountUser" />
+    <FunctionImportMapping FunctionImportName="ContractRenewal" FunctionName="CRM.BusinessLogic.Data.Store.ContractRenewal" />
+    <AssociationSetMapping Name="Sys_Department_CustomerRole_Mapping" TypeName="CRM.BusinessLogic.Data.Sys_Department_CustomerRole_Mapping" StoreEntitySet="Sys_Department_CustomerRole_Mapping">
+      <EndProperty Name="Department">
+        <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
+      </EndProperty>
+      <EndProperty Name="CustomerRole">
+        <ScalarProperty Name="CustomerRoleID" ColumnName="CustomerRoleID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <EntitySetMapping Name="Sys_AlertSettings">
+      <EntityTypeMapping TypeName="CRM.BusinessLogic.Data.Sys_AlertSettings">
+        <MappingFragment StoreEntitySet="Sys_AlertSettings">
+          <ScalarProperty Name="Spare2" ColumnName="Spare2" />
+          <ScalarProperty Name="Spare1" ColumnName="Spare1" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="Rmdname" ColumnName="Rmdname" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sys_AlertTimeSet">
+      <EntityTypeMapping TypeName="CRM.BusinessLogic.Data.Sys_AlertTimeSet">
+        <MappingFragment StoreEntitySet="Sys_AlertTimeSet">
+          <ScalarProperty Name="Spare2" ColumnName="Spare2" />
+          <ScalarProperty Name="Spare1" ColumnName="Spare1" />
+          <ScalarProperty Name="Cycletime" ColumnName="Cycletime" />
+          <ScalarProperty Name="AlertID" ColumnName="AlertID" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sys_StarSet">
+      <EntityTypeMapping TypeName="CRM.BusinessLogic.Data.Sys_StarSet">
+        <MappingFragment StoreEntitySet="Sys_StarSet">
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="StarSrc" ColumnName="StarSrc" />
+          <ScalarProperty Name="StarName" ColumnName="StarName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sys_CustomerStar">
+      <EntityTypeMapping TypeName="CRM.BusinessLogic.Data.Sys_CustomerStar">
+        <MappingFragment StoreEntitySet="Sys_CustomerStar">
+          <ScalarProperty Name="Spare2" ColumnName="Spare2" />
+          <ScalarProperty Name="Spare1" ColumnName="Spare1" />
+          <ScalarProperty Name="SetDate" ColumnName="SetDate" />
+          <ScalarProperty Name="SetID" ColumnName="SetID" />
+          <ScalarProperty Name="IsNew" ColumnName="IsNew" />
+          <ScalarProperty Name="ServerCount" ColumnName="ServerCount" />
+          <ScalarProperty Name="StarLv" ColumnName="StarLv" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SaveAgentAccountTP" FunctionName="CRM.BusinessLogic.Data.Store.EditDC_AgentAccountTP" />
+    <EntitySetMapping Name="TableUpdateLogs">
+      <EntityTypeMapping TypeName="CRM.BusinessLogic.Data.TableUpdateLog">
+        <MappingFragment StoreEntitySet="Table_Update_Log">
+          <ScalarProperty Name="TableName" ColumnName="TableName" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="OperatorID" ColumnName="OperatorID" />
+          <ScalarProperty Name="NewValue" ColumnName="NewValue" />
+          <ScalarProperty Name="OrginValue" ColumnName="OrginValue" />
+          <ScalarProperty Name="FieldName" ColumnName="FieldName" />
+          <ScalarProperty Name="RequestID" ColumnName="RequestID" />
+          <ScalarProperty Name="LogID" ColumnName="LogID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bulletins">
+      <EntityTypeMapping TypeName="CRM.BusinessLogic.Data.Bulletin">
+        <MappingFragment StoreEntitySet="Sys_Bulletin">
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="UpdatorID" ColumnName="UpdatorID" />
+          <ScalarProperty Name="CreatorID" ColumnName="CreatorID" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+          <ScalarProperty Name="Published" ColumnName="Published" />
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Approval" ColumnName="Approval" />
+          <ScalarProperty Name="BulletinStatus" ColumnName="BulletinStatus" />
+          <ScalarProperty Name="ReleasedDate" ColumnName="ReleasedDate" />
+          <ScalarProperty Name="InvalidDate" ColumnName="InvalidDate" />
+          <ScalarProperty Name="EffectiveDate" ColumnName="EffectiveDate" />
+          <ScalarProperty Name="UnitNameId" ColumnName="UnitNameId" />
+          <ScalarProperty Name="PriorTypeID" ColumnName="PriorTypeID" />
+          <ScalarProperty Name="BulletinTypeID" ColumnName="BulletinTypeID" />
+          <ScalarProperty Name="BulletinTitle" ColumnName="BulletinTitle" />
+          <ScalarProperty Name="BulletinCode" ColumnName="BulletinCode" />
+          <ScalarProperty Name="AnnouncementTypeId" ColumnName="AnnouncementTypeId" />
+          <ScalarProperty Name="BulletinID" ColumnName="BulletinID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="Sys_Bulletin_CusotmerMapping" TypeName="CRM.BusinessLogic.Data.Sys_Bulletin_CusotmerMapping" StoreEntitySet="Sys_Bulletin_CusotmerMapping">
+      <EndProperty Name="CustomerInfo">
+        <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+      </EndProperty>
+      <EndProperty Name="Sys_Bulletin">
+        <ScalarProperty Name="BulletinID" ColumnName="BulletinID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <EntitySetMapping Name="BXRepairInformations">
+      <EntityTypeMapping TypeName="CRM.BusinessLogic.Data.BXRepairInformation">
+        <MappingFragment StoreEntitySet="BX_RepairInformation">
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="UpdatorID" ColumnName="UpdatorID" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="CreatorID" ColumnName="CreatorID" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="IsAudit" ColumnName="IsAudit" />
+          <ScalarProperty Name="RepairTime" ColumnName="RepairTime" />
+          <ScalarProperty Name="NoRepairsTime" ColumnName="NoRepairsTime" />
+          <ScalarProperty Name="NoMaintenanceReasonsId" ColumnName="NoMaintenanceReasonsId" />
+          <ScalarProperty Name="AcceptanceTime" ColumnName="AcceptanceTime" />
+          <ScalarProperty Name="MaintenanceMan" ColumnName="MaintenanceMan" />
+          <ScalarProperty Name="NoAcceptanceTime" ColumnName="NoAcceptanceTime" />
+          <ScalarProperty Name="StatusId" ColumnName="StatusId" />
+          <ScalarProperty Name="WarrantyWayId" ColumnName="WarrantyWayId" />
+          <ScalarProperty Name="Contact" ColumnName="Contact" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="RepairMan" ColumnName="RepairMan" />
+          <ScalarProperty Name="DegreeId" ColumnName="DegreeId" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="RepairProject" ColumnName="RepairProject" />
+          <ScalarProperty Name="UnitNameId" ColumnName="UnitNameId" />
+          <ScalarProperty Name="RepairType" ColumnName="RepairType" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

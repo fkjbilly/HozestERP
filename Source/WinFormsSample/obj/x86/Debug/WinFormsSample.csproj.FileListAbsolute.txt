@@ -1,0 +1,16 @@
+F:\TD\JdSdk-master\Source\WinFormsSample\obj\x86\Debug\ResolveAssemblyReference.cache
+F:\TD\JdSdk-master\Source\WinFormsSample\obj\x86\Debug\GenerateResource-ResGen.read.1.tlog
+F:\TD\JdSdk-master\Source\WinFormsSample\obj\x86\Debug\GenerateResource-ResGen.write.1.tlog
+F:\TD\JdSdk-master\Source\WinFormsSample\bin\Debug\WinFormsSample.exe.config
+F:\TD\JdSdk-master\Source\WinFormsSample\bin\Debug\WinFormsSample.exe
+F:\TD\JdSdk-master\Source\WinFormsSample\bin\Debug\WinFormsSample.pdb
+F:\TD\JdSdk-master\Source\WinFormsSample\bin\Debug\JdSdk.dll
+F:\TD\JdSdk-master\Source\WinFormsSample\bin\Debug\Newtonsoft.Json.dll
+F:\TD\JdSdk-master\Source\WinFormsSample\bin\Debug\JdSdk.pdb
+F:\TD\JdSdk-master\Source\WinFormsSample\bin\Debug\JdSdk.xml
+F:\TD\JdSdk-master\Source\WinFormsSample\bin\Debug\Newtonsoft.Json.xml
+F:\TD\JdSdk-master\Source\WinFormsSample\obj\x86\Debug\WinFormsSample.AuthForm.resources
+F:\TD\JdSdk-master\Source\WinFormsSample\obj\x86\Debug\WinFormsSample.MainForm.resources
+F:\TD\JdSdk-master\Source\WinFormsSample\obj\x86\Debug\WinFormsSample.Properties.Resources.resources
+F:\TD\JdSdk-master\Source\WinFormsSample\obj\x86\Debug\WinFormsSample.exe
+F:\TD\JdSdk-master\Source\WinFormsSample\obj\x86\Debug\WinFormsSample.pdb

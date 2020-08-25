@@ -1,0 +1,83 @@
+﻿html
+{ -webkit-text-size-adjust: 100%;}
+* {
+    padding: 0; 
+    margin: 0; 
+    outline:0;
+    font-size: 1em;
+    
+}
+.gvHideHeader
+
+{
+
+    display:none;
+
+}
+body {
+	font: 11px Tahoma;
+	background: #EEEEEE;
+	
+
+}
+h1 {
+    font: bold 32px Times;
+	color: #666;
+	text-align: center;
+	padding: 20px 0;    
+}
+#container {
+    width: 700px;
+    margin: 10px auto;
+}
+.box{width:90%; }
+.search_box{overflow:hidden;font-size: 1.2em;background: #FFFFFF repeat-x top;margin: auto; padding: 0;}
+.search_box2{overflow:hidden;font-size: 1.2em;background: #FFFFFF repeat-x top;margin: auto; padding: 0;}
+.search_box3{overflow:hidden;font-size: 1.2em;background: #FFFFFF repeat-x top;margin: 10px auto; padding: 0;margin: 0; }
+.search_box4{overflow:hidden;font-size: 1.2em;background: #FFFFFF repeat-x top;margin: 10px auto; padding: 0; margin: 0; }
+.search_box5{overflow:hidden;font-size: 1.2em;background: #FFFFFF repeat-x top;margin: 10px auto; padding: 0; margin: 0;}
+.search_box6{ color: #717171;overflow:hidden;float:left;overflow:hidden;background: #FFFFFF repeat-x top;margin: 0 auto; padding: 0; margin: 0;
+
+}
+.search_box7{font-size: 1em; width:90%;height:auto; color: #717171;overflow:hidden;background: #FFFFFF repeat-x top;margin: 10px auto; padding: 0; margin: 0;
+
+}
+.search_box8{border-right: #000000 0px solid; border-top: #000000 0px solid; border-left: #000000 0px solid; border-bottom: #EDEDED 1px solid;}
+
+.tetStyle2{width:85%;height:auto; padding: 0;background:transparent; border-radius:0px;border-right: #000000 0px solid; border-top: #000000 0px solid; border-left: #000000 0px solid; border-bottom: #EDEDED 1px solid;overflow:hidden;
+}
+.abc{font-weight:bold;font-size: 1.5em;}
+.mGrid { width: 100%; background-color: #fff; margin: 5px 0 10px 0;   }
+    .mGrid td { padding: 1px; border-right: #000000 0px solid; border-top: #000000 0px solid; border-left: #000000 0px solid; border-bottom: #EDEDED 1px solid; color: black; font-size: 1.2em;background: #fcfcfc }
+
+
+.lblStyle3{color: #000000;font-size: 1.2em;}
+.lblStyle4{color: #717171;font-size: 0.9em;}
+.lblStyle2{color: #717171;font-size: 1.1em;}
+.lblStyle{width:100%;height:auto; color: #000000; }
+.tetStyle{width:65%;height:30px; padding: 0;background:transparent; border-radius:0px;border-right: #717171 0px solid; border-top: #717171 0px solid; border-left: #717171 0px solid; border-bottom: #EDEDED 0px solid;overflow:hidden;
+}
+.button.gray{
+color: #FFFFFF;
+border:1px solid #FFA500;
+background: -webkit-linear-gradient(top,#FFA500,#FF8C00);
+background: -moz-linear-gradient(top,#FFA500,#FF8C00);
+background: linear-gradient(top,#FFA500,#FF8C00);
+font-size: 1.2em;
+
+
+}
+.button{
+width: 50%;
+line-height: 35px;
+text-align: center;
+font-weight: bold;
+color: #fff;
+position: relative;
+overflow: hidden;
+}
+.button:nth-child(6n){
+margin-right: 0;
+}
+
+

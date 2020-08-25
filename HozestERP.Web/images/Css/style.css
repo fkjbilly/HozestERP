@@ -1,0 +1,15 @@
+/* CSS Document */
+body{ margin:0px auto; padding:0px; font-size:12px; font-family:Tahoma, Verdana, Arial;}
+a{ color:#333333; text-decoration:none;}
+a:hover{ color:#990000; text-decoration:underline;}
+.Login{}
+.Login a{ color:#EDD8D5; text-decoration:none; padding:0px 8px; }
+.Login a:hover{ color:#FFFF00; text-decoration:none;}
+.botton{ color:#CCCCCC; text-align:center;}
+.Left{background: url(../images/main_43.gif) no-repeat bottom; font-size:12px;}
+.Left a{ font-weight:bold; color:#FFFFFF; text-decoration:none;}
+.Left a:hover{ color:#FFFF00; text-decoration:none;}
+.maun{ margin:8px; font-size:12px;}
+.maun ul,li{ padding:0px; margin:0px; list-style:none;}
+.maun li{ background:url(../images/li.gif) no-repeat left center; padding-left:18px; margin-left:15px;}
+.maun a{ font-size:12px;}

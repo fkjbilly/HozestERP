@@ -1,0 +1,50 @@
+/* CSS Document */
+body{ margin:0px; padding:0px; font-size:12px; font-family:Tahoma, Verdana, Arial;}
+a{ color:#333333; text-decoration:none;}
+a:hover{ color:#CC0000; text-decoration:underline;}
+ul,li{margin:0px; padding:0px; list-style:none;}
+/*ÏµÍ³µÇÂ½*/
+
+#formlogin{ width:800px; margin:0px auto; padding-top:20px;}
+#formlogin .bottom{border-top:1px solid #CC0000; text-align:center; width:800px; float:left; margin-top:20px; line-height:30px;}
+#left{ float:left; width:550px;}
+#left img{ float:left;}
+#left .Red_text{ margin:10px; color:#FFFFFF; line-height:25px; float:right; width:320px;}
+#left .R_text{ background:#CC0000; height:164px; margin-top:10px; margin-right:0px;}
+#left .New{ font-size:14px; font-weight:bold; line-height:30px; height:30px; border-bottom:1px solid #CCCCCC; width:98%; text-indent:10px;}
+#left ul{ width:97%; margin-top:8px;}
+#left li{ height:23px; line-height:23px; border-bottom:1px #E57F7F dashed; background:url(image/lit.gif) no-repeat 8px center;}
+#left a{ margin-left:20px;}
+#left .data{ color:#666666; font-size:10px; float:right; margin-right:5px;}
+#right{ float:right; width:250px; margin-top:-30px;}
+#right .R_text{ text-align:right; height:23px; line-height:23px;margin-right:10px;}
+#right .Login_img{ background:url(image/right.gif) no-repeat; width:250px; height:260px; color:#999999;}
+#right .Login_img #LoginForm{text-align:center;width:100%;}
+#right .Table{ margin-top:10px;}
+#right .faq{ border:1px #BDBDBD solid; width:218px; margin-top:10px; background:#FAFAFA; padding:8px; height:160px;}
+#right .New{ font-size:14px; font-weight:bold; line-height:30px; height:30px; border-bottom:1px solid #CCCCCC; width:98%; text-indent:10px;}
+#right ul{ width:97%; margin-top:8px;}
+#right li{ height:23px; line-height:23px; border-bottom:1px #999999 dashed; background:url(image/lit.gif) no-repeat 8px center;}
+#right a{ margin-left:20px;}
+.input{ border-bottom:1px #E4E4E4 solid; border-top:1px #AEAEAE solid;border-right:1px #E4E4E4 solid; border-left:1px #AEAEAE solid; font-family:Tahoma, Verdana, Arial; font-size:12px; padding:2px; color:#333333;}
+.btn-inp {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: bold; FONT-SIZE: 12px; BACKGROUND: url(image/inp.gif) no-repeat 0px 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; WIDTH: 69px; CURSOR: pointer; COLOR: #ffffff; BORDER-TOP-STYLE: none; LINE-HEIGHT: 22px; PADDING-TOP: 0px; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; HEIGHT: 22px; BORDER-BOTTOM-STYLE: none
+}
+.btn-inp-on {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: bold; FONT-SIZE: 12px; BACKGROUND: url(image/inp.gif) no-repeat 0px 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; WIDTH: 69px; CURSOR: pointer; COLOR: #ffffff; BORDER-TOP-STYLE: none; LINE-HEIGHT: 22px; PADDING-TOP: 0px; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; HEIGHT: 22px; BORDER-BOTTOM-STYLE: none
+}
+.btn-inp-on {
+	BACKGROUND: url(image/inp.gif) no-repeat 0px -22px
+}
+
+.Login{}
+.Login a{ color:#EDD8D5; text-decoration:none; padding:0px 8px; }
+.Login a:hover{ color:#FFFF00; text-decoration:none;}
+.botton{ color:#CCCCCC; background-image:url(Image/botton.gif);}
+.Left{background: url(image/main_43.gif) no-repeat bottom; font-size:12px;}
+.Left a{ font-weight:bold; color:#FFFFFF; text-decoration:none;}
+.Left a:hover{ color:#FFFF00; text-decoration:none;}
+.maun{ margin:8px; font-size:12px;}
+.maun ul,li{ padding:0px; margin:0px; list-style:none;}
+.maun li{ background:url(image/li.gif) no-repeat left center; padding-left:18px; margin-left:15px;}
+.maun a{ font-size:12px;}

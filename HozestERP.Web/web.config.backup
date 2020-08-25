@@ -1,0 +1,193 @@
+<?xml version="1.0"?>
+<!--
+  有关如何配置 ASP.NET 应用程序的详细消息，请访问
+  http://go.microsoft.com/fwlink/?LinkId=169433
+  -->
+<configuration>
+  <configSections>
+    <section name="HozestERPConfig" type="HozestERP.BusinessLogic.Configuration.HozestERPConfig, HozestERP.BusinessLogic" requirePermission="false"/>
+    <!-- 系统图标 -->
+    <!-- ShellIconHandler configuration section declaration -->
+    <section name="iconHandler" type="SHIBR.ShellIcons.Web.ShellIconHandlerConfigurationSection"/>
+  </configSections>
+  <appSettings>
+    <add key="ChartImageHandler" value="storage=file;"/>
+    <add key="UseSSL" value="false"/>
+    <add key="SharedSSLUrl" value=""/>
+    <add key="NonSharedSSLUrl" value=""/>
+    <add key="GoogleMerchantID" value=""/>
+    <add key="GoogleMerchantKey" value=""/>
+    <add key="GoogleEnvironment" value="Sandbox"/>
+    <add key="GoogleAuthenticateCallback" value="True"/>
+    <add key="FCKeditor:BasePath" value="~/editors/fckeditor/"/>
+    <add key="FCKeditor:UserFilesPath" value="~/Upload/"/>
+    <add key="FusionChartPath" value="Script/FusionCharts"/>
+    <add key="dependencyResolverTypeName" value="HozestERP.BusinessLogic.Infrastructure.UnityDependencyResolver, HozestERP.BusinessLogic"/>
+    <add key="ChatLogTime" value="15"/>
+  </appSettings>
+  <connectionStrings configSource="ConnectionStrings.config"/>
+  <system.web>
+    <httpHandlers>
+      <remove verb="*" path="*.asmx"/>
+      <add verb="*" path="*.asmx" validate="false" type="System.Web.Script.Services.ScriptHandlerFactory, System.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"/>
+      <add path="Reserved.ReportViewerWebControl.axd" verb="*" type="Microsoft.Reporting.WebForms.HttpHandler, Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" validate="false"/>
+      <add path="*/ext.axd" verb="*" type="Ext.Net.ResourceHandler" validate="false"/>
+      <!-- 系统图标 -->
+      <!-- Add IconHandler for IIS 6.0 / IIS 7.0 Classic mode -->
+      <add path="geticon.axd" verb="GET" type="SHIBR.ShellIcons.Web.ShellIconHandler"/>
+    </httpHandlers>
+    <httpRuntime maxRequestLength="51200" requestValidationMode="2.0" executionTimeout="600"/>
+    <customErrors mode="Off" defaultRedirect="Error/errorpage.html">
+      <error statusCode="403" redirect="Error/bannedaddress.html"/>
+      <error statusCode="404" redirect="Error/filenotfound.html"/>
+    </customErrors>
+    <compilation debug="true" targetFramework="4.0">
+      <expressionBuilders>
+        <add expressionPrefix="CRMIsActionAllowed" type="HozestERP.BusinessLogic.Security.IsActionAllowedExpressionBuilder,HozestERP.BusinessLogic"/>
+        <add expressionPrefix="CRMIsActionAllowedContrary" type="HozestERP.BusinessLogic.Security.IsActionAllowedContraryExpressionBuilder,HozestERP.BusinessLogic"/>
+      </expressionBuilders>
+      <assemblies>
+        <add assembly="System.Web.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+        <add assembly="System.Web.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089"/>
+        <add assembly="System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089"/>
+        <add assembly="Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A"/>
+        <add assembly="System.Management, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A"/>
+        <add assembly="System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A"/>
+      </assemblies>
+      <buildProviders>
+        <add extension=".rdlc" type="Microsoft.Reporting.RdlBuildProvider, Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"/>
+      </buildProviders>
+    </compilation>
+    <authentication mode="Forms">
+      <forms name="HozestERP.AUTH" loginUrl="~/login.aspx" protection="All" timeout="43200" path="/" requireSSL="false" slidingExpiration="true" defaultUrl="~/default.aspx" enableCrossAppRedirects="false"/>
+    </authentication>
+    <membership defaultProvider="CRMMembershipSqlProvider" userIsOnlineTimeWindow="15">
+      <providers>
+        <add name="CRMMembershipSqlProvider" type="HozestERP.BusinessLogic.Profile.StoreMembershipProvider, HozestERP.BusinessLogic" connectionStringName="HozestERPSqlConnection" enablePasswordReset="true" requiresQuestionAndAnswer="false" applicationName="CRM" requiresUniqueEmail="true" enablePasswordRetrieval="true"/>
+      </providers>
+    </membership>
+    <roleManager enabled="true" cacheRolesInCookie="false" defaultProvider="CRMRoleManagerSqlProvider" cookieName=".CRMCommerceRoles" cookiePath="/" cookieTimeout="30" cookieRequireSSL="false" cookieSlidingExpiration="true" createPersistentCookie="false" cookieProtection="All">
+      <providers>
+        <add name="CRMRoleManagerSqlProvider" type="HozestERP.BusinessLogic.Profile.StoreRoleProvider, HozestERP.BusinessLogic" connectionStringName="HozestERPSqlConnection" applicationName="CRM"/>
+      </providers>
+    </roleManager>
+    <sessionState timeout="720" mode="InProc" cookieless="false"/>
+    <pages controlRenderingCompatibilityVersion="3.5" validateRequest="false" clientIDMode="AutoID">
+      <namespaces>
+        <add namespace="System.Collections.Generic"/>
+        <add namespace="HozestERP.BusinessLogic"/>
+        <add namespace="HozestERP.BusinessLogic.Audit"/>
+        <add namespace="HozestERP.BusinessLogic.Audit.UsersOnline"/>
+        <add namespace="HozestERP.BusinessLogic.Configuration.Settings"/>
+        <add namespace="HozestERP.BusinessLogic.CustomerManagement"/>
+        <add namespace="HozestERP.BusinessLogic.Infrastructure"/>
+        <add namespace="HozestERP.BusinessLogic.Media"/>
+        <add namespace="HozestERP.BusinessLogic.Profile"/>
+        <add namespace="HozestERP.BusinessLogic.Security"/>
+        <add namespace="HozestERP.BusinessLogic.SEO"/>
+        <add namespace="HozestERP.BusinessLogic.Tasks"/>
+        <add namespace="HozestERP.BusinessLogic.Utils"/>
+        <add namespace="HozestERP.BusinessLogic.Utils.Html"/>
+        <add namespace="HozestERP.BusinessLogic.ModuleManagement"/>
+        <add namespace="HozestERP.BusinessLogic.Codes"/>
+        <add namespace="HozestERP.Common"/>
+        <add namespace="HozestERP.Common.Utils"/>
+        <add namespace="HozestERP.Common.Utils.Html"/>
+        <add namespace="Ext.Net.Utilities"/>
+      </namespaces>
+      <controls>
+        <add tagPrefix="ext" namespace="Ext.Net" assembly="Ext.Net"/>
+        <add tagPrefix="ajaxToolkit" namespace="AjaxControlToolkit" assembly="AjaxControlToolkit"/>
+        <add tagPrefix="CRM" namespace="HozestERP.Controls" assembly="HozestERP.Controls"/>
+        <add tagPrefix="asp" namespace="System.Web.UI.DataVisualization.Charting" assembly="System.Web.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"/>
+      </controls>
+    </pages>
+    <httpModules>
+      <add name="MembershipHttpModule" type="HozestERP.BusinessLogic.Profile.MembershipHttpModule, HozestERP.BusinessLogic"/>
+      <add name="BlacklistHttpModule" type="HozestERP.BusinessLogic.Security.BlacklistHttpModule, HozestERP.BusinessLogic"/>
+      <add name="DirectRequestModule" type="Ext.Net.DirectRequestModule, Ext.Net"/>
+    </httpModules>
+  </system.web>
+  <system.webServer>
+    <validation validateIntegratedModeConfiguration="false"/>
+    <modules>
+      <add name="MembershipHttpModule" preCondition="managedHandler" type="HozestERP.BusinessLogic.Profile.MembershipHttpModule, HozestERP.BusinessLogic"/>
+      <add name="BlacklistHttpModule" preCondition="managedHandler" type="HozestERP.BusinessLogic.Security.BlacklistHttpModule, HozestERP.BusinessLogic"/>
+      <add name="DirectRequestModule" preCondition="managedHandler" type="Ext.Net.DirectRequestModule, Ext.Net"/>
+    </modules>
+    <handlers>
+      <add name="ReportViewerWebControlHandler" preCondition="integratedMode" verb="*" path="Reserved.ReportViewerWebControl.axd" type="Microsoft.Reporting.WebForms.HttpHandler, Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"/>
+      <add name="DirectRequestHandler" verb="*" path="*/ext.axd" preCondition="integratedMode" type="Ext.Net.ResourceHandler"/>
+      <!-- 系统图标 -->
+      <!-- Add IconHandler for IIS 6.0 / IIS 7.0 Classic mode -->
+      <add name="iconhandler" path="geticon.axd" verb="GET" type="SHIBR.ShellIcons.Web.ShellIconHandler"/>
+    </handlers>
+  </system.webServer>
+  <system.web.extensions>
+    <scripting>
+      <webServices>
+        <jsonSerialization maxJsonLength="50000000"/>
+      </webServices>
+    </scripting>
+  </system.web.extensions>
+  <HozestERPConfig>
+    <SqlServer ConnectionStringName="HozestERPSqlConnection"/>
+    <ScheduleTasks>
+      <Thread seconds="60">
+        <!--do NOT enable ClearCache task if you have enabled tracking online users-->
+        <task name="ClearCache" type="HozestERP.BusinessLogic.Caching.ClearCacheTask, HozestERP.BusinessLogic" enabled="false" stopOnError="false"/>
+        <task name="PurgeOnlineUsers" type="HozestERP.BusinessLogic.Audit.UsersOnline.PurgeOnlineUsersTask, HozestERP.BusinessLogic" enabled="true" stopOnError="false"/>
+        <task name="KeepAlive" type="HozestERP.BusinessLogic.Utils.KeepAliveTask, HozestERP.BusinessLogic" enabled="true" stopOnError="false" path="keepalive/ping.ashx"/>
+      </Thread>
+      <Thread seconds="600">
+        <task name="DeleteExpiredCustomerSessions" type="HozestERP.BusinessLogic.CustomerManagement.DeleteExpiredCustomerSessionsTask, HozestERP.BusinessLogic" enabled="true" stopOnError="false" deleteExpiredCustomerSessionsOlderThanMinutes="43200"/>
+      </Thread>
+      <!--定时获取聊天记录-->
+      <!--<Thread seconds="86400">
+        <task name="GetChatLogs" type="HozestERP.BusinessLogic.ManageCustomerService.GetChatLogs, HozestERP.BusinessLogic" enabled="true" stopOnError="false" deleteExpiredCustomerSessionsOlderThanMinutes="43200" />
+      </Thread>-->
+      <!--定时同步订单-->
+      <Thread seconds="600">
+        <task name="TimingGetXMOrderInfo" type="HozestERP.BusinessLogic.ManageProject.TimingGetXMOrderInfo, HozestERP.BusinessLogic" enabled="true" stopOnError="false" deleteExpiredCustomerSessionsOlderThanMinutes="43200"/>
+      </Thread>
+      <!--定时统计销售数据-->
+      <Thread seconds="600">
+        <task name="TimingGetCWProfitByTwoMonth" type="HozestERP.BusinessLogic.ManageFinance.TimingCWProfit, HozestERP.BusinessLogic" enabled="true" stopOnError="false" deleteExpiredCustomerSessionsOlderThanMinutes="43200" />
+      </Thread>
+      <!--定时更新唯品会虚拟物流-->
+      <Thread seconds="600">
+        <task name="TimingLogisticsAging" type="HozestERP.BusinessLogic.Enterprises.TimingLogisticsAging, HozestERP.BusinessLogic" enabled="true" stopOnError="false" deleteExpiredCustomerSessionsOlderThanMinutes="43200" />
+      </Thread>
+      <!--定时更新库存产品滞销情况和推荐入仓量-->
+      <Thread  seconds="600">
+        <task name="TimingInventoryStatus" type="HozestERP.BusinessLogic.ManageInventory.TimingInventoryStatus, HozestERP.BusinessLogic" enabled="true" stopOnError="false" deleteExpiredCustomerSessionsOlderThanMinutes="43200" />
+      </Thread>
+      <!--定时审核资金流水状态-->
+      <Thread seconds="600">
+        <task name="TimingFinancialCapitalFlowAutoAudit" type="HozestERP.BusinessLogic.ManageFinance.TimingFinancialCapitalFlowAutoAudit, HozestERP.BusinessLogic" enabled="true" stopOnError="false" deleteExpiredCustomerSessionsOlderThanMinutes="43200" />
+      </Thread>
+      <!--每月1号0点统计发出商品库存-->
+      <Thread seconds="3000">
+        <task name="TimingDeliveryProductInventory" type="HozestERP.BusinessLogic.ManageFinance.TimingDeliveryProductInventory, HozestERP.BusinessLogic" enabled="true" stopOnError="false" deleteExpiredCustomerSessionsOlderThanMinutes="43200" />
+      </Thread>
+    </ScheduleTasks>
+  </HozestERPConfig>
+  <!-- 系统图标 -->
+  <!--
+    Icon Handler by Mike Volodarsky
+    Retrieves the shell icon for the specified file name.
+    -->
+  <iconHandler enabled="true" alwaysUseExtension="true" enableClientCaching="true" enableServerCaching="true"/>
+  <system.serviceModel>
+    <bindings>
+      <basicHttpBinding>
+        <binding name="JDsingleOrderGetSoap" />
+      </basicHttpBinding>
+    </bindings>
+    <client>
+      <endpoint address="http://153.36.228.222/JDsingleOrderGet.asmx"
+        binding="basicHttpBinding" bindingConfiguration="JDsingleOrderGetSoap"
+        contract="JDsingleServiceReference.JDsingleOrderGetSoap" name="JDsingleOrderGetSoap" />
+    </client>
+  </system.serviceModel>
+</configuration>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://sms.wx360.bjfzq.com/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="SmsServices" targetNamespace="http://sms.wx360.bjfzq.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema elementFormDefault="unqualified" targetNamespace="http://sms.wx360.bjfzq.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="queryBalance" type="tns:queryBalance" />
+      <xs:element name="queryBalanceResponse" type="tns:queryBalanceResponse" />
+      <xs:element name="sendSms" type="tns:sendSms" />
+      <xs:element name="sendSmsResponse" type="tns:sendSmsResponse" />
+      <xs:complexType name="sendSms">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="loginid" type="xs:string" />
+          <xs:element minOccurs="0" name="loginpwd" type="xs:string" />
+          <xs:element minOccurs="0" name="content" type="xs:string" />
+          <xs:element minOccurs="0" name="sign" type="xs:string" />
+          <xs:element minOccurs="0" name="mobiles" type="xs:string" />
+          <xs:element minOccurs="0" name="sendtime" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="sendSmsResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:smsResult" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="smsResult">
+        <xs:sequence>
+          <xs:element name="result" type="xs:int" />
+          <xs:element minOccurs="0" name="result_desc" type="xs:string" />
+          <xs:element minOccurs="0" name="value" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="queryBalance">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="loginid" type="xs:string" />
+          <xs:element minOccurs="0" name="loginpwd" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="queryBalanceResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:smsResult" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="sendSms">
+    <wsdl:part name="parameters" element="tns:sendSms" />
+  </wsdl:message>
+  <wsdl:message name="sendSmsResponse">
+    <wsdl:part name="parameters" element="tns:sendSmsResponse" />
+  </wsdl:message>
+  <wsdl:message name="queryBalanceResponse">
+    <wsdl:part name="parameters" element="tns:queryBalanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="queryBalance">
+    <wsdl:part name="parameters" element="tns:queryBalance" />
+  </wsdl:message>
+  <wsdl:portType name="SmsServices">
+    <wsdl:operation name="sendSms">
+      <wsdl:input name="sendSms" message="tns:sendSms" />
+      <wsdl:output name="sendSmsResponse" message="tns:sendSmsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="queryBalance">
+      <wsdl:input name="queryBalance" message="tns:queryBalance" />
+      <wsdl:output name="queryBalanceResponse" message="tns:queryBalanceResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SmsServicesSoapBinding" type="tns:SmsServices">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="sendSms">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="sendSms">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="sendSmsResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryBalance">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="queryBalance">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="queryBalanceResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SmsServices">
+    <wsdl:port name="SmsServicesPort" binding="tns:SmsServicesSoapBinding">
+      <soap:address location="http://115.29.47.5:8080/CxfSmsWs/service/SmsServices" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

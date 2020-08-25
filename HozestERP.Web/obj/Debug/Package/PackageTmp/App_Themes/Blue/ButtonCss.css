@@ -1,0 +1,738 @@
+.filesw
+{
+    background-image: url(Image/ButtonImages/filesw.gif) !important;
+}
+.indexicon
+{
+    background-image: url(image/ButtonImages/indexicon.gif) !important;
+}
+.online
+{
+    background-image: url(image/ButtonImages/group.png) !important;
+}
+
+/*-------------主栏目--售后管理频道---------*/
+.homerSHGL
+{
+    background-image: url(image/ButtonImages/balloons--pencil.png) !important;
+    cursor: hand;
+}
+/*------------二级栏目--售后处理---------*/
+.homersSHCL
+{
+    background-image: url(image/ButtonImages/user--pencil.png) !important;
+    cursor: hand;
+}
+/*------------二级栏目--返现管理---------*/
+.homersFXGL
+{
+    background-image: url(image/ButtonImages/money2.png) !important;
+    cursor: hand;
+}
+/*------------二级栏目--zengpin1管理---------*/
+.homersZPGL
+{
+    background-image: url(image/ButtonImages/box-label.png) !important;
+    cursor: hand;
+}
+/*------------二级栏目--理赔管理---------*/
+.homersLPGL
+{
+    background-image: url(image/ButtonImages/lending.gif) !important;
+    cursor: hand;
+}
+/*------------二级栏目--销售跟进---------*/
+.homersXSGJ
+{
+    background-image: url(image/ButtonImages/group.png) !important;
+    cursor: hand;
+}
+/*------------二级栏目--退换货管理---------*/
+.homersTHHGL
+{
+    background-image: url(image/ButtonImages/box--arrow.png) !important;
+    cursor: hand;
+}
+/*------------二级栏目--索赔单管理---------*/
+.homersSPDGL
+{
+    background-image: url(image/ButtonImages/table_edit.png) !important;
+    cursor: hand;
+}
+
+.hemerBaobiao
+{
+    background-image: url(image/ButtonImages/bangb.gif) !important;
+    cursor: hand;
+}
+
+.homerChatHigh
+{
+    background-image: url(image/ButtonImages/chart--pencil.png) !important;
+    cursor: hand;
+}
+
+.homerChatHigh2
+{
+    background-image: url(image/ButtonImages/workl.gif) !important;
+    cursor: hand;
+}
+.homerChatHigh3
+{
+    background-image: url(image/ButtonImages/workl.png) !important;
+    cursor: hand;
+}
+
+
+
+
+
+/*------------二级栏目--预算字段管理---------*/
+.homerYSZUGL
+{
+    background-image: url(image/ButtonImages/property.png) !important;
+    cursor: hand;
+}
+/*------------二级栏目--功能模块---------*/
+.homerGNMK
+{
+    background-image: url(image/ButtonImages/document-block.png) !important;
+    cursor: hand;
+}
+/*------------二级栏目--岗位管理---------*/
+.homerGWGL
+{
+    background-image: url(image/ButtonImages/users.png) !important;
+    cursor: hand;
+}
+/*------------二级栏目--角色管理---------*/
+.homerJSGL
+{
+    background-image: url(image/ButtonImages/user-business.png) !important;
+    cursor: hand;
+}
+/*------------二级栏目--登陆日志---------*/
+.homerJSGL
+{
+    background-image: url(image/ButtonImages/document-list.png) !important;
+    cursor: hand;
+}
+
+/*------------二级栏目--项目---------*/
+.homerXM
+{
+    background-image: url(image/ButtonImages/return.gif) !important;
+    cursor: hand;
+}
+
+/*------------二级栏目--系统参数---------*/
+.homerXTCS
+{
+    background-image: url(image/ButtonImages/wrench.png) !important;
+    cursor: hand;
+}
+
+/*------------二级栏目--APPKY---------*/
+.homerAPPKEY
+{
+    background-image: url(image/ButtonImages/key.png) !important;
+    cursor: hand;
+}
+
+/*------------二级栏目--集团公司--------*/
+.homerCompany
+{
+    background-image: url(image/ButtonImages/house.png) !important;
+    cursor: hand;
+}
+/*------------二级栏目--共使用代码维护--------*/
+.homerGYDMWH
+{
+    background-image: url(image/ButtonImages/table.png) !important;
+    cursor: hand;
+}
+/*------------二级栏目--公告--------*/
+.homerGG
+{
+    background-image: url(image/ButtonImages/comment.png) !important;
+    cursor: hand;
+}
+/*------------二级栏目--quyu--------*/
+.homerQUYU
+{
+    background-image: url(image/ButtonImages/map.png) !important;
+    cursor: hand;
+}
+
+/*------------二级栏目--问题类型管理--------*/
+.homerQUYU3
+{
+    background-image: url(image/ButtonImages/property.png) !important;
+    cursor: hand;
+}
+/*------------二级栏目--物流时效设置--------*/
+.homerWLSXSZ
+{
+    background-image: url(image/ButtonImages/gear.png) !important;
+    cursor: hand;
+}
+
+
+/*------------二级栏目--住址结构管理--------*/
+.homerZZJGGL
+{
+    background-image: url(image/ButtonImages/table.png) !important;
+    cursor: hand;
+}
+
+/*------------二级栏目-yonghu管理--------*/
+.homerYHGL
+{
+    background-image: url(image/ButtonImages/users--arrow.png) !important;
+    cursor: hand;
+}
+
+/*------------二级栏目-薪资管理--------*/
+.homerXZGL
+{
+    background-image: url(image/ButtonImages/money2.png) !important;
+    cursor: hand;
+}
+
+/*------------二级栏目-社保公基金--------*/
+.homerSBGJJ
+{
+    background-image: url(image/ButtonImages/house.png) !important;
+    cursor: hand;
+}
+
+/*------------二级栏目-快递管理--------*/
+.homerKDGL
+{
+    background-image: url(image/ButtonImages/express.png) !important;
+    cursor: hand;
+}
+
+/*------------二级栏目-总管预算录入--------*/
+.homerZGYSLR
+{
+    background-image: url(image/ButtonImages/article.gif) !important;
+    cursor: hand;
+}
+
+
+/*------------二级栏目-店铺管理--------*/
+.homerDPGL
+{
+    background-image: url(image/ButtonImages/article.gif) !important;
+    cursor: hand;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------主栏目--售前管理频道---------*/
+.homerSQGL
+{
+    background-image: url(image/ButtonImages/user_edit.png) !important;
+    cursor: hand;
+}
+/*-------------主栏目--售前管理频道---------*/
+/*------------二级栏目--售后反馈---------*/
+.homersSHFK
+{
+    background-image: url(image/ButtonImages/comment_edit.png) !important;
+    cursor: hand;
+}
+/*------------二级栏目--发票管理---------*/
+.homerFPGL
+{
+    background-image: url(image/ButtonImages/table_edit.png) !important;
+    cursor: hand;
+}
+/*------------二级栏目--聊天记录---------*/
+.homerLTJL
+{
+    background-image: url(image/ButtonImages/balloon-ellipsis.png) !important;
+    cursor: hand;
+}
+/*------------二级栏目--静默统计---------*/
+.homerJMTJ
+{
+    background-image: url(image/ButtonImages/page.png) !important;
+    cursor: hand;
+}
+/*------------二级栏目--客服等级管理---------*/
+.homerKHDJ
+{
+    background-image: url(image/ButtonImages/users--arrow.png) !important;
+    cursor: hand;
+}
+/*------------二级栏目--DSR---------*/
+.homerDSR
+{
+    background-image: url(image/ButtonImages/books--pencil.png) !important;
+    cursor: hand;
+}
+/*------------二级栏目--旺旺号管理---------*/
+.homerWWHGL
+{
+    background-image: url(image/ButtonImages/book.png) !important;
+    cursor: hand;
+}
+/*------------二级栏目--客服与旺旺管理---------*/
+.homerKFWW
+{
+    background-image: url(image/ButtonImages/bin.png) !important;
+    cursor: hand;
+}
+/*------------二级栏目--售前客服薪酬---------*/
+.homerSQKFXC
+{
+    background-image: url(image/ButtonImages/money2.png) !important;
+    cursor: hand;
+}
+/*------------二级栏目--客服数据导入---------*/
+.homerSQKFDR
+{
+    background-image: url(image/ButtonImages/page_white_get.png) !important;
+    cursor: hand;
+}
+/*------------二级栏目-- 售后客服数据---------*/
+.homerSHKFSJ
+{
+    background-image: url(image/ButtonImages/document-list.png) !important;
+    cursor: hand;
+}
+/*------------二级栏目-- 售后客服薪酬---------*/
+.homerSHKFXC
+{
+    background-image: url(image/ButtonImages/money2.png) !important;
+    cursor: hand;
+}
+
+
+
+
+
+/*-------------主栏目--销售管理频道---------*/
+.homerXSGL
+{
+    background-image: url(image/ButtonImages/user-business.png) !important;
+    cursor: hand;
+}
+/*------------二级栏目-- 线上订单管理---------*/
+.homerXSDDGL
+{
+    background-image: url(image/ButtonImages/application_get.png) !important;
+    cursor: hand;
+}
+
+/*------------二级栏目-- 线下订单管理---------*/
+.homerXXDDGL
+{
+    background-image: url(image/ButtonImages/application_put.png) !important;
+    cursor: hand;
+}
+
+/*------------二级栏目-- 其他订单---------*/
+.homerQTDD
+{
+    background-image: url(image/ButtonImages/application_form.png) !important;
+    cursor: hand;
+}
+
+/*------------二级栏目-- 订单详情---------*/
+.homerDDXQ
+{
+    background-image: url(image/ButtonImages/application_view_tile.png) !important;
+    cursor: hand;
+}
+/*------------二级栏目-- 自营日销管理---------*/
+.homerZYYXGL
+{
+    background-image: url(image/ButtonImages/date.png) !important;
+    cursor: hand;
+}
+/*------------二级栏目-- 销收活动类型管理---------*/
+.homerXSHDLXGL
+{
+    background-image: url(image/ButtonImages/flag_red.png) !important;
+    cursor: hand;
+}
+/*------------二级栏目-- 销收活动管理---------*/
+.homerXSHDGL
+{
+    background-image: url(image/ButtonImages/flag--plus.png) !important;
+    cursor: hand;
+}
+
+
+
+
+
+
+
+
+
+
+/*-------------主栏目--商品管理频道---------*/
+.homerSPGL
+{
+    background-image: url(image/ButtonImages/pda.png) !important;
+    cursor: hand;
+}
+/*------------二级栏目-- 商品管理---------*/
+.homerSPGL
+{
+    background-image: url(image/ButtonImages/box-label.png) !important;
+    cursor: hand;
+}
+
+/*------------二级栏目-- 组合商品---------*/
+.homerZHSP
+{
+    background-image: url(image/ButtonImages/block.png) !important;
+    cursor: hand;
+}
+
+
+
+
+
+/*-------------主栏目--采购管理频道---------*/
+.homerCGGL
+{
+    background-image: url(image/ButtonImages/cart_put.png) !important;
+    cursor: hand;
+}
+/*------------二级栏目-- 采购订单---------*/
+.homerCGDD
+{
+    background-image: url(image/ButtonImages/document.png) !important;
+    cursor: hand;
+}
+/*------------二级栏目-- 采购退货订单---------*/
+.homerCGTUD
+{
+    background-image: url(image/ButtonImages/document-table.png) !important;
+    cursor: hand;
+}
+/*------------二级栏目-- 供应商管理---------*/
+.homerGYSGL
+{
+    background-image: url(image/ButtonImages/user-business.png) !important;
+    cursor: hand;
+}
+
+
+
+
+
+
+/*-------------主栏目--财务管理频道---------*/
+.homerCWGL
+{
+    background-image: url(image/ButtonImages/calculator.png) !important;
+    cursor: hand;
+}
+/*------------二级栏目-- 应付账款---------*/
+.homerYFZK
+{
+    background-image: url(image/ButtonImages/receipt-import.png) !important;
+    cursor: hand;
+}
+/*------------二级栏目-- 资金流水---------*/
+.homerZJLS
+{
+    background-image: url(image/ButtonImages/report--arrow.png) !important;
+    cursor: hand;
+}
+/*------------二级栏目-- 资金盘存---------*/
+.homerZJPC
+{
+    background-image: url(image/ButtonImages/bank.png) !important;
+    cursor: hand;
+}
+/*------------二级栏目-- 资金变动---------*/
+.homerZJBD
+{
+    background-image: url(image/ButtonImages/currency-yen.png) !important;
+    cursor: hand;
+}
+/*------------二级栏目-- 发出库存---------*/
+.homerFCKC
+{
+    background-image: url(image/ButtonImages/car--arrow.png) !important;
+    cursor: hand;
+}
+
+/*------------二级栏目-- 暂支审核---------*/
+.homerZZSH
+{
+    background-image: url(image/ButtonImages/user-green.png) !important;
+    cursor: hand;
+}
+/*------------二级栏目-- 暂支确认---------*/
+.homerZZQR
+{
+    background-image: url(image/ButtonImages/102.png) !important;
+    cursor: hand;
+}
+/*------------二级栏目-- 月进销存统计---------*/
+.homerYJXCTJ
+{
+    background-image: url(image/ButtonImages/database-insert.png) !important;
+    cursor: hand;
+}
+
+
+
+
+
+
+
+/*-------------主栏目--运营管理频道---------*/
+.homerYYGL
+{
+    background-image: url(image/ButtonImages/users.png) !important;
+    cursor: hand;
+}
+/*------------二级栏目-- B2B预算录入---------*/
+.homerB2BYSLR
+{
+    background-image: url(image/ButtonImages/article.gif) !important;
+    cursor: hand;
+}
+/*------------二级栏目-- B2B业务管理---------*/
+.homerB2BYWGL
+{
+    background-image: url(image/ButtonImages/Training.gif) !important;
+    cursor: hand;
+}
+/*------------二级栏目-- B2B业务员管理---------*/
+.homerB2BYWYGL
+{
+    background-image: url(image/ButtonImages/user-business.png) !important;
+    cursor: hand;
+}
+
+/*------------二级栏目-- B2B业务类型数据分析---------*/
+.homerB2BYWLXFX
+{
+    background-image: url(image/ButtonImages/notebooks.png) !important;
+    cursor: hand;
+}
+
+/*------------二级栏目-- B2C预算录入---------*/
+.homerB2CYSLR
+{
+    background-image: url(image/ButtonImages/article.gif) !important;
+    cursor: hand;
+}
+/*------------二级栏目-- B2C业务管理---------*/
+.homerB2CYWGL
+{
+    background-image: url(image/ButtonImages/Training.gif) !important;
+    cursor: hand;
+}
+
+/*------------二级栏目-- B2B业绩目标---------*/
+.homerB2BYJMB
+{
+    background-image: url(image/ButtonImages/chart-down-color.png) !important;
+    cursor: hand;
+}
+
+/*------------二级栏目-- B2C业绩目标---------*/
+.homerB2CYJMB
+{
+    background-image: url(image/ButtonImages/chart-down-color.png) !important;
+    cursor: hand;
+}
+
+/*------------二级栏目-- 刷单记录---------*/
+.homerSDJL
+{
+    background-image: url(image/ButtonImages/document.png) !important;
+    cursor: hand;
+}
+
+/*------------二级栏目-- 暂支申请---------*/
+.homerZZSQ
+{
+    background-image: url(image/ButtonImages/document.png) !important;
+    cursor: hand;
+}
+
+/*------------二级栏目-- 刷单申请---------*/
+.homerSDSQ
+{
+    background-image: url(image/ButtonImages/document.png) !important;
+    cursor: hand;
+}
+
+
+
+
+
+
+
+
+
+/*-------------主栏目--发货管理频道---------*/
+.homerFHGL
+{
+    background-image: url(image/ButtonImages/car.png) !important;
+    cursor: hand;
+}
+/*------------二级栏目-- 发货单管理---------*/
+.homerFHDGL
+{
+    background-image: url(image/ButtonImages/document-excel-table.png) !important;
+    cursor: hand;
+}
+
+
+
+/*-------------主栏目--库存管理频道---------*/
+.homerKCGL
+{
+    background-image: url(image/ButtonImages/database.png) !important;
+    cursor: hand;
+}
+/*------------二级栏目--仓库管理--------*/
+.homerCKGL
+{
+    background-image: url(image/ButtonImages/house.png) !important;
+    cursor: hand;
+}
+/*------------二级栏目--采购入库--------*/
+.homerCGRK
+{
+    background-image: url(image/ButtonImages/database_connect.png) !important;
+    cursor: hand;
+}
+/*------------二级栏目--库存退货单--------*/
+.homerCGTH
+{
+    background-image: url(image/ButtonImages/database_delete.png) !important;
+    cursor: hand;
+}
+/*------------二级栏目--销售出库单--------*/
+.homerXSCK
+{
+    background-image: url(image/ButtonImages/database_go.png) !important;
+    cursor: hand;
+}
+/*------------二级栏目--销售退货单--------*/
+.homerXSTH
+{
+    background-image: url(image/ButtonImages/database_delete.png) !important;
+    cursor: hand;
+}
+/*------------二级栏目--库存管理--------*/
+.homerKCGL
+{
+    background-image: url(image/ButtonImages/database_refresh.png) !important;
+    cursor: hand;
+}
+/*------------二级栏目--调整单--------*/
+.homeTZ
+{
+    background-image: url(image/ButtonImages/document.png) !important;
+    cursor: hand;
+}
+
+/*------------二级栏目--盘点单--------*/
+.homePD
+{
+    background-image: url(image/ButtonImages/document.png) !important;
+    cursor: hand;
+}
+
+/*------------二级栏目--调拨单--------*/
+.homeDB
+{
+    background-image: url(image/ButtonImages/document.png) !important;
+    cursor: hand;
+}
+/*------------二级栏目--京东自营退货单--------*/
+.homeJDZYTU
+{
+    background-image: url(image/ButtonImages/document.png) !important;
+    cursor: hand;
+}
+/*------------二级栏目--安全库存--------*/
+.homeAQKC
+{
+    background-image: url(image/ButtonImages/database_error.png) !important;
+    cursor: hand;
+}
+
+/*------------二级栏目--采购明细--------*/
+.homeCGMX
+{
+    background-image: url(image/ButtonImages/application_view_detail.png) !important;
+    cursor: hand;
+}
+/*------------二级栏目--库存帐--------*/
+.homeKCZ
+{
+    background-image: url(image/ButtonImages/database_table.png) !important;
+    cursor: hand;
+}
+/*------------二级栏目--喜临门当日库存--------*/
+.homeXLMDRKC
+{
+    background-image: url(image/ButtonImages/database.png) !important;
+    cursor: hand;
+}
+
+
+
+
+
+
+
+
+
+
+/*-------------主栏目--报表中心频道---------*/
+.homerBBZX
+{
+    background-image: url(image/ButtonImages/table.png) !important;
+    cursor: hand;
+}
+
+/*-------------主栏目--人事管理频道---------*/
+.homers
+{
+    background-image: url(image/ButtonImages/rs.gif) !important;
+    cursor: hand;
+}
+/*-------------主栏目--系统设置频道/homerxtsz ---------*/
+.homerxtsz
+{
+    background-image: url(image/ButtonImages/maintain.gif) !important;
+    cursor: hand;
+}
+/*-------------主栏目--资源管理频道/homerxtsz ---------*/
+.homersZYGL
+{
+    background-image: url(image/ButtonImages/blog.png) !important;
+    cursor: hand;
+}

@@ -1,0 +1,522 @@
+﻿
+/*=======================================
+树页面的样式
+=========================================*/
+.MenuTop
+{
+	width: 3px;
+	background: #115A90;
+}
+.CurrentMenu
+{
+	text-align: center;
+	background-image: url(Image/main_43.gif);
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+}
+.SubMenu
+{
+	cursor: pointer;
+	width: 100%;
+	text-align: center;
+	background-image: url(Image/SubMenu.gif);
+	height: 19px;
+}
+.Split
+{
+	width: 20%;
+	background-image: url(Image/hiddenbtn_v.gif);
+	height: 3px;
+	cursor: hand;
+}
+.SplitBg
+{
+	width: 40%;
+	background-image: url(Image/Split_bg.gif);
+}
+.TreeGrid
+{
+	border: 0px;
+}
+/*======================
+Default.aspx
+=======================*/
+.Split_V
+{
+	background-color: #115a90;
+	width: 7px;
+}
+.Split_V_Bar
+{
+	height: 52px;
+	width: 7px;
+}
+.Main_Top1
+{
+	background-image: url(Image/main_24.gif);
+}
+.Main_Top2
+{
+	background-image: url(Image/main_26.gif);
+}
+.Main_Top3
+{
+	background-image: url(Image/main_28.gif);
+}
+.Main_Top4
+{
+	background-image: url(Image/main_46.gif);
+}
+.Main_Top5
+{
+	background-image: url(Image/main_48.gif);
+}
+.Main_Top6
+{
+	background-image: url(Image/main_50.gif);
+}
+.Main_Right
+{
+	background-color: #115A90;
+}
+/*====================
+CommonManager
+=====================*/
+.GridHeard
+{
+	background-image: url(Image/grid3-hrow.gif);
+	color: black;
+	position: relative;
+	/*top: expression(this.offsetParent.scrollTop-1);*/	
+	border:0px;
+	border-bottom-width: 0px;
+}
+.GridHeard2
+{
+	background-image: url(Image/grid3-hrow2.gif);
+	color: black;
+	position: relative;
+	/*top: expression(this.offsetParent.scrollTop-1);*/	
+	border:0px;
+	border-bottom-width: 0px;
+}
+.GridHeardNoTop
+{
+	background-image: url(Image/grid3-hrow.gif);
+	color: black;
+	border-bottom-width: 0px;
+}
+.GridOverHeard
+{
+	background-image: url(Image/grid3-hrow-over.gif);
+	color: black;
+	position: relative;
+	/*top: expression(this.offsetParent.scrollTop-1);*/
+	border-bottom-width: 0px;
+}
+.GridOverHeardNoTop
+{
+	background-image: url(Image/grid3-hrow-over.gif);
+	color: black;
+	border-bottom-width: 0px;
+}
+.GridFoot
+{
+	height: 27px;
+	background-image: url(Image/gridFoot.gif);
+	width: 100%;
+	border-right: #ababab 1px solid;
+	border-left: #ababab 1px solid;
+	width: 100%;
+	border-bottom: #ababab 1px solid;
+}
+.fixCol
+{
+	position: relative;
+	left: expression(this.offsetParent.scrollLeft);
+}
+.TitleDir
+{
+	font-weight: bold;
+	color: #2C4794;
+	font-size: 10pt;
+	font-family: 微软雅黑;
+}
+
+.SearchSplit
+{
+	height: 1px;
+	background-color: #dcdcdc;
+}
+
+.transbox
+{
+	filter: alpha(opacity=70);
+	-moz-opacity: 0.7;
+	opacity: 0.7;
+}
+.divs
+{
+	overflow: auto;
+	height: 100%;
+}
+.WaitPanel
+{
+	width: 262px;
+	height: 167px;
+	background-image: url(Image/Wait.jpg);
+}
+.CheckRow
+{
+	background-color: #FAE4E3;
+	text-align: left;
+	vertical-align: middle;
+	height: 5px;
+}
+.SelectRow
+{
+	background-color: #F6C4C3;
+	text-align: left;
+	vertical-align: middle;
+	height: 5px;
+}
+/*=============================
+
+按钮样式
+
+=============================*/
+.button2left_out
+{
+	border-top-width: 0px;
+	border-left-width: 0px;
+	border-bottom-width: 0px;
+	border-right-width: 0px;
+	background-image: url(Image/btn2left.gif);
+	color: White;
+	width: 42px;
+	height: 21px;
+}
+.button2left_over
+{
+	border-top-width: 0px;
+	border-left-width: 0px;
+	border-bottom-width: 0px;
+	border-right-width: 0px;
+	background-image: url(Image/btn2left_over.gif);
+	color: White;
+	width: 42px;
+	height: 21px;
+	cursor: hand;
+}
+.button2right_out
+{
+	border-top-width: 0px;
+	border-left-width: 0px;
+	border-bottom-width: 0px;
+	border-right-width: 0px;
+	background-image: url(Image/btn2right.gif);
+	color: White;
+	width: 24px;
+	height: 21px;
+	cursor: hand;
+}
+
+.button2right_over
+{
+	border-top-width: 0px;
+	border-left-width: 0px;
+	border-bottom-width: 0px;
+	border-right-width: 0px;
+	background-image: url(Image/btn2right_over.gif);
+	color: White;
+	width: 24px;
+	height: 21px;
+	cursor: hand;
+}
+
+.button2right_down_out
+{
+	border-top-width: 0px;
+	border-left-width: 0px;
+	border-bottom-width: 0px;
+	border-right-width: 0px;
+	background-image: url(Image/btn2rightdown.gif);
+	color: White;
+	width: 24px;
+	height: 21px;
+	cursor: hand;
+}
+
+.button2right_down_over
+{
+	border-top-width: 0px;
+	border-left-width: 0px;
+	border-bottom-width: 0px;
+	border-right-width: 0px;
+	background-image: url(Image/btn2rightdown_over.gif);
+	color: White;
+	width: 24px;
+	height: 21px;
+	cursor: hand;
+}
+
+.button2_out
+{
+	border-top-width: 0px;
+	border-left-width: 0px;
+	border-bottom-width: 0px;
+	border-right-width: 0px;
+	background-image: url(Image/btn2.gif);
+	color: White;
+	width: 55px;
+	height: 21px;
+	cursor: hand;
+	margin-left: 5px;
+}
+.button2_over
+{
+	border-top-width: 0px;
+	border-left-width: 0px;
+	border-bottom-width: 0px;
+	border-right-width: 0px;
+	background-image: url(Image/btn2_over.gif);
+	color: White;
+	width: 55px;
+	height: 21px;
+	cursor: hand;
+	margin-left: 5px;
+}
+
+.button2_up
+{
+	border-top-width: 0px;
+	border-left-width: 0px;
+	border-bottom-width: 0px;
+	border-right-width: 0px;
+	background-image: url(Image/btn2up);
+	color: White;
+	width: 24px;
+	height: 21px;
+	cursor: hand;
+	margin-left: 5px;
+}
+
+.button2_down
+{
+	border-top-width: 0px;
+	border-left-width: 0px;
+	border-bottom-width: 0px;
+	border-right-width: 0px;
+	background-image: url(Image/btn2down);
+	color: White;
+	width: 24px;
+	height: 21px;
+	cursor: hand;
+	margin-left: 5px;
+}
+
+.button4_out
+{
+	border-top-width: 0px;
+	border-left-width: 0px;
+	border-bottom-width: 0px;
+	border-right-width: 0px;
+	background-image: url(Image/btn4.gif);
+	color: White;
+	width: 79px;
+	height: 21px;
+	cursor: hand;
+	margin-left: 5px;
+}
+.button4_over
+{
+	border-top-width: 0px;
+	border-left-width: 0px;
+	border-bottom-width: 0px;
+	border-right-width: 0px;
+	background-image: url(Image/btn4_over.gif);
+	color: White;
+	width: 79px;
+	height: 21px;
+	cursor: hand;
+	margin-left: 5px;
+}
+
+.button6_out
+{
+	border-top-width: 0px;
+	border-left-width: 0px;
+	border-bottom-width: 0px;
+	border-right-width: 0px;
+	background-image: url(Image/btn6.gif);
+	color: White;
+	width: 105px;
+	height: 21px;
+	cursor: hand;
+	margin-left: 5px;
+}
+
+.button6_over
+{
+	border-top-width: 0px;
+	border-left-width: 0px;
+	border-bottom-width: 0px;
+	border-right-width: 0px;
+	background-image: url(Image/btn6_over.gif);
+	color: White;
+	width: 105px;
+	height: 21px;
+	cursor: hand;
+	margin-left: 5px;
+}
+
+.button7_out
+{
+	border-top-width: 0px;
+	border-left-width: 0px;
+	border-bottom-width: 0px;
+	border-right-width: 0px;
+	background-image: url(Image/btn6.gif);
+	color: White;
+	width: 105px;
+	height: 21px;
+	cursor: hand;
+	margin-left: 5px;
+}
+
+.button7_over
+{
+	border-top-width: 0px;
+	border-left-width: 0px;
+	border-bottom-width: 0px;
+	border-right-width: 0px;
+	background-image: url(Image/btn6_over.gif);
+	color: White;
+	width: 105px;
+	height: 21px;
+	cursor: hand;
+	margin-left: 5px;
+}
+
+.button12_out
+{
+	border-top-width: 0px;
+	border-left-width: 0px;
+	border-bottom-width: 0px;
+	border-right-width: 0px;
+	background-image: url(Image/btn6.gif);
+	color: White;
+	width: 190px;
+	height: 21px;
+	cursor: hand;
+	margin-left: 5px;
+}
+
+.button12_over
+{
+	border-top-width: 0px;
+	border-left-width: 0px;
+	border-bottom-width: 0px;
+	border-right-width: 0px;
+	background-image: url(Image/btn6_over.gif);
+	color: White;
+	width: 190px;
+	height: 21px;
+	cursor: hand;
+	margin-left: 5px;
+}
+.EidtHead
+{
+	background-image: url(Image/grid3-hrow.gif);
+	color: black;
+	height: 24px;
+	border-bottom-width: 0px;
+}
+
+.tabBtn4_out
+{
+	border-top-width: 0px;
+	border-left-width: 0px;
+	border-bottom-width: 0px;
+	border-right-width: 0px;
+	background-image: url(Image/tabBtn4.gif);
+	color: White;
+	width: 79px;
+	height: 24px;
+	cursor: hand;
+	vertical-align: middle;
+}
+.tabBtn4_over
+{
+	border-top-width: 0px;
+	border-left-width: 0px;
+	border-bottom-width: 0px;
+	border-right-width: 0px;
+	background-image: url(Image/tabBtn4_over.gif);
+	color: White;
+	width: 79px;
+	height: 24px;
+	cursor: hand;
+	vertical-align: middle;
+}
+.PopDivTop
+{
+	height: 32px;
+	background-image: url(Image/Notice/NoticeTop.gif);
+	border-bottom: #ababab 1px solid;
+}
+
+.PopDivTitle
+{
+	cursor: move;
+	height: 20px;
+	background-color: #3e91d3;
+}
+
+.PopDivClose
+{
+	cursor: hand;
+	background-color: #3e91d3;
+}
+.PopDivFoot
+{
+	padding-right: 5px;
+	padding-left: 5px;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	height: 25px;
+	background-image: url(Image/Notice/NoticeFoot.gif);
+	border-top: #ababab 1px solid;
+}
+.NoticeClose
+{
+	src: url(Image/Notice/NoticeClose.gif);
+}
+
+.fieldset
+{
+	padding-top: 10px;
+	padding-right: 30px;
+	padding-bottom: 10px;
+	padding-left: 16px;
+	border-top-color: #9d9d9d;
+	border-right-color: #9d9d9d;
+	border-bottom-color: #9d9d9d;
+	border-left-color: #9d9d9d;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: dashed;
+	border-right-style: dashed;
+	border-bottom-style: dashed;
+	border-left-style: dashed;
+}
+
+.fieldset legend
+{
+	padding-right: 16px;
+	padding-left: 16px;
+	background-color: #ffffff;
+}

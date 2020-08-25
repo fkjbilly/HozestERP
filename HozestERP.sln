@@ -1,0 +1,85 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dependencies", "Dependencies", "{9EA6A900-AE81-4195-8D90-EB606B178909}"
+	ProjectSection(SolutionItems) = preProject
+		Dependencies\AjaxControlToolkit.dll = Dependencies\AjaxControlToolkit.dll
+		Dependencies\Ext.Net.dll = Dependencies\Ext.Net.dll
+		Dependencies\Ext.Net.Utilities.dll = Dependencies\Ext.Net.Utilities.dll
+		Dependencies\FredCK.FCKeditorV2.dll = Dependencies\FredCK.FCKeditorV2.dll
+		Dependencies\Ionic.Zip.dll = Dependencies\Ionic.Zip.dll
+		Dependencies\jmail.dll = Dependencies\jmail.dll
+		Dependencies\Lindonsoft.QRIIIS.Controls.dll = Dependencies\Lindonsoft.QRIIIS.Controls.dll
+		Dependencies\Microsoft.Practices.ServiceLocation.dll = Dependencies\Microsoft.Practices.ServiceLocation.dll
+		Dependencies\Microsoft.Practices.Unity.Configuration.dll = Dependencies\Microsoft.Practices.Unity.Configuration.dll
+		Dependencies\Microsoft.Practices.Unity.dll = Dependencies\Microsoft.Practices.Unity.dll
+		Dependencies\Microsoft.Practices.Unity.Interception.Configuration.dll = Dependencies\Microsoft.Practices.Unity.Interception.Configuration.dll
+		Dependencies\Microsoft.Practices.Unity.Interception.dll = Dependencies\Microsoft.Practices.Unity.Interception.dll
+		Dependencies\ShellIconHandler.dll = Dependencies\ShellIconHandler.dll
+		Dependencies\ShellIcons.dll = Dependencies\ShellIcons.dll
+		Dependencies\TopSdk.dll = Dependencies\TopSdk.dll
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HozestERP.BusinessLogic", "HozestERP.BusinessLogic\HozestERP.BusinessLogic.csproj", "{E8C9E78E-3AA9-4F59-B6AC-603BC891F036}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HozestERP.Common", "HozestERP.Common\HozestERP.Common.csproj", "{A598DC05-2E62-4114-AC3E-A6E58E085AFF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HozestERP.Controls", "HozestERP.Controls\HozestERP.Controls.csproj", "{9ED7D5DF-E369-46D5-AA93-E62A69A88BFD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HozestERP.Web", "HozestERP.Web\HozestERP.Web.csproj", "{144FA0D6-7F7D-4181-AAC6-F86464E0BA3F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HozestERP.WebApi", "HozestERP.WebApi\HozestERP.WebApi.csproj", "{EA770439-2E47-46BE-A75F-828D5E561E98}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug_Ubuntu|Any CPU = Debug_Ubuntu|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		Release_Ubuntu|Any CPU = Release_Ubuntu|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E8C9E78E-3AA9-4F59-B6AC-603BC891F036}.Debug_Ubuntu|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8C9E78E-3AA9-4F59-B6AC-603BC891F036}.Debug_Ubuntu|Any CPU.Build.0 = Debug|Any CPU
+		{E8C9E78E-3AA9-4F59-B6AC-603BC891F036}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8C9E78E-3AA9-4F59-B6AC-603BC891F036}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8C9E78E-3AA9-4F59-B6AC-603BC891F036}.Release_Ubuntu|Any CPU.ActiveCfg = Release|Any CPU
+		{E8C9E78E-3AA9-4F59-B6AC-603BC891F036}.Release_Ubuntu|Any CPU.Build.0 = Release|Any CPU
+		{E8C9E78E-3AA9-4F59-B6AC-603BC891F036}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8C9E78E-3AA9-4F59-B6AC-603BC891F036}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A598DC05-2E62-4114-AC3E-A6E58E085AFF}.Debug_Ubuntu|Any CPU.ActiveCfg = Debug|Any CPU
+		{A598DC05-2E62-4114-AC3E-A6E58E085AFF}.Debug_Ubuntu|Any CPU.Build.0 = Debug|Any CPU
+		{A598DC05-2E62-4114-AC3E-A6E58E085AFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A598DC05-2E62-4114-AC3E-A6E58E085AFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A598DC05-2E62-4114-AC3E-A6E58E085AFF}.Release_Ubuntu|Any CPU.ActiveCfg = Release|Any CPU
+		{A598DC05-2E62-4114-AC3E-A6E58E085AFF}.Release_Ubuntu|Any CPU.Build.0 = Release|Any CPU
+		{A598DC05-2E62-4114-AC3E-A6E58E085AFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A598DC05-2E62-4114-AC3E-A6E58E085AFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9ED7D5DF-E369-46D5-AA93-E62A69A88BFD}.Debug_Ubuntu|Any CPU.ActiveCfg = Debug|Any CPU
+		{9ED7D5DF-E369-46D5-AA93-E62A69A88BFD}.Debug_Ubuntu|Any CPU.Build.0 = Debug|Any CPU
+		{9ED7D5DF-E369-46D5-AA93-E62A69A88BFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9ED7D5DF-E369-46D5-AA93-E62A69A88BFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9ED7D5DF-E369-46D5-AA93-E62A69A88BFD}.Release_Ubuntu|Any CPU.ActiveCfg = Release|Any CPU
+		{9ED7D5DF-E369-46D5-AA93-E62A69A88BFD}.Release_Ubuntu|Any CPU.Build.0 = Release|Any CPU
+		{9ED7D5DF-E369-46D5-AA93-E62A69A88BFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9ED7D5DF-E369-46D5-AA93-E62A69A88BFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{144FA0D6-7F7D-4181-AAC6-F86464E0BA3F}.Debug_Ubuntu|Any CPU.ActiveCfg = Debug|Any CPU
+		{144FA0D6-7F7D-4181-AAC6-F86464E0BA3F}.Debug_Ubuntu|Any CPU.Build.0 = Debug|Any CPU
+		{144FA0D6-7F7D-4181-AAC6-F86464E0BA3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{144FA0D6-7F7D-4181-AAC6-F86464E0BA3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{144FA0D6-7F7D-4181-AAC6-F86464E0BA3F}.Release_Ubuntu|Any CPU.ActiveCfg = Release|Any CPU
+		{144FA0D6-7F7D-4181-AAC6-F86464E0BA3F}.Release_Ubuntu|Any CPU.Build.0 = Release|Any CPU
+		{144FA0D6-7F7D-4181-AAC6-F86464E0BA3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{144FA0D6-7F7D-4181-AAC6-F86464E0BA3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA770439-2E47-46BE-A75F-828D5E561E98}.Debug_Ubuntu|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA770439-2E47-46BE-A75F-828D5E561E98}.Debug_Ubuntu|Any CPU.Build.0 = Debug|Any CPU
+		{EA770439-2E47-46BE-A75F-828D5E561E98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA770439-2E47-46BE-A75F-828D5E561E98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA770439-2E47-46BE-A75F-828D5E561E98}.Release_Ubuntu|Any CPU.ActiveCfg = Release|Any CPU
+		{EA770439-2E47-46BE-A75F-828D5E561E98}.Release_Ubuntu|Any CPU.Build.0 = Release|Any CPU
+		{EA770439-2E47-46BE-A75F-828D5E561E98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA770439-2E47-46BE-A75F-828D5E561E98}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

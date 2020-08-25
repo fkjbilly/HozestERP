@@ -1,0 +1,609 @@
+/*=======================================
+File Name : EHR.CSS
+File Content : Define Ehr Web System CSS
+Define Date : 2002/11/26
+Define Author : Davi Xiong
+Version : 1.0
+
+Note : 
+=========================================*/
+
+body
+{
+    font-size: 12px;
+    margin: 0px;
+    background-color: #e2e5e6;
+    margin-top: 0px;
+    margin-left: 0px;
+}
+tdhidden
+{
+    overflow: hidden;
+}
+
+Table
+{
+    font-size: 9px;
+}
+
+Label
+{
+    font-size: 12px;
+}
+
+h2 {padding:0;margin:5px 0;font-size:12px;font-weight:bold;}
+
+/* HyperLink CSS */
+A
+{
+    color: #2F2F2F;
+    text-decoration: none;
+}
+
+A:link
+{
+    color: #2F2F2F;
+    text-decoration: none;
+}
+
+A:visited
+{
+    color: #2F2F2F;
+    text-decoration: none;
+}
+
+A:active
+{
+    color: #2F2F2F;
+    text-decoration: none;
+}
+
+A:hover
+{
+    color: #2F2F2F;
+    text-decoration: none;
+}
+.Link1
+{
+    color: Red;
+    text-decoration: none;
+}
+
+/* Page normal item CSS */
+
+.Body
+{
+    background-color: #F5F5F5;
+    margin: 0px;
+}
+.Body1
+{
+    background-color: #F5F5F5;
+    margin: 0px;
+}
+.newWindowBody
+{
+    margin: 0px;
+    background-color: White;
+}
+
+/*	<ASP:Button></ASP:Button> */
+.Button
+{
+    font-size: 12px;
+    border: 0px;
+    height: 19px;
+    width: 41px;
+    background-color: transparent;
+    cursor: hand;
+    padding-top: 2px;
+    background-repeat: no-repeat;
+}
+.CheckBox
+{
+    height: 13px;
+    width: 13px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    border: 0px;
+    border-width: 0px;
+    margin-top: 3px;
+}
+/*	<ASP:Button></ASP:Button> */
+.Button2
+{
+    font-size: 12px;
+    border: 0px;
+    height: 19px;
+    width: 65px;
+    background-color: transparent;
+    cursor: hand;
+    padding-top: 2px;
+    background-repeat: no-repeat;
+}
+
+.ImgButton
+{
+    font-size: 12px;
+    border: 0px; /*height :26px; 		width :94px;*/
+    height: 16px;
+    width: 16px;
+    background-color: transparent;
+    cursor: hand;
+}
+
+/*	<ASP:Button></ASP:Button> */
+.SmallButton
+{
+    font-size: 12px;
+    border: 0px; /*height :26px; 		width :94px;*/
+    height: 24px;
+    width: 24px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    cursor: hand;
+}
+
+/*	Normal Lable <ASP:Lable></ASP:Label> */
+.Label
+{
+    font-size: 12px;
+}
+
+/* Bold	Normal Lable <ASP:Lable></ASP:Label> */
+.BLabel
+{
+    font-weight: bold;
+    font-size: 12px;
+}
+
+/*	Topic Lable <ASP:Lable></ASP:Label> */
+.LabelTopic
+{
+    font-weight: bold;
+    font-size: 12px;
+}
+
+/*	TextMode =
+ SingleLine <ASP:TextBox></ASP:TextBox> */
+.TextBox
+{
+    border-right: 1px solid;
+    border-top: 1px solid;
+    border-left: 1px solid;
+    border-bottom: 1px solid;
+    font-size: 12px;
+    border-color: #ababab;
+    border-width: 1px;
+    border-style: solid;
+    background-color: White;
+    height: 20px;
+}
+.PriceTextBox
+{
+    border-right: 1px solid;
+    border-top: 1px solid;
+    border-left: 1px solid;
+    border-bottom: 1px solid;
+    text-align: right;
+    font-size: 12px;
+    border-color: #ababab;
+    border-width: 1px;
+    border-style: solid;
+    background-color: White;
+    height: 20px;
+}
+.HiddeTextBox
+{
+    border-right: 1px solid;
+    border-top: 1px solid;
+    border-left: 1px solid;
+    border-bottom: 1px solid;
+    text-align: right;
+    font-size: 12px;
+    border-color: #ababab;
+    border-width: 1px;
+    border-style: solid;
+    background-color: White;
+    width: 0px;
+    height: 0px;
+}
+
+/*	TextMode = MultiLine <ASP:TextBox></ASP:TextBox> */
+.TextArea
+{
+    font-size: 12px;
+    border-color: #D7D8D9;
+    border-width: 1px;
+    background-color: White;
+}
+
+/*	<ASP:ListBox></ASP:ListBox> */
+.ListBox
+{
+    color: black;
+    font-size: 12px;
+    border-style: solid;
+    border-width: 1;
+}
+
+/*	<ASP:DropDownList></ASP:DropDownList> */
+.DropDownList
+{
+    font-size: 12px;
+    border-style: solid;
+    border-color: #ababab;
+    border-width: 1;
+    background-color: #ffffff;
+    border-right: #ababab 1px solid;
+    border-top: #ababab 1px solid;
+    border-left: #ababab 1px solid;
+    border-bottom: #ababab 1px solid;
+}
+
+.Table
+{
+    border-right: #ababab 1px solid;
+    border-top: #ababab 1px solid;
+    border-left: #ababab 1px solid;
+    border-bottom: #ababab 1px solid;
+}
+
+.TableField
+{
+    border-right: #999999 1px solid;
+    border-top: #999999 1px solid;
+    border-left: #999999 1px solid;
+    border-bottom: #999999 1px solid;
+    background-color: #EDEDF0;
+    border-color: #999999;
+}
+
+/* for query condition table */
+.TableWithBackColor
+{
+    border-right: #999999 1px solid;
+    border-top: #999999 1px solid;
+    border-left: #999999 1px solid;
+    border-bottom: #999999 1px solid;
+    background-color: #EDEDF0;
+    border-color: #999999;
+    width: 100%;
+    height: 100%;
+}
+
+.RadioButtonList
+{
+    font-size: 12px;
+    height: 20px;
+}
+
+.listBarTable
+{
+    font-size: 13px;
+    color: DeepPink;
+    padding-right: 5px;
+    padding-left: 4px;
+    padding-top: 5px;
+    width: expression(158*screen.height/768);
+}
+
+.test
+{
+    font-size: 13px;
+    color: DeepPink;
+    padding-right: 5px;
+    padding-left: 4px;
+    padding-top: 5px;
+    width: expression(document.documentElement.clientWidth -30);
+    height: expression( 		document.getElementById("GridView1").clientHeight > document.documentElement.clientHeight-this.offsetTop -30-document.getElementById('gridfoot').offsetHeight? 		document.documentElement.clientHeight-this.offsetTop -30-document.getElementById('gridfoot').offsetHeight:document.getElementById("GridView1").clientHeight 		);
+    overflow: auto;
+}
+
+/* for labeled link buttons */
+.currentLabel
+{
+    background-color: LightSkyBlue;
+}
+
+
+.topMargin
+{
+    height: 13px;
+}
+
+.bottomMargin
+{
+    height: 15px;
+}
+
+
+.leftMargin
+{
+    height: 10px;
+}
+
+.rightMargin
+{
+    height: 10px;
+}
+
+/*　列举定义　*/
+Menu
+{
+    font-size: 12px;
+    color: #000000;
+    font-family: "Microsoft Sans Serif" , "微软雅黑";
+}
+
+/*　表格定义　*/
+Table
+{
+    padding: 0px;
+    font-family: "Microsoft Sans Serif" , "微软雅黑";
+    font-size: 12px;
+}
+Td, Th
+{
+    font-family: "Microsoft Sans Serif" , "微软雅黑";
+}
+
+
+/*  链接定义 */
+A
+{
+    text-decoration: none;
+    color: #000000;
+}
+A:hover
+{
+    color: #3333CC;
+    text-decoration: none;
+}
+
+/*＝＝＝＝＝＝＝＝＝＝区块定义＝＝＝＝＝＝＝＝＝＝＝*/
+
+/*　+++++头部文件定义+++++　*/
+.Header
+{
+    background-image: url(../Image/banner_middle.gif);
+    height: 53px;
+    background-repeat: repeat-x;
+}
+.Header_banner
+{
+    background-image: url(../Image/banner_left.gif);
+    background-repeat: no-repeat;
+    background-position: left;
+    height: 53px;
+    width: 100%;
+}
+.Header_banner_width
+{
+    width: 250px;
+}
+.Header_right
+{
+    background-image: url(../Image/banner_right.gif);
+    background-repeat: no-repeat;
+    background-position: right;
+    width: auto;
+}
+.Header_welcome
+{
+    color: #FFFFFF;
+    text-align: right;
+}
+.Header_navi
+{
+    color: #192490;
+    text-align: right;
+    height: 24px;
+}
+.Header_navi a
+{
+    text-decoration: none;
+    color: #192490;
+}
+.Header_navi a:hover
+{
+    text-decoration: none;
+    color: #3333CC;
+}
+.Navi
+{
+    height: 23;
+    background-image: url(../Image/navi_bg.gif);
+    background-repeat: repeat-x;
+    text-align: left;
+}
+.Navi_date
+{
+    color: #017FCB;
+    width: 165px;
+}
+
+/*  +++++Group_left 区域定义+++++*/
+.group
+{
+    font-family: "Microsoft Sans Serif" , "微软雅黑";
+    font-weight: bold;
+    color: #2D257B;
+    letter-spacing: 0.3em;
+    background-image: url(../Image/group_middle.gif);
+    background-repeat: repeat-x;
+    width: 100%;
+}
+.group a
+{
+    color: #2D257B;
+    text-decoration: none;
+}
+.group a:hover
+{
+    color: #2D257B;
+    text-decoration: none;
+}
+.group_col
+{
+    font-family: "Microsoft Sans Serif" , "微软雅黑";
+    color: #4B4F52;
+}
+.group_col a
+{
+    text-decoration: none;
+    color: #4B4F52;
+}
+.group_col a:hover
+{
+    text-decoration: none;
+    color: #4B4F52;
+}
+.col_selected
+{
+    background-color: #FEDE89;
+}
+/*  +++++  Main操作区  +++++  */
+.Main_bg
+{
+    background-color: #E5E4E9;
+}
+.pageNavi
+{
+    background-color: A9B2D3;
+    text-decoration: none;
+    height: 18px;
+    text-align: left;
+    text-indent: 9pt;
+}
+/*present operate area*/
+.pageNavi_selcol
+{
+    color: #55589D;
+}
+/*　+++++脚部文件定义+++++　*/
+.Footer
+{
+    font-family: "Microsoft Sans Serif" , "微软雅黑";
+    background-color: #F2F2F2;
+    height: 17px;
+    text-align: right;
+}
+
+/* +++++eHRMainFrame+++++ */
+.Calender
+{
+    font-size: 12px;
+    color: #007FD0;
+}
+.ToolBarLable
+{
+    font-size: 12px;
+    color: #1E2494;
+    cursor: hand;
+}
+
+.CurrentPageIndexer
+{
+    color: #342576;
+}
+
+DIV.PageNavigator
+{
+    cursor: hand;
+}
+DIV.MainMenu
+{
+    cursor: hand;
+    color: #342576;
+    font-weight: bold;
+    width: 100%;
+}
+SPAN.MenuItem
+{
+    color: #4C5259;
+    cursor: hand;
+}
+TD.GroupLeft
+{
+    background-image: url(../Image/group_left.gif);
+    background-repeat: no-repeat;
+}
+TD.GroupRight
+{
+    background-image: url(../Image/group_right.gif);
+    background-repeat: no-repeat;
+}
+TD.GroupMiddle
+{
+    background-image: url(../Image/group_middle.gif);
+    background-repeat: repeat-x;
+}
+TD.ModuleMenu
+{
+    background-color: #E5E5E8; /*background-color:E2E2E2;*/
+}
+TD.NavigatorBar
+{
+    background-color: #DEE3E9;
+}
+.GridHeader
+{
+    background-color: #D2D5DD;
+    font-weight: bold;
+    text-align: left;
+    vertical-align: middle;
+}
+.GridRow
+{
+    text-align: left;
+    vertical-align: middle;
+    height: 5px;
+}
+.Tree
+{
+    text-align: left;
+}
+.Grid
+{
+    border-color: #ababab;
+}
+.lblReport
+{
+    overflow: auto;
+}
+
+.Borderline
+{
+    vertical-align: top;
+    border-right: #ababab 1px solid;
+    border-top: #ababab 1px solid;
+    border-left: #ababab 1px solid;
+    border-bottom: #ababab 1px solid;
+}
+
+.LineText
+{
+    border: #006699;
+    border-style: solid;
+    border-top-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 1px;
+    border-left-width: 0px;
+}
+.alphas
+{
+    background-color: #FF0000;
+    filter: Alpha(Opacity=30);
+}
+.breakall
+{
+    word-break: break-all;
+}
+
+.headBackGr
+{
+    background-color: #bf4435;
+}

@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="FHDataSet" targetNamespace="http://tempuri.org/FHDataSet.xsd" xmlns:mstns="http://tempuri.org/FHDataSet.xsd" xmlns="http://tempuri.org/FHDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="FHDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="FHDataSet" msprop:Generator_UserDSName="FHDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="FHDOrderinfo" msprop:Generator_TableClassName="FHDOrderinfoDataTable" msprop:Generator_TableVarName="tableFHDOrderinfo" msprop:Generator_TablePropName="FHDOrderinfo" msprop:Generator_RowDeletingName="FHDOrderinfoRowDeleting" msprop:Generator_RowChangingName="FHDOrderinfoRowChanging" msprop:Generator_RowEvHandlerName="FHDOrderinfoRowChangeEventHandler" msprop:Generator_RowDeletedName="FHDOrderinfoRowDeleted" msprop:Generator_UserTableName="FHDOrderinfo" msprop:Generator_RowChangedName="FHDOrderinfoRowChanged" msprop:Generator_RowEvArgName="FHDOrderinfoRowChangeEvent" msprop:Generator_RowClassName="FHDOrderinfoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:string" />
+              <xs:element name="Nick" msprop:Generator_ColumnVarNameInTable="columnNick" msprop:Generator_ColumnPropNameInRow="Nick" msprop:Generator_ColumnPropNameInTable="NickColumn" msprop:Generator_UserColumnName="Nick" type="xs:string" minOccurs="0" />
+              <xs:element name="OrderCode" msprop:Generator_ColumnVarNameInTable="columnOrderCode" msprop:Generator_ColumnPropNameInRow="OrderCode" msprop:Generator_ColumnPropNameInTable="OrderCodeColumn" msprop:Generator_UserColumnName="OrderCode" type="xs:string" minOccurs="0" />
+              <xs:element name="Tel" msprop:Generator_ColumnVarNameInTable="columnTel" msprop:Generator_ColumnPropNameInRow="Tel" msprop:Generator_ColumnPropNameInTable="TelColumn" msprop:Generator_UserColumnName="Tel" type="xs:string" minOccurs="0" />
+              <xs:element name="Moblie" msprop:Generator_ColumnVarNameInTable="columnMoblie" msprop:Generator_ColumnPropNameInRow="Moblie" msprop:Generator_ColumnPropNameInTable="MoblieColumn" msprop:Generator_UserColumnName="Moblie" type="xs:string" minOccurs="0" />
+              <xs:element name="WanID" msprop:Generator_ColumnVarNameInTable="columnWanID" msprop:Generator_ColumnPropNameInRow="WanID" msprop:Generator_ColumnPropNameInTable="WanIDColumn" msprop:Generator_UserColumnName="WanID" type="xs:string" minOccurs="0" />
+              <xs:element name="FullName" msprop:Generator_ColumnVarNameInTable="columnFullName" msprop:Generator_ColumnPropNameInRow="FullName" msprop:Generator_ColumnPropNameInTable="FullNameColumn" msprop:Generator_UserColumnName="FullName" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FHDOrderinfoDe" msprop:Generator_TableClassName="FHDOrderinfoDeDataTable" msprop:Generator_TableVarName="tableFHDOrderinfoDe" msprop:Generator_TablePropName="FHDOrderinfoDe" msprop:Generator_RowDeletingName="FHDOrderinfoDeRowDeleting" msprop:Generator_RowChangingName="FHDOrderinfoDeRowChanging" msprop:Generator_RowEvHandlerName="FHDOrderinfoDeRowChangeEventHandler" msprop:Generator_RowDeletedName="FHDOrderinfoDeRowDeleted" msprop:Generator_UserTableName="FHDOrderinfoDe" msprop:Generator_RowChangedName="FHDOrderinfoDeRowChanged" msprop:Generator_RowEvArgName="FHDOrderinfoDeRowChangeEvent" msprop:Generator_RowClassName="FHDOrderinfoDeRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:string" minOccurs="0" />
+              <xs:element name="OrderinfoID" msprop:Generator_ColumnVarNameInTable="columnOrderinfoID" msprop:Generator_ColumnPropNameInRow="OrderinfoID" msprop:Generator_ColumnPropNameInTable="OrderinfoIDColumn" msprop:Generator_UserColumnName="OrderinfoID" type="xs:string" minOccurs="0" />
+              <xs:element name="PlatformMerchantCode" msprop:Generator_ColumnVarNameInTable="columnPlatformMerchantCode" msprop:Generator_ColumnPropNameInRow="PlatformMerchantCode" msprop:Generator_ColumnPropNameInTable="PlatformMerchantCodeColumn" msprop:Generator_UserColumnName="PlatformMerchantCode" type="xs:string" minOccurs="0" />
+              <xs:element name="ProductName" msprop:Generator_ColumnVarNameInTable="columnProductName" msprop:Generator_ColumnPropNameInRow="ProductName" msprop:Generator_ColumnPropNameInTable="ProductNameColumn" msprop:Generator_UserColumnName="ProductName" type="xs:string" minOccurs="0" />
+              <xs:element name="Specifications" msprop:Generator_ColumnVarNameInTable="columnSpecifications" msprop:Generator_ColumnPropNameInRow="Specifications" msprop:Generator_ColumnPropNameInTable="SpecificationsColumn" msprop:Generator_UserColumnName="Specifications" type="xs:string" minOccurs="0" />
+              <xs:element name="ProductNum" msprop:Generator_ColumnVarNameInTable="columnProductNum" msprop:Generator_ColumnPropNameInRow="ProductNum" msprop:Generator_ColumnPropNameInTable="ProductNumColumn" msprop:Generator_UserColumnName="ProductNum" type="xs:string" minOccurs="0" />
+              <xs:element name="TManufacturersCode" msprop:Generator_ColumnVarNameInTable="columnTManufacturersCode" msprop:Generator_ColumnPropNameInRow="TManufacturersCode" msprop:Generator_ColumnPropNameInTable="TManufacturersCodeColumn" msprop:Generator_UserColumnName="TManufacturersCode" type="xs:string" minOccurs="0" />
+              <xs:element name="Remarks" msprop:Generator_ColumnVarNameInTable="columnRemarks" msprop:Generator_ColumnPropNameInRow="Remarks" msprop:Generator_ColumnPropNameInTable="RemarksColumn" msprop:Generator_UserColumnName="Remarks" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="FHDOrderinfoKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:FHDOrderinfo" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="FHDOrderinfoDeKey1">
+      <xs:selector xpath=".//mstns:FHDOrderinfoDe" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="FHDOrderinfo_FHDOrderinfoDe" msdata:parent="FHDOrderinfo" msdata:child="FHDOrderinfoDe" msdata:parentkey="ID" msdata:childkey="OrderinfoID" msprop:Generator_UserChildTable="FHDOrderinfoDe" msprop:Generator_ChildPropName="GetFHDOrderinfoDeRows" msprop:Generator_UserRelationName="FHDOrderinfo_FHDOrderinfoDe" msprop:Generator_ParentPropName="FHDOrderinfoRow" msprop:Generator_RelationVarName="relationFHDOrderinfo_FHDOrderinfoDe" msprop:Generator_UserParentTable="FHDOrderinfo" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

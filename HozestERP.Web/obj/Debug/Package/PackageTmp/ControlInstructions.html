@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+        body
+        {
+            font-family: 微软雅黑,Verdana, Arial;
+        }
+    </style>
+</head>
+<body>
+    <table bordercolor="#ababab" border="1" style="width: 100%; height: 5px; border-top-style: ridge;
+        border-right-style: ridge; border-bottom-style: ridge; border-left-style: ridge;
+        border-collapse: collapse; word-break: keep-all; word-wrap: normal; background-color: rgb(231, 231, 255);">   
+        <tr class="GridRow" style="height: 5px; background-color: white;">
+            <td rowspan="2">
+                用户自定义验证控件
+            </td>
+            <td>
+                &lt;asp:CustomValidator ID="CustomValidator1" runat="server" ControlToValidate="txtFullName$txtValue"
+                Display="None" OnServerValidate="CustomValidator1_ServerValidate" SetFocusOnError="True"
+                ValidateEmptyText="True" ValidationGroup="RewardsGroup" &gt;&lt;/asp:CustomValidator
+                &gt;
+            </td>
+        </tr>
+        <tr class="GridRow" style="height: 5px; background-color: rgb(247, 247, 247);">
+            <td>
+                <div style="float: left;">
+                    <font color="red">注意:</font>
+                </div>
+                <div style="float: left;">
+                    ControlToValidate:获取或设置要验证的输入控件。 （继承自 BaseValidator。）
+                    <br />
+                    OnServerValidate:为 CustomValidator 控件引发 ServerValidate 事件。(服务器事件)
+                    <br />
+                    <b>详细可以参照:<a href="http://msdn.microsoft.com/zh-cn/library/system.web.ui.webcontrols.customvalidator.aspx"
+                        style="color: Red; text-decoration: underline;">CustomValidator 类(System.Web.UI.WebControls)</a></b>
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
