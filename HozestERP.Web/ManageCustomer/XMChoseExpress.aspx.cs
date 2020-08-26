@@ -15,6 +15,9 @@ using HozestERP.BusinessLogic.ManageInventory;
 using Newtonsoft.Json.Linq;
 using HozestERP.Web.SmsServiceReference;
 using Top.Api;
+using System.Net;
+using System.IO;
+using Newtonsoft.Json;
 
 namespace HozestERP.Web.ManageCustomer
 {
@@ -38,6 +41,7 @@ namespace HozestERP.Web.ManageCustomer
                     this.ddlExpressList.Items.Insert(0, new ListItem("中国邮政", "1"));
                     this.ddlExpressList.Items.Insert(0, new ListItem("申通快递", "470"));
                     this.ddlExpressList.Items.Insert(0, new ListItem("中通快递", "500"));
+                    this.ddlExpressList.Items.Insert(0, new ListItem("极兔速递", "999999"));
                     this.ddlExpressList.Items.Insert(0, new ListItem("--- 请选择 ---", "-1"));
                 }
                 else
@@ -100,7 +104,7 @@ namespace HozestERP.Web.ManageCustomer
                 ////var userName = HozestERPContext.Current.User.Username;//获取登陆人的登陆账号
                 //var user = base.CustomerInfoService.GetCustomerInfoByID(HozestERPContext.Current.User.CustomerID);//获取登陆人的信息
                 //if(user.SDepartment.DepName.Equals("眠集子公司"))
-                    printer = "QR-586 LABEL";
+                printer = "QR-586 LABEL";
                 //else
                 //    printer = "Gprinter  GP-1124D";
                 //#endregion
@@ -110,88 +114,133 @@ namespace HozestERP.Web.ManageCustomer
             {
                 cp_code = "SF";
                 printer = "HPRT HLP106S";
-            } 
+            }
             else if (ExpressId == "500")//中通快递
             {
                 cp_code = "ZTO";
                 printer = "KM-106 Printer";
             }
-
-            var InfoList = base.XMExpressManagementService.GetXMExpressManagementByID(IDs);
-            //foreach (int ID in IDs)
-            foreach(var Info in InfoList)
+            else if (ExpressId == "999999") //极兔速递
             {
-                //var Info = base.XMExpressManagementService.GetXMExpressManagementByID(ID);
-                if (Info != null)
+
+            }
+
+
+            if (ExpressId == "999999") //极兔速递
+            {
+                try
                 {
-                    if (Info.PrintCount > 0 && Info.ExpressID.ToString() != ExpressId)
+                    var jsonobject = new
                     {
-                        base.ShowMessage("收件人：" + Info.ReceivingName + "，的快递单已用" + Info.ExpressName + "打印,请先取消该寄件单号！");
-                        return;
-                    }
-                    if (Info.Price != null)
-                    {
-                        base.ShowMessage("收件人：" + Info.ReceivingName + "，的快递单已填写价格，不能打印！");
-                        return;
-                    }
-                    if (!UserIds.Contains((int)Info.SenderID))
-                    {
-                        base.ShowMessage("收件人：" + Info.ReceivingName + "，的快递单,您没有权限打印！");
-                        return;
-                    }
-                    list.Add(Info);
+                        countryCode = "CHN",
+                    };
+                    string JSONData = JsonConvert.SerializeObject(jsonobject);
+                    var Url = "https://uat-general.jtexpress.com.cn/edigeneral/location/getLocation";
+                    byte[] bytes = Encoding.UTF8.GetBytes(JSONData);
+                    HttpWebRequest request = (HttpWebRequest)WebRequest.Create(Url);
+                    request.Method = "POST";
+                    //request.ContentLength = bytes.Length;
+                    request.ContentType = "application/json; charset=utf-8";
+                    request.Headers["apiAccount"] = "1627";
+                    request.Headers["digest"] = "U40e5sumorgd3YgZzU61Mw";
+                    request.Headers["timestamp"] = "1565238848921";
+                    Stream reqstream = request.GetRequestStream();
+                    reqstream.Write(bytes, 0, bytes.Length);
+
+                    //声明一个HttpWebRequest请求  
+                    request.Timeout = 90000;
+                    //设置连接超时时间  
+                    request.Headers.Set("Pragma", "no-cache");
+                    HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+                    Stream streamReceive = response.GetResponseStream();
+                    Encoding encoding = Encoding.UTF8;
+
+                    StreamReader streamReader = new StreamReader(streamReceive, encoding);
+                    string strResult = streamReader.ReadToEnd();
+                    streamReceive.Dispose();
+                    streamReader.Dispose();
+                }
+                catch (Exception ex)
+                {
+
                 }
             }
-
-            string Template = base.XMOrderInfoAPIService.GetisvTemplates("1", cp_code);//获取商家的模板自定义区
-            if (Template == "")
+            else
             {
-                base.ShowMessage("获取申通电子面单模板失败！");
-                return;
-            }
-
-            t.Append("{\"cmd\": \"print\",\"requetid\": \"" + DateTime.Now.ToString("yyMMddHHmmddfff") + "\",\"verson\": \"1.0\",");
-            t.Append("\"task\": {\"taskID\": \"\",\"preview\": false,\"printer\": \"" + printer + "\",\"documents\":[");//preview：是否预览
-            var XMOrderInfoAppList = base.XMOrderInfoAppService.GetXMOrderInfoAppByID(10);//天猫城市爱情旗舰店
-            ITopClient client = new DefaultTopClient(XMOrderInfoAppList.ServerUrl, XMOrderInfoAppList.AppKey, XMOrderInfoAppList.AppSecret);
-            //list.as
-            foreach (XMExpressManagement Info in list)
-            {
-                string str = base.XMOrderInfoAPIService.GetCaiNiaoWaybilInfo(Info, cp_code, XMOrderInfoAppList, client);
-                if (str == "")
+                var InfoList = base.XMExpressManagementService.GetXMExpressManagementByID(IDs);
+                foreach (var Info in InfoList)
                 {
-                    base.ShowMessage("收件人：" + Info.ReceivingName + "，的快递单获取物流服务商电子面单号失败！");
+                    if (Info != null)
+                    {
+                        if (Info.PrintCount > 0 && Info.ExpressID.ToString() != ExpressId)
+                        {
+                            base.ShowMessage("收件人：" + Info.ReceivingName + "，的快递单已用" + Info.ExpressName + "打印,请先取消该寄件单号！");
+                            return;
+                        }
+                        if (Info.Price != null)
+                        {
+                            base.ShowMessage("收件人：" + Info.ReceivingName + "，的快递单已填写价格，不能打印！");
+                            return;
+                        }
+                        if (!UserIds.Contains((int)Info.SenderID))
+                        {
+                            base.ShowMessage("收件人：" + Info.ReceivingName + "，的快递单,您没有权限打印！");
+                            return;
+                        }
+                        list.Add(Info);
+                    }
+                }
+
+                string Template = base.XMOrderInfoAPIService.GetisvTemplates("1", cp_code);//获取商家的模板自定义区
+                if (Template == "")
+                {
+                    base.ShowMessage("获取申通电子面单模板失败！");
                     return;
                 }
-                else
+
+                t.Append("{\"cmd\": \"print\",\"requetid\": \"" + DateTime.Now.ToString("yyMMddHHmmddfff") + "\",\"verson\": \"1.0\",");
+                t.Append("\"task\": {\"taskID\": \"\",\"preview\": false,\"printer\": \"" + printer + "\",\"documents\":[");//preview：是否预览
+                var XMOrderInfoAppList = base.XMOrderInfoAppService.GetXMOrderInfoAppByID(10);//天猫城市爱情旗舰店
+                ITopClient client = new DefaultTopClient(XMOrderInfoAppList.ServerUrl, XMOrderInfoAppList.AppKey, XMOrderInfoAppList.AppSecret);
+                //list.as
+                foreach (XMExpressManagement Info in list)
                 {
-                    string waybill_code = str;
-                    int a = str.IndexOf("<waybill_code>");
-                    waybill_code = waybill_code.Substring(a, str.Length - a - 1);
-                    int b = waybill_code.IndexOf("</waybill_code>");
-                    waybill_code = waybill_code.Substring(0, b).Replace("<waybill_code>", "").Replace("</waybill_code>", "");
+                    string str = base.XMOrderInfoAPIService.GetCaiNiaoWaybilInfo(Info, cp_code, XMOrderInfoAppList, client);
+                    if (str == "")
+                    {
+                        base.ShowMessage("收件人：" + Info.ReceivingName + "，的快递单获取物流服务商电子面单号失败！");
+                        return;
+                    }
+                    else
+                    {
+                        string waybill_code = str;
+                        int a = str.IndexOf("<waybill_code>");
+                        waybill_code = waybill_code.Substring(a, str.Length - a - 1);
+                        int b = waybill_code.IndexOf("</waybill_code>");
+                        waybill_code = waybill_code.Substring(0, b).Replace("<waybill_code>", "").Replace("</waybill_code>", "");
 
-                    string print_data = str;
-                    int c = str.IndexOf("<print_data>");
-                    print_data = print_data.Substring(c, str.Length - c - 1);
-                    int d = print_data.IndexOf("</print_data>");
-                    print_data = print_data.Substring(0, d).Replace("<print_data>", "").Replace("</print_data>", "");
+                        string print_data = str;
+                        int c = str.IndexOf("<print_data>");
+                        print_data = print_data.Substring(c, str.Length - c - 1);
+                        int d = print_data.IndexOf("</print_data>");
+                        print_data = print_data.Substring(0, d).Replace("<print_data>", "").Replace("</print_data>", "");
 
-                    Info.ExpressID = int.Parse(ExpressId);
-                    Info.CourierNumber = waybill_code;
-                    Info.PrintCount = Info.PrintCount + 1;//打印次数
-                    Info.PrintDate = DateTime.Now;//打印时间
-                    Info.UpdateID = HozestERPContext.Current.User.CustomerID;
-                    Info.UpdateDate = DateTime.Now;
+                        Info.ExpressID = int.Parse(ExpressId);
+                        Info.CourierNumber = waybill_code;
+                        Info.PrintCount = Info.PrintCount + 1;//打印次数
+                        Info.PrintDate = DateTime.Now;//打印时间
+                        Info.UpdateID = HozestERPContext.Current.User.CustomerID;
+                        Info.UpdateDate = DateTime.Now;
 
-                    t = GetJsonStr(t, print_data, Template, Info, emsCustomerCode);
+                        t = GetJsonStr(t, print_data, Template, Info, emsCustomerCode);
+                    }
                 }
-            }
-            t.Append("]}}");
+                t.Append("]}}");
 
-            Session["DirectThermalPrint-Express"] = list;
-            JObject JsonStr = JObject.Parse(t.ToString());
-            Page.ClientScript.RegisterStartupScript(Page.GetType(), "ExpressDirectThermalPrint", "<script>doSetPrinterConfig(" + JsonStr + ");</script>");
+                Session["DirectThermalPrint-Express"] = list;
+                JObject JsonStr = JObject.Parse(t.ToString());
+                Page.ClientScript.RegisterStartupScript(Page.GetType(), "ExpressDirectThermalPrint", "<script>doSetPrinterConfig(" + JsonStr + ");</script>");
+            }
         }
 
         /// <summary>
